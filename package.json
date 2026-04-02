@@ -1,0 +1,12 @@
+{
+  "name": "russ-d-wings",
+  "version": "1.0.0",
+  "description": "A high-efficiency scheduling and order management web application built for a unique, flavor-driven chicken wing restaurant based in New Haven, CT. Russ D Wings streamlines how customers place orders and how the business manages availability, ensuring smooth operations and no scheduling conflicts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
