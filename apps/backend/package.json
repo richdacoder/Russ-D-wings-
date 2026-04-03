@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "knex": "^3.2.8",
-    "pg": "^8.20.0"
+    "pg": "^8.20.0",
+    "resend": "^6.10.0"
   }
 }
