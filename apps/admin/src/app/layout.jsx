@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
+import HomePage from "./page.jsx";
 
-
-export default function HomePage() {
+function Layout (){
 
 }
 return(
   <>
-  <div>working</div>
+<HomePage/>
   </>
 )
