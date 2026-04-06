@@ -12,7 +12,10 @@ return(
 </head>
 <body>
   <header>
-
+    <nav>
+      <link className="logo"></link>
+      <button> ☰</button>
+    </nav>
   </header>
 <footer>
 <main>
