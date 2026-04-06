@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.header{
+  display:flex;
+  justify-content: space-between;
+}
+.navbar{
+  display:flex;
+}
+.nav-button{
+  display:none;
+}
+
+@media (max-width: 768px){
+   .navbar{
+    display:none;
+  }
+  .navbar.open{
+    display: flex;
+
+  }
+.nav-button{
+  display:block;
+
+}
+}

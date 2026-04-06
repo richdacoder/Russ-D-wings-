@@ -1,25 +1,57 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import "./styles/globals.css";
 
 export default function  RootLayout( {children} ){
-const [menuOpen, setMenuOpen] = useState(false);
+const [menuOpen, setMenuOpen] =  useState(false);
 
+useEffect(() => {
+  // Check if we are on a desktop screen on mount
+  // if (window.innerWidth > 768) {
+  //   setMenuOpen(true);
+  //   setShowBurger(false);
+  //   console.log('burger', showBurger, 'menu', menuOpen );
+  // } else if(window.innerWidth <= 768){
+  //   setMenuOpen(false);
+  //   setShowBurger(true);
+
+  // }
+}, []);
+
+console.log( 'menu', menuOpen );
+
+const toggleMenu = ()=>{setMenuOpen(!menuOpen) };
+
+
+
+/*
+- nav open when in full scrren no hamburger button
+- make toggle
+- is toggle open?
+- if so open navbar
+
+*/
 return(
 
 <html >
 <head>
 </head>
 <body>
-  <header>
-    <nav>
+  <header className="header">
+  <div> logo place here
       <link className="logo"></link>
-      <button> ☰</button>
+      </div>
+      <div>
+
+      <button className="nav-button" onClick={toggleMenu} > ☰</button>
+
+     <nav className={`navbar ${menuOpen? "open" : "" }`}>
       <a>Home</a>
       <a>Schedule</a>
       <a>Menu</a>
-
-    </nav>
+      </nav>
+      </div>
   </header>
 <footer>
 <main>
