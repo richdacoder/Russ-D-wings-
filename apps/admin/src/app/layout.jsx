@@ -47,9 +47,10 @@ return(
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
 
      <nav className={`navbar ${menuOpen? "open" : "" }`}>
-      <a>Home</a>
-      <a>Schedule</a>
-      <a>Menu</a>
+      <a href="/">Home</a>
+      <a href="/request">Request</a>
+      <a href="/schedule">Schedule</a>
+      <a href="/menu">Menu</a>
       </nav>
       </div>
   </header>
