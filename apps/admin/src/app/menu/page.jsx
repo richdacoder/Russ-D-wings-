@@ -3,6 +3,18 @@
 import {useState, useEffect} from "react";
 
 export default function Menu(){
+const [category, setCategory] = useState("");
+const [menuItem, setMenuItem] = useState("");
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+const newItem = {
+  category: category,
+  name: menuItem
+}
+
+console.log(newItem);
+}
 /*
 
 ** there would be get post and delete on this page
@@ -16,17 +28,29 @@ export default function Menu(){
   return(
     <div>
       <h1>Menu</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
-        <label>Catergory</label>
-        <select>
-            <option>Main</option>
-            <option>Side</option>
-            <option>Drink</option>
+        <label>Category</label>
+        <select
+          value={category}
+          onChange={(e) => {
+          setCategory(e.target.value)}}
+        >
+            <option value="main">Main</option>
+            <option value="side">Side</option>
+            <option value="drink">Drink</option>
         </select>
         </div>
 
-
+        <div>
+          <label>Menu Item</label>
+          <input
+            onChange={(e) => {
+              setMenuItem(e.target.value)
+            }}
+            value={menuItem}/>
+        </div>
+        <button type="submit">Add</button>
       </form>
       </div>
   )
