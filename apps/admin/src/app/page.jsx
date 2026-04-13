@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import ActiveOrder from "./order/page.jsx";
 
 
 export default function HomePage() {
 const [selectedOrder, setSelectedOrder] = useState(null);
 const [orders, setOrders] = useState([]);
-
 return(
   <>
   <div>
@@ -29,6 +29,13 @@ return(
   </button>
   </div>
   </div>
+  {
+    selectedOrder &&
+  <ActiveOrder
+  orders={orders}
+  onClose={()=> setSelectedOrder(null)}
+  />
+  }
   </>
 )
 }
