@@ -1,5 +1,5 @@
 "use client";
-
+import {useState, useEffect} from "react";
 export default function Request(){
   /*
 - request doesnt need checking if exist system because he can take more than two orders
@@ -18,6 +18,17 @@ export default function Request(){
 
 
   */
+
+  const [requests, setRequests] = useState([]);
+  const [selectedRequest, setSelectedRequest] = useState(null);
+  const [loading, setLoading ] = useState(true);
+  const [error, setError] = useState(null);
+
+
+if (loading) return <p className="loading">Loading Bookings...</p>;
+  if (error) return <p className="error">{error}</p>;
+
+
   return(
     <div>working yeah</div>
   )
