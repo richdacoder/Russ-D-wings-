@@ -1,5 +1,7 @@
 "use client";
 import {useState, useEffect} from "react";
+import ActiveRequest from "./extras/active-request.jsx";
+
 export default function Request(){
   /*
 - request doesnt need checking if exist system because he can take more than two orders
@@ -15,7 +17,9 @@ export default function Request(){
 
   - request gets deleted
 
-
+  when request get no response when should it be deleted?
+  -  for pop up mention when request was made(even for orders)
+  - mention type of request (cater)
 
   */
 
@@ -25,11 +29,40 @@ export default function Request(){
   const [error, setError] = useState(null);
 
 
-if (loading) return <p className="loading">Loading Bookings...</p>;
-  if (error) return <p className="error">{error}</p>;
+  // if (loading) return <p className="loading">Loading Bookings...</p>;
+  // if (error) return <p className="error">{error}</p>;
 
 
   return(
-    <div>working yeah</div>
+    <>
+    <div>
+     <h1>Requests</h1>
+      <div>
+        <span>Date</span>
+        <span>Name</span>
+        <span>Time</span>
+      </div>
+      <div>
+        <button onClick={ (e) =>{
+          e.stopPropagation();
+          setSelectedRequest(requests)
+        }
+        }>
+          <span>4/15/26</span>
+          <span>Timmy Turner</span>
+          <span>5:00 PM</span>
+        </button>
+      </div>
+      {
+        selectedRequest &&
+        <ActiveRequest
+        onClose={() =>{
+          setSelectedRequest(null);
+        }}
+        requests={requests}
+        />
+      }
+    </div>
+    </>
   )
 }

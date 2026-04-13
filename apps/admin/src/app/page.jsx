@@ -5,22 +5,26 @@ import ActiveOrder from "./order/page.jsx";
 
 
 export default function HomePage() {
+  /*
+
+  - add status and send emails for each status
+  */
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading ] = useState(true);
   const [error, setError] = useState(null);
 
 
-  if (loading) return <p className="loading">Loading Bookings...</p>;
-  if (error) return <p className="error">{error}</p>;
+  // if (loading) return <p className="loading">Loading Bookings...</p>;
+  // if (error) return <p className="error">{error}</p>;
 
 return(
   <>
-  <div>
+<div>
   <h1>orders</h1>
-  <span>Date</span>
-  <span>Name</span>
-  <span>Time</span>
+    <span>Date</span>
+    <span>Name</span>
+    <span>Time</span>
 <div>
   <button
   onClick={

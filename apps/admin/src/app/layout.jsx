@@ -39,9 +39,12 @@ return(
 </head>
 <body>
   <header className="header">
-  <div> logo place here
+  <div>
+    <a href="/">
+      logo place here
       <link className="logo"></link>
-      </div>
+    </a>
+  </div>
       <div>
 
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
