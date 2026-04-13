@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 
 
 export default function HomePage() {
-const [selectedOrders, setSelectedOrders] = useState(null);
+const [selectedOrder, setSelectedOrder] = useState(null);
+const [orders, setOrders] = useState([]);
 
 return(
   <>
@@ -14,7 +15,14 @@ return(
   <span>Name</span>
   <span>Time</span>
 <div>
-  <button>
+  <button
+  onClick={
+    (e) =>{
+      e.stopPropagation();
+      setSelectedOrder(orders)
+
+    }
+  }>
     <span>4/15/26</span>
     <span>Jim Jones</span>
     <span>5:30 PM</span>
