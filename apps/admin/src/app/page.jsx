@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 
 export default function HomePage() {
-
+const [selectedOrders, setSelectedOrders] = useState(null);
 
 return(
   <>
@@ -13,12 +13,13 @@ return(
   <span>Date</span>
   <span>Name</span>
   <span>Time</span>
-
+<div>
   <button>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span>4/15/26</span>
+    <span>Jim Jones</span>
+    <span>5:30 PM</span>
   </button>
+  </div>
   </div>
   </>
 )
