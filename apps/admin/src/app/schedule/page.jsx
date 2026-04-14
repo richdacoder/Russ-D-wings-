@@ -6,11 +6,22 @@ export default function Schedule(){
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
+  const actualTime = (t) => {
+     const [y, m, d] = new Date()
+     .toISOString()
+     .split("T")[0]
+     .split("-")
+     .map(Number);
+
+     const [hour, min] = t.split(":").map(Number);
+     return new Date(y,m - 1,d,hour, min);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
   const timeBlocks = {
-    start_time: startTime,
-    end_time: endTime
+    start_time: actualTime(startTime),
+    end_time: actualTime(endTime)
   }
   console.log(timeBlocks);
   setStartTime("");
@@ -25,7 +36,9 @@ export default function Schedule(){
 
  - how to create a time listing selection
 
- *** make handle submit and put values
+ *** make the time legit data
+ - make the time not able to over lap each other
+ - the timing is for today
 */
   return(
     <div>
