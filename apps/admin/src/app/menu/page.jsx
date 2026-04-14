@@ -12,8 +12,9 @@ const newItem = {
   category: category,
   name: menuItem
 }
-
 console.log(newItem);
+setCategory("");
+setMenuItem("");
 }
 /*
 
