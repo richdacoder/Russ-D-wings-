@@ -38,7 +38,7 @@ export default function Schedule(){
 
  *** make the time legit data
  - make the time not able to over lap each other
- - the timing is for today
+ - the timing is for todayxxx
 */
   return(
     <div>
@@ -64,6 +64,7 @@ export default function Schedule(){
         <input
           type="time"
           value={endTime}
+          min={startTime}
           onChange={(e) => {setEndTime(e.target.value)}}
         />
       </div>
