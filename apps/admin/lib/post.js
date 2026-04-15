@@ -10,7 +10,7 @@
 
 */
 
-export default async function Post(){
+export default async function Post(formData){
  const url = 'http://localhost:3000';
 
  const res = await fetch(`${url}/api/availability`,
@@ -19,8 +19,8 @@ export default async function Post(){
   headers:{
     'content-type':'application/json'
   },
-  body: JSON.stringify({})
-})
+  body: JSON.stringify(formData)
+});
  const data = await res.json();
  console.log(data);
 

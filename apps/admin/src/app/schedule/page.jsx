@@ -1,6 +1,7 @@
 "use client";
 
 import {useState, useEffect} from "react";
+import Post from "../../../lib/post.js";
 
 export default function Schedule(){
   const [startTime, setStartTime] = useState("");
@@ -17,13 +18,14 @@ export default function Schedule(){
      return new Date(y,m - 1,d,hour, min);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   const timeBlocks = {
     start_time: actualTime(startTime),
     end_time: actualTime(endTime)
   }
   console.log(timeBlocks);
+  await Post(timeBlocks);
   setStartTime("");
   setEndTime("");
 }
