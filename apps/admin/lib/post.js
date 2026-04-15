@@ -5,13 +5,17 @@
 - fetch() api
 - send object (method, headers, body)
 - body- convert to string
+- if response is not ok send error in console throw new
 - data variable json
 - something to check error
+
 
 */
 
 export default async function Post(formData){
- const url = 'http://localhost:3000';
+  console.log('post page', formData);
+ const url = window.location.hostname == 'localhost'?
+ 'http://localhost:3000' : 'domain goes here'
 
  const res = await fetch(`${url}/api/availability`,
 {
@@ -21,6 +25,12 @@ export default async function Post(formData){
   },
   body: JSON.stringify(formData)
 });
+
+if(!res.ok){
+  const errorText = await res.text();
+  console.error('error res', errorText);
+  throw new Error('something went wrong');
+}
  const data = await res.json();
  console.log(data);
 

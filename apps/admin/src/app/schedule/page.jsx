@@ -20,12 +20,15 @@ export default function Schedule(){
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!startTime || !endTime) return;
+
   const timeBlocks = {
     start_time: actualTime(startTime),
     end_time: actualTime(endTime)
   }
   console.log(timeBlocks);
   await Post(timeBlocks);
+  console.log('after post')
   setStartTime("");
   setEndTime("");
 }
