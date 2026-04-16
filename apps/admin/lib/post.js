@@ -8,7 +8,7 @@
 - if response is not ok send error in console throw new
 - data variable json
 - something to check error
-skjak
+
 
 */
 
