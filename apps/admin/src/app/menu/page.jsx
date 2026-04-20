@@ -5,16 +5,19 @@ import {useState, useEffect} from "react";
 export default function Menu(){
 const [category, setCategory] = useState("");
 const [menuItem, setMenuItem] = useState("");
+const [price, setPrice] = useState("");
 
 const handleSubmit = (e) => {
   e.preventDefault();
 const newItem = {
   category: category,
-  name: menuItem
+  name: menuItem,
+  price: price
 }
 console.log(newItem);
 setCategory("");
 setMenuItem("");
+setPrice("");
 }
 /*
 
@@ -50,6 +53,22 @@ setMenuItem("");
               setMenuItem(e.target.value)
             }}
             value={menuItem}/>
+        </div>
+        <div>
+          <label>Price</label>
+          <div>
+            <span>$</span>
+            <input
+            step='0.01'
+            type="number"
+            min="0"
+
+
+            onChange={(e)=> {
+              setPrice(e.target.value)
+            }}
+            />
+          </div>
         </div>
         <button type="submit">Add</button>
       </form>
