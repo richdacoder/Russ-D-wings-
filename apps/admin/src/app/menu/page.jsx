@@ -9,14 +9,16 @@ const [category, setCategory] = useState("");
 const [menuItem, setMenuItem] = useState("");
 const [price, setPrice] = useState("");
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
+  if(!category || !menuItem || !price) return;
 const newItem = {
   category: category,
   name: menuItem,
   price: price
 }
 console.log(newItem);
+await Post(newItem);
 setCategory("");
 setMenuItem("");
 setPrice("");
