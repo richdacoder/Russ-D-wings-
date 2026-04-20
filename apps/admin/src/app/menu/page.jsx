@@ -1,6 +1,8 @@
 "use client";
 
 import {useState, useEffect} from "react";
+import Post from "../../../lib/post.js";
+
 
 export default function Menu(){
 const [category, setCategory] = useState("");
@@ -21,7 +23,7 @@ setPrice("");
 }
 /*
 
-** there would be get post and delete on this page
+** there would be get post put and delete on this page
 
 - catergory
 - inside of input option selection will drop down (GET) with what was added
