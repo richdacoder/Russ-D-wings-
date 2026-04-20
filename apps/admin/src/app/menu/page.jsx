@@ -39,6 +39,7 @@ setPrice("");
           value={category}
           onChange={(e) => {
           setCategory(e.target.value)}}
+          required
         >
             <option value="main">Main</option>
             <option value="side">Side</option>
@@ -52,7 +53,9 @@ setPrice("");
             onChange={(e) => {
               setMenuItem(e.target.value)
             }}
-            value={menuItem}/>
+            value={menuItem}
+            required
+            />
         </div>
         <div>
           <label>Price</label>
@@ -62,11 +65,11 @@ setPrice("");
             step='0.01'
             type="number"
             min="0"
-
-
             onChange={(e)=> {
               setPrice(e.target.value)
             }}
+            value={price}
+            required
             />
           </div>
         </div>
