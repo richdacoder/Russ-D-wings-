@@ -12,6 +12,23 @@ const app = express();
 */
 
 app.get('/health', (req, res) => {
-  res.status(200)
+  return res.status(200)
   .json({status:200})
-})
+});
+
+const allowedOrigins = [process.env.NEXT_PUBLIC_API_URL];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error('Not allowed by CORS'));
+    },
+    credentials: true,
+  })
+);
