@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 /*
-- make sure health is 200
-- added allowed urls
-- add cors
+- make sure health is 200 *
+- added allowed urls*
+- add cors*
 - make middleware
 - make 404 handler
 - make error hanler
@@ -32,3 +32,5 @@ app.use(
     credentials: true,
   })
 );
+
+app.listen(3000);
