@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-
+const router = express.Router();
 /*
 - make sure health is 200 *
 - added allowed urls*
@@ -40,14 +40,14 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: false }));
 
 
-  const router =
-  app.post('/availability', (req, res) => {
+  const route =
+  router.post('/availability', (req, res) => {
     res.json({ available: true });
   });
 
-  app.use('/api', router);
+  app.use('/api', route);
 
-console.log('check', router );
+console.log('check', route);
 
 app.use((req, res, next) => {
   res.status(404).json({
