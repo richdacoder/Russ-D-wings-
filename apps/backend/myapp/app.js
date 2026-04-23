@@ -42,7 +42,11 @@ app.use(express.urlencoded({ extended: false }));
 
   const route =
   router.post('/availability', (req, res) => {
-    res.json({ available: true });
+     console.log(req.body);
+    return res.status(200).json({
+      available: true,
+      message: 'Test working',
+    })
   });
 
   app.use('/api', route);
