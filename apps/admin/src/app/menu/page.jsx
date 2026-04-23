@@ -9,6 +9,7 @@ const [category, setCategory] = useState("");
 const [menuItem, setMenuItem] = useState("");
 const [price, setPrice] = useState("");
 const [description, setDescription] = useState("");
+const [stock, setStock] = useState(true);
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -32,6 +33,8 @@ setPrice("");
 - inside of input option selection will drop down (GET) with what was added
 
 - dish will be an input
+
+- mkae sure stock pop on GET
 
 */
   return(
@@ -79,7 +82,11 @@ setPrice("");
           </div>
           <div>
             <label> Description </label>
-            <input/>
+            <input
+            onChange={(e)=>{
+              setDescription(e.target.value)
+            }}
+            />
           </div>
         </div>
         <button type="submit">Add</button>
