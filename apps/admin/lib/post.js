@@ -16,7 +16,7 @@ export default async function Post(formData){
   console.log('post page', formData);
 
   const url = process.env.NEXT_PUBLIC_API_URL;
-  console.log('url', url)
+  console.log('url', url);
 
  const res = await fetch(`${url}/api/availability`,
 {

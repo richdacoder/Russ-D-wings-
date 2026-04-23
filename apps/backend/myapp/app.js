@@ -17,7 +17,9 @@ app.get('/health', (req, res) => {
   .json({status:200})
 });
 
-const allowedOrigins = [process.env.NEXT_PUBLIC_API_URL];
+// const allowedOrigins = [process.env.NEXT_PUBLIC_API_URL];
+const allowedOrigins = ['http://localhost:3000'];
+console.log('allowed origin', allowedOrigins);
 
 app.use(
   cors({
@@ -33,6 +35,19 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: false }));
+
+
+  const router =
+  app.post('/availability', (req, res) => {
+    res.json({ available: true });
+  });
+
+  app.use('/api', router);
+
+console.log('check', router );
 
 app.use((req, res, next) => {
   res.status(404).json({
