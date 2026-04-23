@@ -38,16 +38,6 @@ app.use(
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: false }));
 
-
-  const route =
-  router.post('/availability', (req, res) => {
-     console.log(req.body);
-    return res.status(200).json({
-      available: true,
-      message: 'Test working',
-    })
-  });
-
   app.use('/api', route);
 
 console.log('check', route);
