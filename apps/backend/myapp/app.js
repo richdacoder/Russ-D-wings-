@@ -2,15 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const availabilityRouter = require('../routes/availability.js');
-/*
-- make sure health is 200 *
-- added allowed urls*
-- add cors*
-- make middleware
-- make 404 handler
-- make error hanler
-
-*/
 
 app.get('/health', (req, res) => {
   return res.status(200)
