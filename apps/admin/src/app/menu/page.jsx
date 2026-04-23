@@ -8,6 +8,7 @@ export default function Menu(){
 const [category, setCategory] = useState("");
 const [menuItem, setMenuItem] = useState("");
 const [price, setPrice] = useState("");
+const [description, setDescription] = useState("");
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -75,6 +76,10 @@ setPrice("");
             value={price}
             required
             />
+          </div>
+          <div>
+            <label> Description </label>
+            <input/>
           </div>
         </div>
         <button type="submit">Add</button>
