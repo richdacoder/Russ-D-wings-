@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const router = express.Router();
 /*
 - make sure health is 200 *
 - added allowed urls*
