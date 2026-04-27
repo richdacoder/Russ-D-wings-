@@ -4,9 +4,9 @@ local: {
   connection: {
     host: "127.0.0.1",
     port: 5432,
-    user: process.env.POSTGRES_USER || "postgres",
-    password: process.env.POSTGRES_PASSWORD || "yourpassword",
-    database: process.env.POSTGRES_DB || "big_jumps_db"
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD ,
+    database: process.env.POSTGRES_DB
   },
   migrations: {
     directory: './migrations'
@@ -14,3 +14,7 @@ local: {
 
 }
 }
+
+console.log("POSTGRES_USER:", process.env.POSTGRES_USER);
+console.log("POSTGRES_PASSWORD:", process.env.POSTGRES_PASSWORD);
+console.log("POSTGRES_DB:", process.env.POSTGRES_DB);
