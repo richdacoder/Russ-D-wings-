@@ -1,15 +1,16 @@
 module.exports = {
-  development:{
-  client:'pg',
-  connection:{
-    host: "postgres-db",
+local: {
+  client: "pg",
+  connection: {
+    host: "127.0.0.1",
     port: 5432,
-    user: process.env.POSTGRES_USER,
-    password: process.env.POSTGRES_PASSWORD,
-    database: process.env.POSTGRES_DB
+    user: process.env.POSTGRES_USER || "postgres",
+    password: process.env.POSTGRES_PASSWORD || "yourpassword",
+    database: process.env.POSTGRES_DB || "big_jumps_db"
   },
   migrations: {
     directory: './migrations'
   },
+
 }
 }
