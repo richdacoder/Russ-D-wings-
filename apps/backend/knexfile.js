@@ -1,5 +1,5 @@
 module.exports = {
-developement:{
+  development:{
   client:'pg',
   connection:{
     host: "postgres-db",
