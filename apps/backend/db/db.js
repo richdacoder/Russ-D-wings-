@@ -6,3 +6,5 @@ const env = process.env.NODE_ENV;
 console.log(`🚀 Database connecting to: ${env} mode`);
 
 const db = knex(knexfile[env]);
+
+module.exports = db;
