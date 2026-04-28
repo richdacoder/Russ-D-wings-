@@ -21,8 +21,11 @@ router.post('/availability', async (req, res) => {
   const data = req.body
   console.log(data);
   try{
-    const normalizeData = {
-
+    const normalizedData = {
+       date: data.date,
+       start_time: data.start_time,
+       end_time: data.end_time,
+       is_active: true
     }
   }catch(err){
     console.error(err);
