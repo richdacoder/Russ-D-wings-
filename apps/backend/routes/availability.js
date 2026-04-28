@@ -21,7 +21,9 @@ router.post('/availability', async (req, res) => {
   const data = req.body
   console.log(data);
   try{
+    const normalizeData = {
 
+    }
   }catch(err){
     console.error(err);
   }
