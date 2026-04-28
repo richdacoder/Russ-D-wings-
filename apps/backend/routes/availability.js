@@ -37,6 +37,11 @@ router.post('/availability', async (req, res) => {
     if(missingFields.length){
       return res.status(400).json({error:`missing required fields: ${missingFields.join(',')}`})
     }
+
+    const newRequest = await db('time_slots')
+    .insert(data)
+    .returning('*');
+
   }catch(err){
     console.error(err);
   }
