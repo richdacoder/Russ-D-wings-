@@ -9,7 +9,10 @@ local: {
     database: process.env.POSTGRES_DB
   },
   migrations: {
-    directory: './migrations/migrations'
+    directory: [
+      './migrations/menu',
+      './migrations/time-slots'
+    ]
   },
 
 }
