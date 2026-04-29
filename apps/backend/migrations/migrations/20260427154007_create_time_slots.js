@@ -6,11 +6,9 @@ exports.up = function (knex) {
     table.uuid('id').primary();
 
     table.date('date').notNullable();
-    table.time('start_time').notNullable();
-    table.time('end_time').notNullable();
-
+    table.timestamp('start_time', { useTz: true }).notNullable();
+    table.timestamp('end_time', { useTz: true }).notNullable();
     table.boolean('is_active').defaultTo(true);
-
     table.timestamps(true, true);
   });
 };

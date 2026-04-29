@@ -28,19 +28,31 @@ router.post('/availability', async (req, res) => {
       'is_active'
     ]
 
+    console.log('check 1');
+
     const missingFields = required.filter(f => {
       data[f]=== null ||
       data[f] === undefined ||
       data[f] === '';
     });
 
+        console.log('check 2');
+
+
     if(missingFields.length){
       return res.status(400).json({error:`missing required fields: ${missingFields.join(',')}`})
     }
 
+        console.log('check 3', data, typeof data);
+
     const newRequest = await db('time_slots')
     .insert(data)
     .returning('*');
+
+        console.log('check 4');
+
+    console.log('new request', newRequest);
+        console.log('check 5');
 
   }catch(err){
     console.error(err);
