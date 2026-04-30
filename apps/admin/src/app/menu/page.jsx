@@ -17,7 +17,8 @@ const handleSubmit = async (e) => {
 const newItem = {
   category: category,
   name: menuItem,
-  price: price
+  price: price,
+  type: 'menu'
 }
 console.log(newItem);
 await Post(newItem);
