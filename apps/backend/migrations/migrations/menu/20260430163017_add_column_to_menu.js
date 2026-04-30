@@ -3,7 +3,9 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  
+  return knex.schema.alterTable('menu',(table) => {
+    table.string('type').notNullable().defaultTo('menu');
+})
 };
 
 /**
@@ -11,5 +13,7 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  
+return knex.schema.alterTable('menu', (table) => {
+  table.dropColumn('type');
+})
 };
