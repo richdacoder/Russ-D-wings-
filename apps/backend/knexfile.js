@@ -10,8 +10,8 @@ local: {
   },
   migrations: {
     directory: [
-      './migrations/menu',
-      './migrations/time-slots'
+      './migrations/migrations/menu',
+      './migrations/migrations/time-slots'
     ]
   },
 

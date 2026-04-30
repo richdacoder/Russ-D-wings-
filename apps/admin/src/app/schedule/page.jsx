@@ -24,7 +24,8 @@ export default function Schedule(){
 
   const timeBlocks = {
     start_time: actualTime(startTime),
-    end_time: actualTime(endTime)
+    end_time: actualTime(endTime),
+    // type:'availability'
   }
   console.log(timeBlocks);
   await Post(timeBlocks);
