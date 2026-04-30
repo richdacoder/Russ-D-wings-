@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const availabilityRouter = require('../routes/availability.js');
+const menuRouter = require('../routes/menu.js');
 
 app.get('/health', (req, res) => {
   return res.status(200)
