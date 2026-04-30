@@ -14,13 +14,20 @@ router.post("/menu", async (req,res) =>{
   const data = req.body;
   console.log('menu', data);
 try{
-const require = [
+const required = [
    'category',
    'dish',
    'price',
    'stock',
    'description'
 ];
+
+const missingFields = required.filter(f => {
+  return
+  data[f] === undefined ||
+  data[f] === null ||
+  data[f] === '';
+});
 
 }catch(err){
 console.error(err);

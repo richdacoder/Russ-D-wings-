@@ -30,11 +30,11 @@ router.post('/availability', async (req, res) => {
 
     console.log('check 1');
 
-    const missingFields = required.filter(f => {
+    const missingFields = required.filter(f =>
       data[f]=== null ||
       data[f] === undefined ||
-      data[f] === '';
-    });
+      data[f] === ''
+    );
 
         console.log('check 2');
 
