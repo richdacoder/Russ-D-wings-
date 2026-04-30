@@ -16,8 +16,10 @@ const handleSubmit = async (e) => {
   if(!category || !menuItem || !price) return;
 const newItem = {
   category: category,
-  name: menuItem,
+  dish: menuItem,
   price: price,
+  stock: stock,
+  description: description,
   type: 'menu'
 }
 console.log(newItem);
