@@ -45,13 +45,13 @@ router.post('/availability', async (req, res) => {
 
         console.log('check 3', data, typeof data);
 
-    const newRequest = await db('time_slots')
+    const query = await db('time_slots')
     .insert(data)
     .returning('*');
 
         console.log('check 4');
 
-    console.log('new request', newRequest);
+    console.log('new request', query);
         console.log('check 5');
 
   }catch(err){

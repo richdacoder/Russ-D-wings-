@@ -3,9 +3,9 @@ const router = express.Router();
 const db = require('../db/db.js');
 
 /*
-- make require array
-- check for missing field
-- make 404 error
+- make require array x
+- check for missing field x
+- make 404 errorx
 - insert into database
 
 
@@ -31,6 +31,12 @@ const missingFields = required.filter(f =>
     if(missingFields.length){
       return res.status(400).json({error:`missing required fields: ${missingFields.join(',')}`})
     }
+
+    const query = await db('menu')
+    .insert(data)
+    .returning('*');
+
+    console.log('after post menu')
 
   }catch(err){
 console.error(err);
