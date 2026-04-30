@@ -14,11 +14,12 @@
 
 export default async function Post(formData){
   console.log('post page', formData);
+  const type = formData.type;
 
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log('url', url);
 
- const res = await fetch(`${url}/api/availability`,
+ const res = await fetch(`${url}/api/${type}`,
 {
   method: 'POST',
   headers:{
