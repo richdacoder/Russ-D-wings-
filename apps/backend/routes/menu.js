@@ -28,7 +28,11 @@ const missingFields = required.filter(f =>
   data[f] === ''
 );
 
-}catch(err){
+    if(missingFields.length){
+      return res.status(400).json({error:`missing required fields: ${missingFields.join(',')}`})
+    }
+
+  }catch(err){
 console.error(err);
 }
 })
