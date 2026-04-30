@@ -33,6 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 
 console.log('before api call', availabilityRouter);
 app.use('/api', availabilityRouter);
+app.use('/api', menuRouter);
 
 app.use((req, res, next) => {
   res.status(404).json({
