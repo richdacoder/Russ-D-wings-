@@ -22,12 +22,11 @@ const required = [
    'description'
 ];
 
-const missingFields = required.filter(f => {
-  return
+const missingFields = required.filter(f =>
   data[f] === undefined ||
   data[f] === null ||
-  data[f] === '';
-});
+  data[f] === ''
+);
 
 }catch(err){
 console.error(err);
