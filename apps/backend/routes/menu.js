@@ -36,7 +36,7 @@ const missingFields = required.filter(f =>
     .insert(data)
     .returning('*');
 
-    console.log('after post menu')
+    console.log('after post menu', query);
 
   }catch(err){
 console.error(err);
