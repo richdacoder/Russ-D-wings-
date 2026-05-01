@@ -1,3 +1,7 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
 
 export default function RootLayout({ children }) {
   return (
@@ -5,15 +9,19 @@ export default function RootLayout({ children }) {
       lang="en"
     >
       <header>
-        <img
-        src="#"/>
+        <Link>
+        <Image
+        src="/"
+        alt="logo"
+        />
+        </Link>
         <div>logo place here</div>
         <nav>
-            <a href="#"> Menu </a>
-            <a href="#"> Order </a>
-            <a href="#"> Catering </a>
-            <a href="#"> About Us </a>
-            <a href="#"> Contact Us </a>
+            <a href="/menu"> Menu </a>
+            <a href="/order"> Order </a>
+            <a href="/catering"> Catering </a>
+            <a href="/about-us"> About Us </a>
+            <a href="/contact-us"> Contact Us </a>
         </nav>
       </header>
       <body className="min-h-full flex flex-col">{children}</body>
