@@ -9,20 +9,19 @@ function Home(){
 
 return(
   <div>
-    <Link href="#"><Image src="/logo.png" width={100} height={100}  alt="logo"/></Link>
     <h1 className="russ-d-wings" >Russ D wings</h1>
 
     <Image
       width={100} height={100}
-      class="russ-animation"
+      className="russ-animation"
       alt="russ-animation"
     />
 
     <div>
-    <button className="order-btn" href="#">Order</button>
+    <Link className="order-btn" href="/order">Order</Link>
     </div>
 
-    <h2 class="quote" >We Litty</h2>
+    <h2 className="quote" >We Litty</h2>
 
     <Image
       src="/logo.png"

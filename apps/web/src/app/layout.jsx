@@ -17,13 +17,13 @@ export default function RootLayout({ children }) {
           width={100}
           height={100}        />
         </Link>
-        <div>logo place here</div>
+
         <nav>
             <Link href="/menu"> Menu </Link>
             <Link href="/order"> Order </Link>
             <Link href="/catering"> Catering </Link>
             <Link href="/about-us"> about Us </Link>
-            <Link href="/contct-us"> Contact Us </Link>
+            <Link href="/contact-us"> Contact Us </Link>
         </nav>
       </header>
             {children}
