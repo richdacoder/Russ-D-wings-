@@ -10,6 +10,8 @@ export default function RootLayout({ children }) {
         <div>logo place here</div>
         <nav>
             <a href="#"> Menu </a>
+            <a href="#"> Order </a>
+            <a href="#"> Catering </a>
             <a href="#"> About Us </a>
             <a href="#"> Contact Us </a>
         </nav>

@@ -4,7 +4,8 @@ function Home(){
 
 return(
   <div>
-    <h1>Russ D wings</h1>
+    <a href="#"><img src="#" /></a>
+    <h1 class="russ-d-wings" >Russ D wings</h1>
 
     <img
     src="#"
@@ -12,10 +13,10 @@ return(
     />
 
     <div>
-    <button>Order</button>
+    <button class="order-btn" href="#">Order</button>
     </div>
 
-    <h2>We Litty</h2>
+    <h2 class="quote" >We Litty</h2>
 
     <img
     src="#"
