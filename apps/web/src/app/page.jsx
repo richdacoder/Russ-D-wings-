@@ -11,8 +11,11 @@ return(
     class="russ-animation"
     />
 
+    <div>
     <button>Order</button>
-    <h2>we Litty</h2>
+    </div>
+
+    <h2>We Litty</h2>
 
     <img
     src="#"
