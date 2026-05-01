@@ -1,26 +1,34 @@
+"use client";
+
 import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+
 
 function Home(){
 
 return(
   <div>
-    <a href="#"><img src="#" /></a>
-    <h1 class="russ-d-wings" >Russ D wings</h1>
+    <Link href="#"><Image src="/logo.png" width={100} height={100}  alt="logo"/></Link>
+    <h1 className="russ-d-wings" >Russ D wings</h1>
 
-    <img
-    src="#"
-    class="russ-animation"
+    <Image
+      width={100} height={100}
+      class="russ-animation"
+      alt="russ-animation"
     />
 
     <div>
-    <button class="order-btn" href="#">Order</button>
+    <button className="order-btn" href="#">Order</button>
     </div>
 
     <h2 class="quote" >We Litty</h2>
 
-    <img
-    src="#"
-    class="wings"
+    <Image
+      src="/logo.png"
+      width={100} height={100}
+      className="wings"
+      alt="wings"
     />
   </div>
 )

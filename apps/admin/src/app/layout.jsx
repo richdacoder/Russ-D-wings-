@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import "./styles/globals.css";
 
@@ -40,20 +42,20 @@ return(
 <body>
   <header className="header">
   <div>
-    <a href="/">
+    <Link href="/">
       logo place here
       <link className="logo"></link>
-    </a>
+    </Link>
   </div>
       <div>
 
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
 
      <nav className={`navbar ${menuOpen? "open" : "" }`}>
-      <a href="/">Home</a>
-      <a href="/request">Request</a>
-      <a href="/schedule">Schedule</a>
-      <a href="/menu">Menu</a>
+      <Link href="/">Home</Link>
+      <Link href="/request">Request</Link>
+      <Link href="/schedule">Schedule</Link>
+      <Link href="/menu">Menu</Link>
       </nav>
       </div>
   </header>

@@ -8,23 +8,26 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
     >
-      <header>
-        <Link>
+      <body className="min-h-full flex flex-col">
+              <header>
+        <Link href="/" >
         <Image
-        src="/"
-        alt="logo"
-        />
+          src="/logo.png"
+          alt="logo"
+          width={100}
+          height={100}        />
         </Link>
         <div>logo place here</div>
         <nav>
-            <a href="/menu"> Menu </a>
-            <a href="/order"> Order </a>
-            <a href="/catering"> Catering </a>
-            <a href="/about-us"> About Us </a>
-            <a href="/contact-us"> Contact Us </a>
+            <Link href="/menu"> Menu </Link>
+            <Link href="/order"> Order </Link>
+            <Link href="/catering"> Catering </Link>
+            <Link href="/about-us"> about Us </Link>
+            <Link href="/contct-us"> Contact Us </Link>
         </nav>
       </header>
-      <body className="min-h-full flex flex-col">{children}</body>
+            {children}
+  </body>
     </html>
   );
 }
