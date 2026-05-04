@@ -21,6 +21,7 @@ export default function Order(){
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [dish, setDish] = useState("");
+  const [side, setSide] = useState("");
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
