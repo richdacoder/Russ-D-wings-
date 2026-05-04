@@ -22,6 +22,7 @@ export default function Order(){
   const [email, setEmail] = useState("");
   const [dish, setDish] = useState("");
   const [side, setSide] = useState("");
+  const [drink, setDrink] = useState("");
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
