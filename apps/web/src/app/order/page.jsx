@@ -43,11 +43,13 @@ return(
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div key={field}>
             <label> {field} </label>
-            <input required/>
+            <input
+            type={field}
+            required/>
           </div>
          ) )
       }
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   </div>
 )
