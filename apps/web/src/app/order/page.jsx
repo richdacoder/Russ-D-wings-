@@ -30,10 +30,18 @@ export default function Order(){
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
-  const handleChange = () => {
-
+  const changeType = (field) => {
+    if(field !== 'Phone' && field !== 'Email'){
+             return "text"
+            } else if(field === 'Phone'){
+              return "tel"
+  } else {
+    return "email"
   }
-
+  }
+  console.log(changeType("Email"));
+console.log(changeType("Phone"));
+console.log(changeType("First Name"));
 
 
 return(
