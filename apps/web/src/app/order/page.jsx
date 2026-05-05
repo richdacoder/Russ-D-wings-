@@ -38,12 +38,16 @@ export default function Order(){
 
 return(
   <div>
-    <form>
+    <form >
       {
-        ['First Name', 'Last Name', 'Phone', 'Email']
+        ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
+          <div key={field}>
+            <label> {field} </label>
+            <input/>
+          </div>
+         ) )
       }
-
-
+      <button>Submit</button>
     </form>
   </div>
 )
