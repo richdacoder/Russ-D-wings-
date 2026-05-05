@@ -21,6 +21,7 @@ on next and express route
 */
 export default function Order(){
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [dish, setDish] = useState("");
@@ -38,7 +39,9 @@ export default function Order(){
 return(
   <div>
     <form>
-
+      {
+        ['First Name', 'Last Name', 'Phone', 'Email']
+      }
 
 
     </form>
