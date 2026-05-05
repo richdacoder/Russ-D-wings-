@@ -10,6 +10,9 @@ import { useState, useEffect } from "react";
 - put them in the input with onchange
 - put them in an object
 - handle submit
+
+
+- create array name, email,
 -----------------------------------------
 
 for catering use type to differient in code base all coding logic for catering done
@@ -17,7 +20,7 @@ on next and express route
 
 */
 export default function Order(){
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [dish, setDish] = useState("");
@@ -26,13 +29,16 @@ export default function Order(){
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
+  const handleChange = () => {
 
+  }
 
 
 
 return(
   <div>
     <form>
+
 
 
     </form>
