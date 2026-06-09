@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 /*
 - create construct varibales
-- make GET request for menu and availablity
+- make GET request for menu and availablity <<<<<<
 - make timslots display for sameday
 - make menu display
 - put them in the input with onchange
