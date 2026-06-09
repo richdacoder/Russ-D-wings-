@@ -45,6 +45,10 @@ export default function Schedule(){
  *** make the time legit data
  - make the time not able to over lap each other
  - the timing is for todayxxx
+
+
+ **
+ semnd confirmation of meal and time
 */
   return(
     <div>

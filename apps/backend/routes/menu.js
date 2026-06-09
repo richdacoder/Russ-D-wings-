@@ -10,6 +10,28 @@ const db = require('../db/db.js');
 
 
 */
+router.get("/menu", async (req,res) =>{
+  try{
+   const menu = await db("menu")
+  .select('*');
+
+  console.log('look', menu);
+
+  res.status(200).json(menu);
+
+  } catch(err){
+    console.error(err);
+    res.status(500).json({
+      error: "Failed to fetch menu"
+    });
+  }
+
+}
+)
+
+
+
+
 router.post("/menu", async (req,res) =>{
   const data = req.body;
   console.log('menu', data);
@@ -42,5 +64,6 @@ const missingFields = required.filter(f =>
 console.error(err);
 }
 })
+
 
 module.exports = router
