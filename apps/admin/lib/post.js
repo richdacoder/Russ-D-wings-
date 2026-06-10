@@ -28,6 +28,8 @@ export default async function Post(formData){
   body: JSON.stringify(formData)
 });
 
+console.log('after res and post');
+
 if(!res.ok){
   const errorText = await res.text();
   console.error('error res', errorText);

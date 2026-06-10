@@ -6,6 +6,7 @@ import Post from "../../../lib/post.js";
 export default function Schedule(){
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
+  const [isActive, setIsActive] = useState(true);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -25,9 +26,10 @@ export default function Schedule(){
   const timeBlocks = {
     start_time: actualTime(startTime),
     end_time: actualTime(endTime),
-    type:'availability'
+    type:'availability',
+    is_active: isActive
   }
-  console.log(timeBlocks);
+  console.log(timeBlocks, 'is active', isActive);
   await Post(timeBlocks);
   console.log('after post')
   setStartTime("");

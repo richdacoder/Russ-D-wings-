@@ -22,7 +22,6 @@ router.post('/availability', async (req, res) => {
   console.log(data);
   try{
     const required = [
-      'date',
       'start_time',
       'end_time',
       'is_active'
