@@ -1,7 +1,7 @@
 "use client";
 
 import {useState, useEffect} from "react";
-import Post from "../../../lib/post.js";
+import Post from "../../../../lib/post.js";
 
 
 export default function Menu(){
