@@ -49,6 +49,7 @@ router.post('/availability', async (req, res) => {
     .returning('*');
 
         console.log('check 4');
+    return res.status(201).json(query);
 
     console.log('new request', query);
         console.log('check 5');
