@@ -58,6 +58,8 @@ const missingFields = required.filter(f =>
     .insert(data)
     .returning('*');
 
+    return res.status(201).json(query);
+
     console.log('after post menu', query);
 
   }catch(err){

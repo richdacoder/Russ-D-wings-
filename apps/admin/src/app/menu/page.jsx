@@ -5,7 +5,7 @@ import Post from "../../../lib/post.js";
 
 
 export default function Menu(){
-const [category, setCategory] = useState("");
+const [category, setCategory] = useState("main");
 const [menuItem, setMenuItem] = useState("");
 const [price, setPrice] = useState("");
 const [description, setDescription] = useState("");
@@ -24,6 +24,9 @@ const newItem = {
 }
 console.log(newItem);
 await Post(newItem);
+
+console.log('after await post');
+
 setCategory("");
 setMenuItem("");
 setPrice("");
