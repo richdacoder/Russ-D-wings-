@@ -34,7 +34,7 @@ export default function Order(){
 
   useEffect( () => {
     async function getMenu(){
-      const data = await Get();
+      const data = await Get("menu");
       setMenu(data);
       console.log('menu test', data);
     }

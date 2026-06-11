@@ -10,6 +10,8 @@
 */
 
 export default async function Get(endpoint){
+
+  console.log('endpoint', endpoint);
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log('url yes', url);
   console.log('ENV:', process.env.NEXT_PUBLIC_API_URL);
