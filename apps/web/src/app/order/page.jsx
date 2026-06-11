@@ -30,15 +30,20 @@ export default function Order(){
   const [drink, setDrink] = useState("");
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [menu, setMenu] = useState("");
 
   useEffect( () => {
     async function getMenu(){
       const data = await Get();
+      setMenu(data);
       console.log('menu test', data);
     }
     getMenu();
   }
-  )
+  );
+
+  console.log('testing test menu', menu);
+
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
              return "text"

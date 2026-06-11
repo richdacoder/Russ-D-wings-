@@ -18,6 +18,8 @@ export default async function Post(formData){
 
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log('url', url);
+  console.log('ENV:', process.env.NEXT_PUBLIC_API_URL);
+console.log('RUNTIME TYPE:', typeof window === 'undefined' ? 'server' : 'client');
 
  const res = await fetch(`${url}/api/${type}`,
 {
@@ -35,5 +37,7 @@ if(!res.ok){
 }
  const data = await res.json();
  console.log(data);
+
+ return data;
 
 }

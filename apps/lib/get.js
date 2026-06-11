@@ -10,10 +10,11 @@
 */
 
 export default async function Get(){
-  try{
-
   const url = process.env.NEXT_PUBLIC_API_URL;
-  console.log('url', url);
+  console.log('url yes', url);
+  console.log('ENV:', process.env.NEXT_PUBLIC_API_URL);
+  console.log('RUNTIME TYPE:', typeof window === 'undefined' ? 'server' : 'client');
+  try{
 
   const res = await fetch(
   `${url}/api/menu`,
