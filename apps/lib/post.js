@@ -17,7 +17,7 @@ export default async function Post(formData){
   const type = formData.type;
 
   const url = process.env.NEXT_PUBLIC_API_URL;
-  console.log('url', url);
+  console.log('url', process.env);
   console.log('ENV:', process.env.NEXT_PUBLIC_API_URL);
 console.log('RUNTIME TYPE:', typeof window === 'undefined' ? 'server' : 'client');
 
