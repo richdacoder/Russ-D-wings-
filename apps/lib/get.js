@@ -9,7 +9,7 @@
 
 */
 
-export default async function Get(){
+export default async function Get(endpoint){
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log('url yes', url);
   console.log('ENV:', process.env.NEXT_PUBLIC_API_URL);
@@ -17,12 +17,16 @@ export default async function Get(){
   try{
 
   const res = await fetch(
-  `${url}/api/menu`,
+  `${url}/api/${endpoint}`,
   {
     method: 'GET'
     }
 
   )
+
+  if (!res.ok) {
+    throw new Error(`Request failed: ${res.status}`);
+  }
   const data = await res.json();
   console.log('get page data', data);
 

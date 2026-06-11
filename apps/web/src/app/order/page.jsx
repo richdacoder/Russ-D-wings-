@@ -39,7 +39,8 @@ export default function Order(){
       console.log('menu test', data);
     }
     getMenu();
-  }
+  },
+  []
   );
 
   console.log('testing test menu', menu);
