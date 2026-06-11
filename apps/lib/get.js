@@ -9,19 +9,26 @@
 
 */
 
-export async function get(formdata){
+export async function get(){
+  try{
+
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log('url', url);
 
   const res = await fetch(
   `${url}/api/menu`,
   {
-    method: 'GET',
+    method: 'GET'
     }
 
   )
-  const data = await res.json()
+  const data = await res.json();
 
+  return data
+
+  } catch(err){
+    console.log(err)
+  }
 
 
 
