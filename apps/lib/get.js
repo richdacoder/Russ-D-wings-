@@ -9,6 +9,9 @@
 
 */
 
-export async function get(){
+export async function get(formdata){
+  const url = process.env.NEXT_PUBLIC_API_URL;
+  console.log('url', url);
+
 
 }
