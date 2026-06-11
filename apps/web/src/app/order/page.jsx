@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Get from "../../../../lib/get.js";
 
 /*
 - create construct varibales
@@ -30,6 +31,14 @@ export default function Order(){
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
+  useEffect( () => {
+    async function getMenu(){
+      const data = await Get();
+      console.log('menu test', data);
+    }
+    getMenu();
+  }
+  )
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
              return "text"

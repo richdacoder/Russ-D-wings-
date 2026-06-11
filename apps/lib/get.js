@@ -9,7 +9,7 @@
 
 */
 
-export async function get(){
+export default async function Get(){
   try{
 
   const url = process.env.NEXT_PUBLIC_API_URL;
@@ -23,6 +23,7 @@ export async function get(){
 
   )
   const data = await res.json();
+  console.log('get page data', data);
 
   return data
 
