@@ -10,7 +10,10 @@ app.get('/health', (req, res) => {
 });
 
 // const allowedOrigins = [process.env.NEXT_PUBLIC_API_URL];
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:3002'
+];
 console.log('allowed origin', allowedOrigins);
 
 app.use(
