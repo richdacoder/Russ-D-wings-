@@ -31,6 +31,7 @@ export default function Order(){
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [menu, setMenu] = useState("");
+  const [list, setList] = useState(["main", "side", "drink"]);
 
   useEffect( () => {
     async function getMenu(){
@@ -79,15 +80,13 @@ return(
         </h1>
 
         <div>
-          <label>Main</label>
+          {/* {
+            menu.type &&  (
+          <label></label>
           <input
           />
-          <label>Side</label>
-          <input
-          />
-          <label>Drink</label>
-          <input
-          />
+            )
+          } */}
         </div>
 
 
