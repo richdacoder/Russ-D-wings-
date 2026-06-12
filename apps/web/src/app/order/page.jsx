@@ -78,6 +78,18 @@ return(
           Menu
         </h1>
 
+        <div>
+          <label>Main</label>
+          <input
+          />
+          <label>Side</label>
+          <input
+          />
+          <label>Drink</label>
+          <input
+          />
+        </div>
+
 
       </div>
       <button type="submit">Submit</button>
