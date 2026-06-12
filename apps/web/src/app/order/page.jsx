@@ -35,9 +35,9 @@ export default function Order(){
 
   useEffect( () => {
     async function getMenu(){
-      const data = await Get("menu");
-      setMenu(data);
-      console.log('menu test', data);
+      const dataArray = await Get("menu");
+      setMenu(dataArray);
+      console.log('here is menu test', dataArray);
     }
     getMenu();
   },
@@ -79,15 +79,19 @@ return(
           Menu
         </h1>
 
-        <div>
           {/* {
-            menu.type &&  (
-          <label></label>
+            list.map((item) => {
+            menu.map( c.category === item ) && (
+              <div>
+          <label>{item}</label>
           <input
           />
+          </div>
+
+            )
+            }
             )
           } */}
-        </div>
 
 
       </div>
