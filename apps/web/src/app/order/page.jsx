@@ -30,21 +30,22 @@ export default function Order(){
   const [drink, setDrink] = useState("");
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [menu, setMenu] = useState("");
+  const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
 
   useEffect( () => {
     async function getMenu(){
       const dataArray = await Get("menu");
       setMenu(dataArray);
-      console.log('here is menu test', dataArray);
+      console.log('here is data array',  dataArray);
     }
     getMenu();
   },
   []
   );
 
-  console.log('testing test menu', menu);
+  console.log('testing test menu', menu.map((i) => { return i }));
+  console.log('list', typeof list);
 
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
@@ -80,16 +81,18 @@ return(
         </h1>
 
           {
-            list.map((item) => {
-              console.log('item?', item)
-             return  item
-            menu.map( k
+            menu.map((item) => {
+              console.log('item?', item);
+          //   menu.forEach((item) => {
+          //     console.log('item?', item);
+          //   }
+
           //     category === item ) && (
           //     <div>
           // <label>{item}</label>
           // </div>
-
-            )
+          //   )
+            return <div key={item}>{item}</div>
             }
             )
           }
