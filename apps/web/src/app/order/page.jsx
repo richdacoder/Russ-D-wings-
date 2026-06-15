@@ -79,19 +79,20 @@ return(
           Menu
         </h1>
 
-          {/* {
+          {
             list.map((item) => {
-            menu.map( c.category === item ) && (
-              <div>
-          <label>{item}</label>
-          <input
-          />
-          </div>
+              console.log('item?', item)
+             return  item
+            menu.map( k
+          //     category === item ) && (
+          //     <div>
+          // <label>{item}</label>
+          // </div>
 
             )
             }
             )
-          } */}
+          }
 
 
       </div>
