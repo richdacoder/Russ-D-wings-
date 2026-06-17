@@ -29,7 +29,9 @@ export default function Order(){
   const [side, setSide] = useState("");
   const [drink, setDrink] = useState("");
   const [total, setTotal] = useState(0);
+  const [pickUpTime, setPickUpTime] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [formData, setFormData] = useState({})
   const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
 
@@ -81,7 +83,7 @@ return(
         </h1>
 
           {
-            menu.map((item) => {
+            menu.map((item, i) => {
               console.log('item?', item);
           //   menu.forEach((item) => {
           //     console.log('item?', item);
@@ -92,7 +94,7 @@ return(
           // <label>{item}</label>
           // </div>
           //   )
-            return <div key={item}>{item}</div>
+            return <div key={i}>{item}</div>
             }
             )
           }
