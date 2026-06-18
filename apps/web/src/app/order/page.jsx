@@ -59,9 +59,11 @@ export default function Order(){
   }
   }
 
-  const sortByType = menu.map(() => {
+  const sortByType = menu.map((item, index) => {
 
   })
+
+
 
   console.log(changeType("Email"));
 console.log(changeType("Phone"));
@@ -90,15 +92,6 @@ return(
           {
             menu.map((item, index) => {
               console.log('item?', item);
-          //   menu.forEach((item) => {
-          //     console.log('item?', item);
-          //   }
-
-          //     category === item ) && (
-          //     <div>
-          // <label>{item}</label>
-          // </div>
-          //   )
             return <div>
             <div key={item.id || item.id || item.dish || index} >{item.dish}</div>
             </div>
@@ -108,6 +101,12 @@ return(
 
             <div>
             <h2> Main </h2>
+            <button
+            type="button"
+            onClick={()=> { setQuantity( quantity + 1)} }
+            >+</button>
+            <label>{quantity}</label>
+            <button>-</button>
             </div>
 
             <div>
