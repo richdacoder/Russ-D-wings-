@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Get from "../../../../lib/get.js";
 
 /*
+*** each function gets own file
 - seperate items by types
 - make ammount and subtract with and total
 - create construct varibales
@@ -89,6 +90,9 @@ export default function Order(){
               [item.id]: currentQtty > 1 ? currentQtty - 1 : 0
             }))}}
             >-</button>
+            <div>
+              <p>${item.price} </p>
+            </div>
 
     </div>
   })
@@ -143,9 +147,15 @@ return(
             </div>
 
             <div>
-              <h5>Pick up time</h5>
+              <h5>Total Amount</h5>
+            </div>
+
+            <div>
+              <h6>Pick up time</h6>
               <input/>
             </div>
+
+
       </div>
       <button type="submit">Submit</button>
     </form>
