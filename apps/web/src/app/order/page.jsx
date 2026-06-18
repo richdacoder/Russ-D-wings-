@@ -83,7 +83,7 @@ return(
         </h1>
 
           {
-            menu.map((item, i) => {
+            menu.map((item, index) => {
               console.log('item?', item);
           //   menu.forEach((item) => {
           //     console.log('item?', item);
@@ -94,7 +94,7 @@ return(
           // <label>{item}</label>
           // </div>
           //   )
-            return <div key={i}>{item}</div>
+            return <div key={item.id || item.id || item.dish || index} >{item.dish}</div>
             }
             )
           }
