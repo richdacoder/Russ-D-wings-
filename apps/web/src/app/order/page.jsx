@@ -64,16 +64,21 @@ export default function Order(){
 
   const sortByType = menu.map((item, index) => {
 
-    const currentQtty = itemQuantity[item.id];
+    const currentQtty = itemQuantity[item.id] || 0;
 
     return <div>
       {item.dish}
                   <button
             type="button"
-            onClick={()=> { setItemQuantity( quantity + 1)} }
+            onClick={()=> {
+              setItemQuantity(prev => ({
+                ...prev,
+                [item.id]: currentQtty + 1
+              }))
+            } }
             >+</button>
             <label
-            >{quantity}</label>
+            >{currentQtty}</label>
             <button
             type="button"
             onClick={() => { setItemQuantity(quantity > 1 ? quantity - 1 : 0 )}}
