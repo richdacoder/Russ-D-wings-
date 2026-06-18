@@ -30,7 +30,7 @@ export default function Order(){
   const [drink, setDrink] = useState("");
   const [total, setTotal] = useState(0);
   const [pickUpTime, setPickUpTime] = useState("");
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
   const [formData, setFormData] = useState({})
   const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
@@ -105,8 +105,12 @@ return(
             type="button"
             onClick={()=> { setQuantity( quantity + 1)} }
             >+</button>
-            <label>{quantity}</label>
-            <button>-</button>
+            <label
+            >{quantity}</label>
+            <button
+            type="button"
+            onClick={() => { setQuantity(quantity > 1 ? quantity - 1 : 0 )}}
+            >-</button>
             </div>
 
             <div>
