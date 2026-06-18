@@ -31,7 +31,8 @@ export default function Order(){
   const [total, setTotal] = useState(0);
   const [pickUpTime, setPickUpTime] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [formData, setFormData] = useState({})
+  const [itemQuantity, setItemQuantity] = useState({})
+  const [formData, setFormData] = useState({});
   const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
 
@@ -45,6 +46,8 @@ export default function Order(){
   },
   []
   );
+
+  console.log('item quantitiy', itemQuantity);
 
   console.log('testing test menu', menu.map((i) => { return i }));
   console.log('list', typeof list);
@@ -61,6 +64,22 @@ export default function Order(){
 
   const sortByType = menu.map((item, index) => {
 
+    const currentQtty = itemQuantity[item.id];
+
+    return <div>
+      {item.dish}
+                  <button
+            type="button"
+            onClick={()=> { setItemQuantity( quantity + 1)} }
+            >+</button>
+            <label
+            >{quantity}</label>
+            <button
+            type="button"
+            onClick={() => { setItemQuantity(quantity > 1 ? quantity - 1 : 0 )}}
+            >-</button>
+
+    </div>
   })
 
 
@@ -101,16 +120,7 @@ return(
 
             <div>
             <h2> Main </h2>
-            <button
-            type="button"
-            onClick={()=> { setQuantity( quantity + 1)} }
-            >+</button>
-            <label
-            >{quantity}</label>
-            <button
-            type="button"
-            onClick={() => { setQuantity(quantity > 1 ? quantity - 1 : 0 )}}
-            >-</button>
+            {sortByType}
             </div>
 
             <div>
