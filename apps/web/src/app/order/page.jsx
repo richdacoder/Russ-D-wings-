@@ -58,6 +58,11 @@ export default function Order(){
     return "email"
   }
   }
+
+  const sortByType = menu.map(() => {
+
+  })
+
   console.log(changeType("Email"));
 console.log(changeType("Phone"));
 console.log(changeType("First Name"));
@@ -94,10 +99,24 @@ return(
           // <label>{item}</label>
           // </div>
           //   )
-            return <div key={item.id || item.id || item.dish || index} >{item.dish}</div>
+            return <div>
+            <div key={item.id || item.id || item.dish || index} >{item.dish}</div>
+            </div>
             }
             )
           }
+
+            <div>
+            <h2> Main </h2>
+            </div>
+
+            <div>
+            <h3> Side </h3>
+            </div>
+
+            <div>
+            <h4> Drink </h4>
+            </div>
 
 
       </div>
