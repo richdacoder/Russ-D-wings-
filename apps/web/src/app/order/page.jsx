@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Get from "../../../../lib/get.js";
 
 /*
+- seperate items by types
+- make ammount and subtract with and total
 - create construct varibales
 - make GET request for menu and availablity <<<<<<
 - make timslots display for sameday
@@ -20,6 +22,7 @@ for catering use type to differient in code base all coding logic for catering d
 on next and express route
 
 */
+
 export default function Order(){
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -81,7 +84,10 @@ export default function Order(){
             >{currentQtty}</label>
             <button
             type="button"
-            onClick={() => { setItemQuantity(quantity > 1 ? quantity - 1 : 0 )}}
+            onClick={() => { setItemQuantity(prev => ({
+              ...prev,
+              [item.id]: currentQtty > 1 ? currentQtty - 1 : 0
+            }))}}
             >-</button>
 
     </div>
@@ -136,7 +142,9 @@ return(
             <h4> Drink </h4>
             </div>
 
-
+            <div>
+              <h5>Pick up time</h5>
+            </div>
       </div>
       <button type="submit">Submit</button>
     </form>
