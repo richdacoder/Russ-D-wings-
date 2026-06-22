@@ -75,6 +75,8 @@ export default function Order(){
     console.log('itemQuantity', itemQuantity);
     console.log('item category', item.category);
 
+    if (type === item.category)
+
     return <div>
       {item.dish}
                   <button
@@ -140,15 +142,19 @@ return(
 
             <div>
             <h2> Main </h2>
-            {sortByType('side')}
+            {sortByType('main')}
+
             </div>
 
             <div>
             <h3> Side </h3>
+            {sortByType('side')}
             </div>
 
             <div>
             <h4> Drink </h4>
+            {sortByType('drink')}
+
             </div>
 
             <div>
