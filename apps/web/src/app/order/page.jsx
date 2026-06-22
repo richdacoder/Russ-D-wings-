@@ -66,12 +66,14 @@ export default function Order(){
   }
   }
 
-  const sortByType = () => {
-   menu.map((item, index) => {
+  const sortByType = (type) => {
+    console.log('type', type);
+    return menu.map((item, index) => {
 
     const currentQtty = itemQuantity[item.id] || 0;
     console.log('currentQtty', currentQtty );
     console.log('itemQuantity', itemQuantity);
+    console.log('item category', item.category);
 
     return <div>
       {item.dish}
@@ -138,7 +140,7 @@ return(
 
             <div>
             <h2> Main </h2>
-            {sortByType}
+            {sortByType('side')}
             </div>
 
             <div>
