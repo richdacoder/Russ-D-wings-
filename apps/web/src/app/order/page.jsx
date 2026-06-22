@@ -6,7 +6,7 @@ import Get from "../../../../lib/get.js";
 /*
 *** each function gets own file
 - seperate items by types
-- make ammount and subtract with and total
+- make ammount and subtract with and total (create cart component)
 - create construct varibales
 - make GET request for menu and availablity <<<<<<
 - make timslots display for sameday
@@ -66,9 +66,12 @@ export default function Order(){
   }
   }
 
-  const sortByType = menu.map((item, index) => {
+  const sortByType = () => {
+   menu.map((item, index) => {
 
     const currentQtty = itemQuantity[item.id] || 0;
+    console.log('currentQtty', currentQtty );
+    console.log('itemQuantity', itemQuantity);
 
     return <div>
       {item.dish}
@@ -96,7 +99,7 @@ export default function Order(){
 
     </div>
   })
-
+}
 
 
   console.log(changeType("Email"));
