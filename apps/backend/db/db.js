@@ -3,7 +3,7 @@ const knexfile = require('../knexfile.js');
 
 const env = process.env.NODE_ENV || 'local';
 
-console.log(`🚀 Database connecting to: ${env} mode`);
+console.log(`🚀 Database connecting  to: ${env} mode`);
 
 const db = knex(knexfile[env]);
 
