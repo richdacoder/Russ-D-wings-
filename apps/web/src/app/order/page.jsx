@@ -130,17 +130,6 @@ return(
         <h1>
           Menu
         </h1>
-
-          {
-            menu.map((item, index) => {
-              console.log('item?', item);
-            return <div>
-            <div key={item.id || item.id || item.dish || index} >{item.dish}</div>
-            </div>
-            }
-            )
-          }
-
             <div>
             <h2> Main </h2>
             {sortByType('main')}
