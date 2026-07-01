@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Get from "../../../../lib/get.js";
+import Cart from "./components/cart.jsx";
 
 /*
 *** each function gets own file
