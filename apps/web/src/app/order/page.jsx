@@ -5,7 +5,7 @@ import Get from "../../../../lib/get.js";
 
 /*
 *** each function gets own file
-- seperate items by types
+- seperate items by types xxx
 - make ammount and subtract with and total (create cart component)
 - create construct varibales
 - make GET request for menu and availablity <<<<<<
