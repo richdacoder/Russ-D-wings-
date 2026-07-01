@@ -149,6 +149,7 @@ return(
             </div>
 
             <div>
+              <Cart/>
               <h5>Total Amount</h5>
             </div>
 
