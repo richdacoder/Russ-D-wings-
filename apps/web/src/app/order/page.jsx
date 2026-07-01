@@ -8,6 +8,7 @@ import Cart from "./components/cart.jsx";
 *** each function gets own file
 - seperate items by types xxx
 - make ammount and subtract with and total (create cart component)
+(send menu, send list)
 - create construct varibales
 - make GET request for menu and availablity <<<<<<
 - make timslots display for sameday
@@ -102,7 +103,13 @@ export default function Order(){
             <div>
               <p>${item.price} </p>
             </div>
-
+            <div>
+              <button
+                type="button"
+                >
+                Add To Cart
+              </button>
+            </div>
     </div>
   })
 }
@@ -149,7 +156,9 @@ return(
             </div>
 
             <div>
-              <Cart/>
+              <Cart
+              menu={menu}
+              />
               <h5>Total Amount</h5>
             </div>
 
