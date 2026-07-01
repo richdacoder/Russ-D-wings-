@@ -162,7 +162,7 @@ return(
 
             <div>
               <Cart
-              menu={menu}
+              addToCart={addToCart}
               />
               <h5>Total Amount</h5>
             </div>
