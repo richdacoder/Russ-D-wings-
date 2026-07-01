@@ -77,7 +77,8 @@ export default function Order(){
 
     if (type === item.category)
 
-    return <div>
+    return <div
+    key={item.id}>
       {item.dish}
                   <button
             type="button"
