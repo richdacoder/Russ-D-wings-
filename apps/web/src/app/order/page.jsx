@@ -41,7 +41,7 @@ export default function Order(){
   const [formData, setFormData] = useState({});
   const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
-  const [test, setTest] = useState([]);
+  const [addToCart, setAddToCart] = useState([]);
 
   useEffect( () => {
     async function getMenu(){
@@ -69,7 +69,7 @@ export default function Order(){
   }
   }
 
-  console.log('test click e', test);
+  console.log('test click addtocart', addToCart);
 
   const sortByType = (type) => {
     console.log('type', type);
@@ -110,7 +110,7 @@ export default function Order(){
               <button
               value={item}
                 type="button"
-                onClick={() => { console.log('button clicked'), setTest( JSON.stringify(item)) } }
+                onClick={() => { console.log('button clicked'), setAddToCart( JSON.stringify(item)) } }
                 >
                 Add To Cart
               </button>

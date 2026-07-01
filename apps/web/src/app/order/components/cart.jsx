@@ -3,6 +3,7 @@
 /*
 add   const [quantity, setQuantity] = useState(0);
   const [itemQuantity, setItemQuantity] = useState({})
+  - make an array to add objects
   - add subtract and delete
 
 
