@@ -10,9 +10,9 @@ add   const [quantity, setQuantity] = useState(0);
 
 */
 
-export default function Cart(menu){
+export default function Cart(addToCart){
 
-  console.log('see if menu works on cart', menu);
+  console.log('see if addToCart works on cart', addToCart);
 
 return(
 <div>works working!</div>
