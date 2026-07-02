@@ -1,5 +1,7 @@
 "use client";
 
+import {useState} from 'react';
+
 /*
 add   const [quantity, setQuantity] = useState(0);
   const [itemQuantity, setItemQuantity] = useState({})
@@ -11,6 +13,7 @@ add   const [quantity, setQuantity] = useState(0);
 */
 
 export default function Cart(addToCart){
+  const [cart, setCart] = useState([]);
 
   console.log('see if addToCart works on cart', addToCart);
 
