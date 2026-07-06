@@ -13,17 +13,20 @@ add   const [quantity, setQuantity] = useState(0);
 
 */
 
-export default function Cart(addToCart){
+export default function Cart({addToCart}){
 
-  const cart = addToCart.addToCart; //object in an object
-
-  console.log('see if addToCart works on cart', cart, {
-    dish:cart.dish,
-  price:cart.price,
-type:cart.category
+  console.log('see if addToCart works on cart', addToCart, {
+    dish:addToCart.dish,
+  price:addToCart.price,
+type:addToCart.category
  });
 
 return(
-<div>works working!</div>
+<div>
+  <div>dish:{addToCart.dish}</div>
+<div>price:{addToCart.price}</div>
+<div>type:{addToCart.category}</div>
+
+  </div>
 )
 }
