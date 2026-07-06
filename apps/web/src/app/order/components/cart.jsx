@@ -5,7 +5,7 @@ import {useState} from 'react';
 /*
 add   const [quantity, setQuantity] = useState(0);
   const [itemQuantity, setItemQuantity] = useState({})
-  - make an array to add objects
+  - make an objects to add array
   - what we need(dish,type,price)
   - add subtract and delete
 
@@ -15,7 +15,9 @@ add   const [quantity, setQuantity] = useState(0);
 
 export default function Cart({addToCart}){
 
-  console.log('see if addToCart works on cart', addToCart, {
+  const [cart, setCart] = useState([])
+
+  console.log('see if addToCart works on cart', cart.map(item => item), {
     dish:addToCart.dish,
   price:addToCart.price,
 type:addToCart.category
@@ -23,10 +25,18 @@ type:addToCart.category
 
 return(
 <div>
-  <div>dish:{addToCart.dish}</div>
-<div>price:{addToCart.price}</div>
-<div>type:{addToCart.category}</div>
-
+{
+  cart.map((item, index)  => {
+    return(
+    <div key={index}>
+  <div>dish:{item.dish}</div>
+<div>price:{item.price}</div>
+<div>type:{item.category}</div>
+<button> + </button>
+<button> - </button>
+</div>
+  );} )
+}
   </div>
-)
+ )
 }
