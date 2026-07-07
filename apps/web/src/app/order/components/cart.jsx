@@ -10,14 +10,15 @@ add   const [quantity, setQuantity] = useState(0);
   - add subtract and delete
 
 
-
+onjective for 7/6/26
+- go to parent page and turn add to cart to an actual arry and then pass it as a prop to this page
 */
 
 export default function Cart({addToCart}){
 
   const [cart, setCart] = useState([])
 
-  console.log('see if addToCart works on cart', cart.map(item => item), {
+  console.log('see if addToCart works on cart', addToCart, {
     dish:addToCart.dish,
   price:addToCart.price,
 type:addToCart.category

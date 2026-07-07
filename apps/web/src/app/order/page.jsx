@@ -110,7 +110,7 @@ export default function Order(){
               <button
               value={item}
                 type="button"
-                onClick={() => { console.log('button clicked'), setAddToCart( item) } }
+                onClick={() => { console.log('button clicked'), setAddToCart(prevItem => [...prevItem, item]) } }
                 >
                 Add To Cart
               </button>
