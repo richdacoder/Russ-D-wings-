@@ -18,16 +18,17 @@ export default function Cart({addToCart}){
 
   const [cart, setCart] = useState([])
 
-  console.log('see if addToCart works on cart', addToCart, {
-    dish:addToCart.dish,
-  price:addToCart.price,
-type:addToCart.category
- });
+  console.log('see if addToCart works on cart', addToCart, addToCart.map(obj => {
+   return { dish:obj.dish,
+  price:obj.price,
+type:obj.category
+}
+ }));
 
 return(
 <div>
 {
-  cart.map((item, index)  => {
+  addToCart.map((item, index)  => {
     return(
     <div key={index}>
   <div>dish:{item.dish}</div>
