@@ -85,24 +85,6 @@ export default function Order(){
     return <div
     key={item.id}>
       {item.dish}
-                  <button
-            type="button"
-            onClick={()=> {
-              setItemQuantity(prev => ({
-                ...prev,
-                [item.id]: currentQtty + 1
-              }))
-            } }
-            >+</button>
-            <label
-            >{currentQtty}</label>
-            <button
-            type="button"
-            onClick={() => { setItemQuantity(prev => ({
-              ...prev,
-              [item.id]: currentQtty > 1 ? currentQtty - 1 : 0
-            }))}}
-            >-</button>
             <div>
               <p>${item.price} </p>
             </div>
@@ -110,7 +92,18 @@ export default function Order(){
               <button
               value={item}
                 type="button"
-                onClick={() => { console.log('button clicked'), setAddToCart(prevItem => [...prevItem, item]) } }
+                onClick={() => {
+                  console.log('button clicked'),
+                  setAddToCart(prevCart => {
+                    const matchId = prevCart.some(obj => obj.id === item.id);
+                    if(matchId){
+                      return prevCart;
+                    }
+                      return [...prevCart, item]
+
+                 }
+                )}
+                    }
                 >
                 Add To Cart
               </button>
