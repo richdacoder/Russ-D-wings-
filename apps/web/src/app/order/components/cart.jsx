@@ -32,12 +32,14 @@ export default function Cart({addToCart, setAddToCart}){
 
 
     const itemCount = (id) => {
-      const currentQtty = itemQuantity[id] || 0;
+      const currentQtty = itemQuantity[id] || 1;
           console.log('working itemcount', currentQtty, id);
 
       return(
       <div>
-       <button onClick={() => {
+       <button
+       type="button"
+       onClick={() => {
         setItemQuantity(prev => ({
           ...prev,
           [id]: currentQtty + 1
@@ -45,11 +47,13 @@ export default function Cart({addToCart, setAddToCart}){
       );
        }}> + </button>
        <label>{currentQtty}</label>
-       <button onClick={() => {
+       <button
+       type="button"
+       onClick={() => {
         setItemQuantity(prev => (
           {
             ...prev,
-            [id]: currentQtty > 1? currentQtty -1 : 0
+            [id]: currentQtty > 1? currentQtty -1 : 1
           }
         )
         )
@@ -85,7 +89,10 @@ return(
   <div>dish:{item.dish}</div>
 <div>price:{item.price}</div>
 <div>type:{item.category}</div>
-<button onClick={() => removeItem(index)}>delete</button>
+<button
+type="button"
+onClick={() => removeItem(index)}
+>delete</button>
 {itemCount(item.id)}
 </div>
   );} )
