@@ -24,6 +24,20 @@ export default function Cart({addToCart, setAddToCart}){
 
     const [itemQuantity, setItemQuantity] = useState({});
 
+    // make function itemCount
+    //map through addtocart
+    //
+    //
+
+
+    const itemCount = (item) => {
+      console.log('working itemcount', item);
+      return(
+      <div>
+       <button> + </button>
+       <button> - </button>
+       </div>
+    )}
 
   console.log('see if addToCart works on cart', addToCart, addToCart.map(obj => {
    return { dish:obj.dish,
@@ -52,12 +66,13 @@ return(
   <div>dish:{item.dish}</div>
 <div>price:{item.price}</div>
 <div>type:{item.category}</div>
-<button> + </button>
-<button> - </button>
 <button onClick={() => removeItem(index)}>delete</button>
+{itemCount('test item')}
+
 </div>
   );} )
 }
+
   </div>
  )
 }
