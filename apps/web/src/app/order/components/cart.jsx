@@ -8,18 +8,21 @@ add   const [quantity, setQuantity] = useState(0);
   - make an objects to add array
   - what we need(dish,type,price)
   - add subtract and delete
+  - make you when item is available
 
 
 onjective for 7/6/26
 - go to parent page and turn add to cart to an actual arry and then pass it as a prop to this pagexxx
 
-objective 7/7/26
-- you can delete item of cart
+objective 7/8/26
+- you can delete item of cartxxx
 - make plus and negative button work
 - add and subtract prices
 */
 
 export default function Cart({addToCart, setAddToCart}){
+
+    const [itemQuantity, setItemQuantity] = useState({});
 
 
   console.log('see if addToCart works on cart', addToCart, addToCart.map(obj => {
