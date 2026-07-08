@@ -163,6 +163,7 @@ return(
             <div>
               <Cart
               addToCart={addToCart}
+              setAddToCart={setAddToCart}
               />
               <h5>Total Amount</h5>
             </div>
