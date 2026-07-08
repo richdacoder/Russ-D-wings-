@@ -9,6 +9,7 @@ add   const [quantity, setQuantity] = useState(0);
   - what we need(dish,type,price)
   - add subtract and delete
   - make you when item is available
+  - prevent double adding to cart
 
 
 onjective for 7/6/26
@@ -30,11 +31,20 @@ export default function Cart({addToCart, setAddToCart}){
     //
 
 
-    const itemCount = (item) => {
-      console.log('working itemcount', item);
+    const itemCount = (id) => {
+      const currentQtty = itemQuantity[id] || 0;
+          console.log('working itemcount', currentQtty, id);
+
       return(
       <div>
-       <button> + </button>
+       <button onClick={() => {
+        setItemQuantity(prev => ({
+          ...prev,
+          [id]: currentQtty + 1
+        })
+      );
+       }}> + </button>
+       <label>{currentQtty}</label>
        <button> - </button>
        </div>
     )}
