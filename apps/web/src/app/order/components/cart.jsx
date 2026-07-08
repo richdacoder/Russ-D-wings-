@@ -45,7 +45,16 @@ export default function Cart({addToCart, setAddToCart}){
       );
        }}> + </button>
        <label>{currentQtty}</label>
-       <button> - </button>
+       <button onClick={() => {
+        setItemQuantity(prev => (
+          {
+            ...prev,
+            [id]: currentQtty > 1? currentQtty -1 : 0
+          }
+        )
+        )
+       }
+       }> - </button>
        </div>
     )}
 
