@@ -11,7 +11,12 @@ add   const [quantity, setQuantity] = useState(0);
 
 
 onjective for 7/6/26
-- go to parent page and turn add to cart to an actual arry and then pass it as a prop to this page
+- go to parent page and turn add to cart to an actual arry and then pass it as a prop to this pagexxx
+
+objective 7/7/26
+- you can delete item of cart
+- make plus and negative button work
+- add and subtract prices
 */
 
 export default function Cart({addToCart}){
@@ -36,6 +41,7 @@ return(
 <div>type:{item.category}</div>
 <button> + </button>
 <button> - </button>
+<button>delete</button>
 </div>
   );} )
 }
