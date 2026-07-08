@@ -21,7 +21,6 @@ objective 7/7/26
 
 export default function Cart({addToCart, setAddToCart}){
 
-  const [cart, setCart] = useState([])
 
   console.log('see if addToCart works on cart', addToCart, addToCart.map(obj => {
    return { dish:obj.dish,
