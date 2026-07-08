@@ -19,7 +19,7 @@ objective 7/7/26
 - add and subtract prices
 */
 
-export default function Cart({addToCart}){
+export default function Cart({addToCart, setAddToCart}){
 
   const [cart, setCart] = useState([])
 
@@ -30,11 +30,19 @@ type:obj.category
 }
  }));
 
- const removeItem = (item) => {
+ const removeItem = (removedIndex) => {
+  console.log('removed item from cart', removedIndex );
+  const updatedCart = addToCart.filter((item, index) =>{
+    return removedIndex !== index;
+  })
+    console.log('removed item from cart', removedIndex );
 
+return setAddToCart(updatedCart) ;
  }
+
 return(
 <div>
+  <h1>Cart</h1>
 {
   addToCart.map((item, index)  => {
     return(
@@ -44,7 +52,7 @@ return(
 <div>type:{item.category}</div>
 <button> + </button>
 <button> - </button>
-<button>delete</button>
+<button onClick={() => removeItem(index)}>delete</button>
 </div>
   );} )
 }
