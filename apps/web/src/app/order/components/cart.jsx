@@ -30,6 +30,9 @@ type:obj.category
 }
  }));
 
+ const removeItem = () => {
+
+ }
 return(
 <div>
 {
