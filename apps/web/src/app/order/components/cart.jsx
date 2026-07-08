@@ -24,7 +24,7 @@ export default function Cart({addToCart, setAddToCart}){
 
     const [itemQuantity, setItemQuantity] = useState({});
 
-    // make function itemCount
+    // make function itemCountxx
     //map through addtocart
     //
     //
@@ -67,8 +67,7 @@ return(
 <div>price:{item.price}</div>
 <div>type:{item.category}</div>
 <button onClick={() => removeItem(index)}>delete</button>
-{itemCount('test item')}
-
+{itemCount(item.id)}
 </div>
   );} )
 }
