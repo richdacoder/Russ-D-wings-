@@ -24,6 +24,7 @@ objective 7/8/26
 export default function Cart({addToCart, setAddToCart}){
 
     const [itemQuantity, setItemQuantity] = useState({});
+    const [total, setTotal] = useState(0);
 
     const itemCount = (id) => {
       const currentQtty = itemQuantity[id] || 1;
@@ -92,6 +93,7 @@ onClick={() => removeItem(index)}
   );} )
 }
 <h2>Total</h2>
+<p>{}</p>
   </div>
  )
 }
