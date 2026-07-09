@@ -9,7 +9,7 @@ add   const [quantity, setQuantity] = useState(0);
   - what we need(dish,type,price)
   - add subtract and delete
   - make you when item is available
-  - prevent double adding to cart
+  - prevent double adding to cartxxx
 
 
 onjective for 7/6/26
@@ -17,19 +17,13 @@ onjective for 7/6/26
 
 objective 7/8/26
 - you can delete item of cartxxx
-- make plus and negative button work
+- make plus and negative button workxxx
 - add and subtract prices
 */
 
 export default function Cart({addToCart, setAddToCart}){
 
     const [itemQuantity, setItemQuantity] = useState({});
-
-    // make function itemCountxx
-    //map through addtocart
-    //
-    //
-
 
     const itemCount = (id) => {
       const currentQtty = itemQuantity[id] || 1;
@@ -97,7 +91,7 @@ onClick={() => removeItem(index)}
 </div>
   );} )
 }
-
+<h2>Total</h2>
   </div>
  )
 }
