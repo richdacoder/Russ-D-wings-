@@ -26,10 +26,12 @@ export default function Cart({addToCart, setAddToCart}){
     const [itemQuantity, setItemQuantity] = useState({});
     const [total, setTotal] = useState(0);
 
-    const itemCount = (id) => {
-      const currentQtty = itemQuantity[id] || 1;
-          console.log('working itemcount', currentQtty, id);
+    const totalAmount = (price) => {
 
+    }
+    const itemCount = (id, price) => {
+      const currentQtty = itemQuantity[id] || 1;
+          console.log('working itemcount', currentQtty, price );
       return(
       <div>
        <button
@@ -88,12 +90,12 @@ return(
 type="button"
 onClick={() => removeItem(index)}
 >delete</button>
-{itemCount(item.id)}
+{itemCount(item.id, item.price)}
 </div>
   );} )
 }
 <h2>Total</h2>
-<p>{}</p>
+<p>{total}</p>
   </div>
  )
 }
