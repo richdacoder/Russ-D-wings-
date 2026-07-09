@@ -27,7 +27,9 @@ export default function Cart({addToCart, setAddToCart}){
     const [total, setTotal] = useState(0);
 
     const totalAmount = (price) => {
-
+      const number = Number(price);
+      console.log('converted to number', number);
+      return setTotal(total + number);
     }
     const itemCount = (id, price) => {
       const currentQtty = itemQuantity[id] || 1;
@@ -37,6 +39,7 @@ export default function Cart({addToCart, setAddToCart}){
        <button
        type="button"
        onClick={() => {
+        totalAmount(price);
         setItemQuantity(prev => ({
           ...prev,
           [id]: currentQtty + 1
