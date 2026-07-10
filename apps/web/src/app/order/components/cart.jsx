@@ -24,18 +24,19 @@ objective 7/8/26
 export default function Cart({addToCart, setAddToCart}){
 
     const [itemQuantity, setItemQuantity] = useState({});
-    const [total, setTotal] = useState(0);
+    // const [total, setTotal] = useState(0);
 
-    const totalAmount = addToCart((price) => {
-      const number = Number(price);
-      setTotal(total + number)
-      console.log('converted to number', number, );
+    console.log('item quantity', itemQuantity);
+    const total = addToCart.reduce((sum, item) => {
+      const quantity = itemQuantity[item.id] || 1
+      return (sum + Number(item.price)) * quantity ;
 
-    });
 
-    const itemCount = (id, price) => {
+    }, 0);
+
+    const itemCount = (id) => {
       const currentQtty = itemQuantity[id] || 1;
-          console.log('working itemcount', currentQtty, price );
+          console.log('working itemcount', currentQtty );
       return(
       <div>
        <button
@@ -88,7 +89,7 @@ return(
 type="button"
 onClick={() => removeItem(index)}
 >delete</button>
-{itemCount(item.id, item.price)}
+{itemCount(item.id)}
 </div>
   );} )
 }
