@@ -84,7 +84,7 @@ export default function Order(){
         setItemQuantity(prev => (
           {
             ...prev,
-            [item.id]: currentQtty > 1? currentQtty -1 : 1
+            [item.id]: currentQtty > 1? currentQtty -1 : 0
           }
         )
         )
