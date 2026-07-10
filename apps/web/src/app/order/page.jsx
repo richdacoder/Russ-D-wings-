@@ -146,6 +146,8 @@ return(
               <Cart
               addToCart={addToCart}
               setAddToCart={setAddToCart}
+              itemQuantity={itemQuantity}
+              setItemQuantity={setItemQuantity}
               />
               <h5>Total Amount</h5>
             </div>

@@ -20,6 +20,11 @@ objective 7/8/26
 - you can delete item of cartxxx
 - make plus and negative button workxxx
 - add and subtract pricesxx
+
+objective 7/10/26
+- clear cart button
+- subtotal
+- move quantity back?
 */
 
 export default function Cart({addToCart, setAddToCart}){
@@ -91,7 +96,7 @@ return(
 {
   addToCart.map((item, index)  => {
     return(
-    <div key={index}>
+    <div key={item.id}>
   <div>dish:{item.dish}</div>
 <div>price:${item.price}</div>
 <div>type:{item.category}</div>
