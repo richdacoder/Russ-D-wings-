@@ -7,14 +7,14 @@ import Cart from "./components/cart.jsx";
 /*
 *** each function gets own file
 - seperate items by types xxx
-- make ammount and subtract with and total (create cart component)
+- make ammount and subtract with and total (create cart component)xx
 (send menu, send list)
 - create construct varibales
-- make GET request for menu and availablity <<<<<<
+- make GET request for menuxxx and availablity <<<<<<
 - make timslots display for sameday
-- make menu display
-- put them in the input with onchange
-- put them in an object
+- make menu displayxx
+- put them in the input with onchangexxx
+- put them in an objectxxx
 - handle submit
 
 

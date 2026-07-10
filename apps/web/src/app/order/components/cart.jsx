@@ -8,8 +8,9 @@ add   const [quantity, setQuantity] = useState(0);xx
   - make an objects to add arrayxx
   - what we need(dish,type,price)xx
   - add subtract and deletexx
+    - prevent double adding to cartxxx
   - make you when item is available
-  - prevent double adding to cartxxx
+  - make sure cents math is correct
 
 
 onjective for 7/6/26
@@ -92,7 +93,7 @@ return(
     return(
     <div key={index}>
   <div>dish:{item.dish}</div>
-<div>price:{item.price}</div>
+<div>price:${item.price}</div>
 <div>type:{item.category}</div>
 <button
 type="button"
@@ -103,7 +104,7 @@ onClick={() => removeItem(index)}
   );} )
 }
 <h2>Total</h2>
-<p>{total}</p>
+<p>${total}</p>
   </div>
  )
 }
