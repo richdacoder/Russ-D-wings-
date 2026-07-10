@@ -66,11 +66,17 @@ export default function Cart({addToCart, setAddToCart}){
 
 
  const removeItem = (removedIndex) => {
-  console.log('removed item from cart', removedIndex );
+  console.log('removed item from cart', addToCart[removedIndex].id, addToCart[removedIndex].price, addToCart[removedIndex].dish );
+  const id = addToCart[removedIndex].id;
+  setItemQuantity((qtty) => {
+    const { [id]:_, ...restOfIds} = itemQuantity;
+    return restOfIds
+ })
   const updatedCart = addToCart.filter((item, index) =>{
     return removedIndex !== index;
   })
-    console.log('removed item from cart', removedIndex );
+    console.log('removed item from cart', removedIndex, updatedCart );
+
 
 return setAddToCart(updatedCart) ;
  }

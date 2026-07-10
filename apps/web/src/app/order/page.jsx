@@ -47,17 +47,11 @@ export default function Order(){
     async function getMenu(){
       const dataArray = await Get("menu");
       setMenu(dataArray);
-      console.log('here is data array',  dataArray);
     }
     getMenu();
   },
   []
   );
-
-  console.log('item quantitiy', itemQuantity);
-
-  console.log('testing test menu', menu.map((i) => { return i }));
-  console.log('list', typeof list);
 
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
@@ -69,17 +63,12 @@ export default function Order(){
   }
   }
 
-  console.log('test click addtocart', addToCart);
 
   const sortByType = (type) => {
     console.log('type', type);
     return menu.map((item, index) => {
 
     const currentQtty = itemQuantity[item.id] || 0;
-    console.log('currentQtty', currentQtty );
-    console.log('itemQuantity', itemQuantity);
-    console.log('item category', item.category);
-
     if (type === item.category)
 
     return <div
