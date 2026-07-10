@@ -29,7 +29,7 @@ export default function Cart({addToCart, setAddToCart}){
     console.log('item quantity', itemQuantity);
     const total = addToCart.reduce((sum, item) => {
       const quantity = itemQuantity[item.id] || 1
-      return (sum + Number(item.price)) * quantity ;
+      return sum + Number(item.price) * quantity ;
 
 
     }, 0);
