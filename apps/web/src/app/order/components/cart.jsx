@@ -27,9 +27,7 @@ objective 7/10/26
 - move quantity back?
 */
 
-export default function Cart({addToCart, setAddToCart}){
-
-    const [itemQuantity, setItemQuantity] = useState({});
+export default function Cart({addToCart, setAddToCart, itemQuantity, setItemQuantity}){
 
     console.log('item quantity', itemQuantity);
 
