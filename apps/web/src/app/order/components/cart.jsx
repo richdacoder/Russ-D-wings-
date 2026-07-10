@@ -9,8 +9,9 @@ add   const [quantity, setQuantity] = useState(0);xx
   - what we need(dish,type,price)xx
   - add subtract and deletexx
     - prevent double adding to cartxxx
-  - make you when item is available
-  - make sure cents math is correct
+  - make sure cents math is correctxx
+    - make you when item is available
+
 
 
 onjective for 7/6/26
@@ -24,7 +25,7 @@ objective 7/8/26
 objective 7/10/26
 - clear cart button
 - subtotal
-- move quantity back?
+- move quantity back?xxx
 */
 
 export default function Cart({addToCart, setAddToCart, itemQuantity, setItemQuantity}){
@@ -36,35 +37,35 @@ export default function Cart({addToCart, setAddToCart, itemQuantity, setItemQuan
       return sum + Number(item.price) * quantity ;
     }, 0);
 
-    const itemCount = (id) => {
-      const currentQtty = itemQuantity[id] || 1;
-          console.log('working itemcount', currentQtty );
-      return(
-      <div>
-       <button
-       type="button"
-       onClick={() => {
-        setItemQuantity(prev => ({
-          ...prev,
-          [id]: currentQtty + 1
-        })
-      );
-       }}> + </button>
-       <label>{currentQtty}</label>
-       <button
-       type="button"
-       onClick={() => {
-        setItemQuantity(prev => (
-          {
-            ...prev,
-            [id]: currentQtty > 1? currentQtty -1 : 1
-          }
-        )
-        )
-       }
-       }> - </button>
-       </div>
-    )}
+    // const itemCount = (id) => {
+    //   const currentQtty = itemQuantity[id] || 1;
+    //       console.log('working itemcount', currentQtty );
+    //   return(
+    //   <div>
+    //    <button
+    //    type="button"
+    //    onClick={() => {
+    //     setItemQuantity(prev => ({
+    //       ...prev,
+    //       [id]: currentQtty + 1
+    //     })
+    //   );
+    //    }}> + </button>
+    //    <label>{currentQtty}</label>
+    //    <button
+    //    type="button"
+    //    onClick={() => {
+    //     setItemQuantity(prev => (
+    //       {
+    //         ...prev,
+    //         [id]: currentQtty > 1? currentQtty -1 : 1
+    //       }
+    //     )
+    //     )
+    //    }
+    //    }> - </button>
+    //    </div>
+    // )}
 
 
  const removeItem = (removedIndex) => {
@@ -102,7 +103,7 @@ return(
 type="button"
 onClick={() => removeItem(index)}
 >delete</button>
-{itemCount(item.id)}
+{/* {itemCount(item.id)} */}
 </div>
   );} )
 }

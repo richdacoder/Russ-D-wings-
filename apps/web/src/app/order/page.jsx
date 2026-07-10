@@ -78,6 +78,31 @@ export default function Order(){
               <p>${item.price} </p>
             </div>
             <div>
+                     <button
+       type="button"
+       onClick={() => {
+        setItemQuantity(prev => ({
+          ...prev,
+          [item.id]: currentQtty + 1
+        })
+      );
+       }}> + </button>
+       <label>{currentQtty}</label>
+       <button
+       type="button"
+       onClick={() => {
+        setItemQuantity(prev => (
+          {
+            ...prev,
+            [item.id]: currentQtty > 1? currentQtty -1 : 1
+          }
+        )
+        )
+       }
+       }> - </button>
+
+            </div>
+            <div>
               <button
               value={item}
                 type="button"
