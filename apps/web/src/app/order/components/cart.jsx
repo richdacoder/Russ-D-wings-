@@ -25,9 +25,9 @@ objective 7/8/26
 export default function Cart({addToCart, setAddToCart}){
 
     const [itemQuantity, setItemQuantity] = useState({});
-    // const [total, setTotal] = useState(0);
 
     console.log('item quantity', itemQuantity);
+
     const total = addToCart.reduce((sum, item) => {
       const quantity = itemQuantity[item.id] || 1
       return sum + Number(item.price) * quantity ;
@@ -104,7 +104,7 @@ onClick={() => removeItem(index)}
   );} )
 }
 <h2>Total</h2>
-<p>${total}</p>
+<p>${total.toFixed(2)}</p>
   </div>
  )
 }
