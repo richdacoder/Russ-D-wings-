@@ -26,11 +26,13 @@ export default function Cart({addToCart, setAddToCart}){
     const [itemQuantity, setItemQuantity] = useState({});
     const [total, setTotal] = useState(0);
 
-    const totalAmount = (price) => {
+    const totalAmount = addToCart((price) => {
       const number = Number(price);
-      console.log('converted to number', number);
-      return setTotal(total + number);
-    }
+      setTotal(total + number)
+      console.log('converted to number', number, );
+
+    });
+
     const itemCount = (id, price) => {
       const currentQtty = itemQuantity[id] || 1;
           console.log('working itemcount', currentQtty, price );
@@ -39,7 +41,6 @@ export default function Cart({addToCart, setAddToCart}){
        <button
        type="button"
        onClick={() => {
-        totalAmount(price);
         setItemQuantity(prev => ({
           ...prev,
           [id]: currentQtty + 1
@@ -62,12 +63,6 @@ export default function Cart({addToCart, setAddToCart}){
        </div>
     )}
 
-  console.log('see if addToCart works on cart', addToCart, addToCart.map(obj => {
-   return { dish:obj.dish,
-  price:obj.price,
-type:obj.category
-}
- }));
 
  const removeItem = (removedIndex) => {
   console.log('removed item from cart', removedIndex );
