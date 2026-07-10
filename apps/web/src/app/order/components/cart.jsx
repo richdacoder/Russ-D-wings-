@@ -3,11 +3,11 @@
 import {useState} from 'react';
 
 /*
-add   const [quantity, setQuantity] = useState(0);
-  const [itemQuantity, setItemQuantity] = useState({})
-  - make an objects to add array
-  - what we need(dish,type,price)
-  - add subtract and delete
+add   const [quantity, setQuantity] = useState(0);xx
+  const [itemQuantity, setItemQuantity] = useState({})xx
+  - make an objects to add arrayxx
+  - what we need(dish,type,price)xx
+  - add subtract and deletexx
   - make you when item is available
   - prevent double adding to cartxxx
 
@@ -18,7 +18,7 @@ onjective for 7/6/26
 objective 7/8/26
 - you can delete item of cartxxx
 - make plus and negative button workxxx
-- add and subtract prices
+- add and subtract pricesxx
 */
 
 export default function Cart({addToCart, setAddToCart}){
@@ -30,8 +30,6 @@ export default function Cart({addToCart, setAddToCart}){
     const total = addToCart.reduce((sum, item) => {
       const quantity = itemQuantity[item.id] || 1
       return sum + Number(item.price) * quantity ;
-
-
     }, 0);
 
     const itemCount = (id) => {
@@ -69,7 +67,7 @@ export default function Cart({addToCart, setAddToCart}){
   console.log('removed item from cart', addToCart[removedIndex].id, addToCart[removedIndex].price, addToCart[removedIndex].dish );
   const id = addToCart[removedIndex].id;
   setItemQuantity((qtty) => {
-    const { [id]:_, ...restOfIds} = itemQuantity;
+    const { [id]:_, ...restOfIds} = qtty;
     return restOfIds
  })
   const updatedCart = addToCart.filter((item, index) =>{
@@ -84,6 +82,11 @@ return setAddToCart(updatedCart) ;
 return(
 <div>
   <h1>Cart</h1>
+  {
+    addToCart.length === 0 && (
+    <div> Your cart is empty.</div>
+    )
+  }
 {
   addToCart.map((item, index)  => {
     return(
