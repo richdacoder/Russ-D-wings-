@@ -81,16 +81,6 @@ export default function Order(){
                      <button
        type="button"
        onClick={() => {
-        setItemQuantity(prev => ({
-          ...prev,
-          [item.id]: currentQtty + 1
-        })
-      );
-       }}> + </button>
-       <label>{currentQtty}</label>
-       <button
-       type="button"
-       onClick={() => {
         setItemQuantity(prev => (
           {
             ...prev,
@@ -100,7 +90,16 @@ export default function Order(){
         )
        }
        }> - </button>
-
+       <label>{currentQtty}</label>
+                            <button
+       type="button"
+       onClick={() => {
+        setItemQuantity(prev => ({
+          ...prev,
+          [item.id]: currentQtty + 1
+        })
+      );
+       }}> + </button>
             </div>
             <div>
               <button
