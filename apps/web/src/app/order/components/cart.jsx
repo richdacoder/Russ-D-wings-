@@ -29,7 +29,7 @@ objective 7/10/26
 - move quantity back?xxx
 */
 
-export default function Cart({addToCart, setAddToCart, itemQuantity, setItemQuantity}){
+export default function Cart({addToCart, setAddToCart, itemQuantity, etItemQuantity}){
 
     console.log('item quantity', itemQuantity);
 
