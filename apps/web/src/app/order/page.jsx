@@ -68,7 +68,7 @@ export default function Order(){
     console.log('type', type);
     return menu.map((item, index) => {
 
-    const currentQtty = itemQuantity[item.id] || addToCart.includes(item.id)? 1 : 0;
+    const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
     return <div
