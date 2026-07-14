@@ -17,7 +17,20 @@ const db = require('../db/db.js');
 */
 console.log('router');
 
-router.get('/availability');
+router.get('/availability', async (req, res) =>{
+
+});
+
+
+
+
+
+
+
+
+
+
+
 
 router.post('/availability', async (req, res) => {
   const data = req.body
