@@ -38,7 +38,7 @@ export default function Order(){
   const [pickUpTime, setPickUpTime] = useState("");
   const [quantity, setQuantity] = useState(0);
   const [itemQuantity, setItemQuantity] = useState({})
-  const [formDa, setFormData] = useState({});
+  const [formData, setFormData] = useState({});
   const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
   const [addToCart, setAddToCart] = useState([]);
