@@ -25,8 +25,10 @@ objective 7/8/26
 objective 7/10/26
 - clear cart button
 - subtotal
-- move tottal to parents
+- move tottal to parents??
 - move quantity back?xxx
+
+
 */
 
 export default function Cart({addToCart, setAddToCart, itemQuantity, setItemQuantity}){

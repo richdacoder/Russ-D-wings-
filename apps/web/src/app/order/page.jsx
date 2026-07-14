@@ -21,6 +21,10 @@ import Cart from "./components/cart.jsx";
 - create array name, email,
 -----------------------------------------
 
+
+objective 7/13/26
+- add time slots
+
 for catering use type to differient in code base all coding logic for catering done
 on next and express route
 
@@ -37,7 +41,7 @@ export default function Order(){
   const [total, setTotal] = useState(0);
   const [pickUpTime, setPickUpTime] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [itemQuantity, setItemQuantity] = useState({})
+  const [itemQuantity, setItemQuantity] = useState({});
   const [formData, setFormData] = useState({});
   const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
@@ -126,7 +130,7 @@ export default function Order(){
 }
 
 
-  console.log(changeType("Email"));
+console.log(changeType("Email"));
 console.log(changeType("Phone"));
 console.log(changeType("First Name"));
 
