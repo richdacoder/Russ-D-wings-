@@ -19,9 +19,11 @@ console.log('router');
 
 router.get('/availability', async (req, res) =>{
 try{
-const data = await req.body
+const data = await db('time_slots');
 
-db("time_slots")
+ db("table").
+ select.
+ from("time_slots");
 
 }catch{
 
