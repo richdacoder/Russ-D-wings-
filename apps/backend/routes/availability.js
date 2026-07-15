@@ -19,8 +19,9 @@ console.log('router');
 
 router.get('/availability', async (req, res) =>{
 try{
-const data = req.body
+const data = await req.body
 
+db("time_slots")
 
 }catch{
 
