@@ -19,6 +19,8 @@ console.log('router');
 
 router.get('/availability', async (req, res) =>{
 try{
+const data = req.body
+
 
 }catch{
 
