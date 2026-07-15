@@ -18,7 +18,11 @@ const db = require('../db/db.js');
 console.log('router');
 
 router.get('/availability', async (req, res) =>{
+try{
 
+}catch{
+
+}
 });
 
 
