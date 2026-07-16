@@ -10,7 +10,8 @@ const db = require('../db/db.js');
 - make an array named required for required data or any other way to make sure data is valid
   and none is missing.
 
-  -
+  - http://localhost:3001/availability
+
 
 -
 
@@ -19,14 +20,14 @@ console.log('router');
 
 router.get('/availability', async (req, res) =>{
 try{
-const data = await db('time_slots');
+  console.log('working get avvaiibility');
+const data = await db('time_slots').select('*');
 
- db("table").
- select.
- from("time_slots");
 
-}catch{
+ res.status(200).json(data);
 
+}catch(err){
+console.error('response error');
 }
 });
 
