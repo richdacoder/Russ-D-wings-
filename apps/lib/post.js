@@ -19,6 +19,7 @@ export default async function Post(formData){
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log('url', process.env);
   console.log('ENV:', process.env.NEXT_PUBLIC_API_URL);
+  console.log('formdata type', type);
 console.log('RUNTIME TYPE:', typeof window === 'undefined' ? 'server' : 'client');
 
  const res = await fetch(`${url}/api/${type}`,
