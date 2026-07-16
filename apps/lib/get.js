@@ -9,17 +9,16 @@
 
 */
 
-export default async function Get(endpoint){
+export default async function Get(){
 
-  console.log('endpoint', endpoint);
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log('url yes', url);
   console.log('ENV:', process.env.NEXT_PUBLIC_API_URL);
   console.log('RUNTIME TYPE:', typeof window === 'undefined' ? 'server' : 'client');
   try{
-
-  const res = await fetch(
-  `${url}/api/${endpoint}`,
+    const data = await res.json();
+    const res = await fetch(
+  `${url}/api/${data.type}`,
   {
     method: 'GET'
     }
@@ -29,7 +28,6 @@ export default async function Get(endpoint){
   if (!res.ok) {
     throw new Error(`Request failed: ${res.status}`);
   }
-  const data = await res.json();
   console.log('get page data', data);
 
   return data
