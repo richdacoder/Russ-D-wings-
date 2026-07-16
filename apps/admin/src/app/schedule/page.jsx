@@ -94,7 +94,7 @@ console.log('typeof Post:', typeof Post);
 
       <button type="submit"> Add Time Block </button>
       </form>
-
+      <TimeDisplay/>
     </div>
   )
 }
