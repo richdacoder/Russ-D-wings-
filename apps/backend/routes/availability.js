@@ -28,9 +28,9 @@ const data = await db('time_slots').select('*');
  res.status(200).json(data);
 
 }catch(err){
-console.error('response error');
+console.error('response error', err);
 
-res.status(500).json({error:'response error'});
+res.status(500).json({error:'fail to retrieve availability'});
 }
 });
 
