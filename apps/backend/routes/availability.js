@@ -10,7 +10,8 @@ const db = require('../db/db.js');
 - make an array named required for required data or any other way to make sure data is valid
   and none is missing.
 
-  - http://localhost:3001/availability
+  http://localhost:3001/api/availability
+  http://localhost:3001/availability
 
 
 -
@@ -28,6 +29,8 @@ const data = await db('time_slots').select('*');
 
 }catch(err){
 console.error('response error');
+
+res.status(500).json({error:'response error'});
 }
 });
 
