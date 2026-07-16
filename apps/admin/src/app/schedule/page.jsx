@@ -2,7 +2,14 @@
 
 import {useState, useEffect} from "react";
 import Post from "../../../../lib/post.js";
+import Get from "../../../../lib/get.js";
 
+/*
+- get GET with import
+- send endpoint through GET function
+- plug return in a variable
+
+*/
 export default function Schedule(){
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
