@@ -17,21 +17,29 @@ export default function Schedule(){
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [isActive, setIsActive] = useState(true);
+  const [showStartTime, setShowStartTime] = useState([]);
+  const [showEndTime, setShowEndTime] = useState([]);
+
+
 
   useEffect(() =>  {
   try{
     const loadData = async () =>{
   const [data] = await Get('availability');
-      console.log({
-        'start time': data.start_time,
-      'end time': data.end_time
-      });
+      setShowStartTime(data.start_time);
+      setShowEndTime(data.end_time);
+
     }
     loadData();
   } catch(err){
     console.error(err)
   }
 }, []);
+
+      console.log({
+        'start time': showStartTime,
+      'end time': showEndTime
+      });
 
 
   const actualTime = (t) => {
