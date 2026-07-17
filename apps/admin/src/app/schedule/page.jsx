@@ -121,7 +121,9 @@ console.log('typeof Post:', typeof Post);
       <button type="submit"> Add Time Block </button>
       </form>
       <TimeDisplay
-      get={Get}
+      startTime={showStartTime}
+      endTime={showEndTime}
+
         />
     </div>
   )
