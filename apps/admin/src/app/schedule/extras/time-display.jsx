@@ -7,6 +7,7 @@ export default function TimeDisplay({get}){
   const [time, setTime] = useState("");
 
 
+console.log('time', get);
 return(
 <div>working time display </div>
 )

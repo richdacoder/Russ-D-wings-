@@ -21,8 +21,11 @@ export default function Schedule(){
   useEffect(() =>  {
   try{
     const loadData = async () =>{
-  const data = await get('availability');
-      console.log('time display DATA', data);
+  const [data] = await Get('availability');
+      console.log({
+        'start time': data.start_time,
+      'end time': data.end_time
+      });
     }
     loadData();
   } catch(err){
