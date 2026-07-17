@@ -15,7 +15,7 @@ useEffect(() =>  {
     }
     loadData();
   } catch(err){
-    console.error(errr)
+    console.error(err)
   }
 }, []);
 return(
