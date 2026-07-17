@@ -36,11 +36,6 @@ export default function Schedule(){
   }
 }, []);
 
-      console.log({
-        'start time': showStartTime,
-      'end time': showEndTime
-      });
-
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
