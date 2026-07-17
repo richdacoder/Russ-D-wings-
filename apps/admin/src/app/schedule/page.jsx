@@ -5,6 +5,8 @@ import Post from "../../../../lib/post.js";
 import Get from "../../../../lib/get.js";
 import TimeDisplay from "./extras/time-display.jsx";
 
+
+
 /*
 - get GET with import
 - send endpoint through GET function
@@ -15,6 +17,19 @@ export default function Schedule(){
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [isActive, setIsActive] = useState(true);
+
+  useEffect(() =>  {
+  try{
+    const loadData = async () =>{
+  const data = await get('availability');
+      console.log('time display DATA', data);
+    }
+    loadData();
+  } catch(err){
+    console.error(err)
+  }
+}, []);
+
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
