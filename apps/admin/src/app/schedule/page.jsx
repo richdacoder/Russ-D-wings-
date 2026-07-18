@@ -33,8 +33,8 @@ export default function Schedule(){
         const loadData = async () =>{
   try{
   const data = await Get('availability');
-      setShowStartTime(data.map(s => s.start_time));
-      setShowEndTime(data.map(e => e.end_time));
+      setShowStartTime(data.map(time => time.start_time));
+      setShowEndTime(data.map(time => time.end_time));
 
 
   } catch(err){
