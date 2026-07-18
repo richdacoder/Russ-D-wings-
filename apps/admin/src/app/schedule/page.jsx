@@ -128,7 +128,7 @@ console.log('typeof Post:', typeof Post);
         />
       </div>
       <div>
-        <button type="button" >{isActive? 'Available Time' : 'Block Time'}</button>
+        <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
 
       <button type="submit"> Add Time Block </button>
