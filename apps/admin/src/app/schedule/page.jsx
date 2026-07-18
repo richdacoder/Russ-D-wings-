@@ -19,6 +19,10 @@ button
 - make it that when is saves isactive is false
 - web: time slots will appear for true(isactive)
 
+handle submit
+- check database if an available time exist
+- if do pop up saying that time exist for the day and that if you save its replace current time
+- create delete
 */
 export default function Schedule(){
   const [startTime, setStartTime] = useState("");
@@ -122,6 +126,9 @@ console.log('typeof Post:', typeof Post);
           min={startTime}
           onChange={(e) => {setEndTime(e.target.value)}}
         />
+      </div>
+      <div>
+        <button>{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
 
       <button type="submit"> Add Time Block </button>
