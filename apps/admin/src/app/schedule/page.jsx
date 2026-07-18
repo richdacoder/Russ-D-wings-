@@ -12,6 +12,13 @@ import TimeDisplay from "./extras/time-display.jsx";
 - send endpoint through GET function
 - plug return in a variable
 
+button
+- avaible and not avaible (toggle)
+- when avaivle is active is true, when not availble thats the time block when not availble
+- make update able to web
+- make it that when is saves isactive is false
+- web: time slots will appear for true(isactive)
+
 */
 export default function Schedule(){
   const [startTime, setStartTime] = useState("");
@@ -23,19 +30,21 @@ export default function Schedule(){
 
 
   useEffect(() =>  {
+        const loadData = async () =>{
   try{
-    const loadData = async () =>{
-  const [data] = await Get('availability');
-      setShowStartTime(data.start_time);
-      setShowEndTime(data.end_time);
+  const data = await Get('availability');
+      setShowStartTime(data.map(s => s.start_time));
+      setShowEndTime(data.map(e => e.end_time));
 
-    }
-    loadData();
+
   } catch(err){
     console.error(err)
   }
+};    loadData();
+
 }, []);
 
+console.log('array??',typeof showStartTime);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -79,6 +88,8 @@ console.log('typeof Post:', typeof Post);
  *** make the time legit data
  - make the time not able to over lap each other
  - the timing is for todayxxx
+
+-
 
 
  **

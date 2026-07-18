@@ -1,5 +1,11 @@
 "use client";
 
+/*
+- everything is within today
+- no time can be over lapping
+
+
+*/
 import {useEffect, useState} from "react";
 
 export default function TimeDisplay({startTime, endTime}){
@@ -14,6 +20,8 @@ export default function TimeDisplay({startTime, endTime}){
 
 
 return(
-<div>working time display </div>
+<div>
+
+</div>
 )
 }
