@@ -2,9 +2,20 @@
 
 import {useState, useEffect} from "react";
 
+/*
+- add delete when save
+- add post
+
+*/
+
 export default function AvailabilityManager(){
 
   return(
-    <div>available manager</div>
+    <div>
+      <h1>Saving these changes will replace your existing available time slots. Do you want to continue?</h1>
+           <button type="button">Continue</button>
+           <button type="button">Cancel</button>
+
+    </div>
   )
 }
