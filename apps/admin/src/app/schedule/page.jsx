@@ -48,7 +48,6 @@ export default function Schedule(){
 
 }, []);
 
-console.log('array??',typeof showStartTime);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -64,6 +63,11 @@ console.log('array??',typeof showStartTime);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!startTime || !endTime) return;
+
+    if(isActive){
+      console.log('if you save this youll be deleting current time');
+      return;
+    }
 
     console.log('Post:', Post);
 console.log('typeof Post:', typeof Post);
