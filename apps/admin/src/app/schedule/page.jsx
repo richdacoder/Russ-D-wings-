@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 import Post from "../../../../lib/post.js";
 import Get from "../../../../lib/get.js";
 import TimeDisplay from "./extras/time-display.jsx";
+import AvailabilityManager from "./extras/availability-manager.jsx";
 
 
 
@@ -142,6 +143,9 @@ console.log('typeof Post:', typeof Post);
       endTime={showEndTime}
 
         />
+
+      { isActive && <AvailabilityManager/>}
+
     </div>
   )
 }
