@@ -31,6 +31,7 @@ export default function Schedule(){
   const [isActive, setIsActive] = useState(true);
   const [showStartTime, setShowStartTime] = useState([]);
   const [showEndTime, setShowEndTime] = useState([]);
+  const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
 
 
 
@@ -67,6 +68,7 @@ export default function Schedule(){
 
     if(isActive){
       console.log('if you save this youll be deleting current time');
+      setShowAvailabilityManager(true);//send to child page to put it back to false
       return;
     }
 
@@ -144,7 +146,7 @@ console.log('typeof Post:', typeof Post);
 
         />
 
-      { isActive && <AvailabilityManager/>}
+      { showAvailabilityManager && <AvailabilityManager/>}
 
     </div>
   )
