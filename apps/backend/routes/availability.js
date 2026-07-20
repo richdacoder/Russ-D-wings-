@@ -87,4 +87,8 @@ router.post('/availability', async (req, res) => {
   }
 });
 
+
+
+router.delete()
+
 module.exports = router
