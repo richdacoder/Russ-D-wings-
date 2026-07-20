@@ -89,6 +89,23 @@ router.post('/availability', async (req, res) => {
 
 
 
-router.delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.delete('availabilty/:id', async (res,req) => {
+
+})
 
 module.exports = router
