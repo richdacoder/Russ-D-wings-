@@ -3,6 +3,7 @@
 import {useState, useEffect} from "react";
 
 /*
+objective
 - add delete when save
 - add post
 
