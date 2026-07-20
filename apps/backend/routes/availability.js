@@ -108,15 +108,23 @@ router.delete('/availability/:id', async (req,res) => {
   try{
 const {id} = req.params;
 
-await knex('time_slot').
+const deletedRows = await knex('time_slot').
 where({id}).
 delete();
 
-res.status(200);
+if(deletedRows === 0)return res.status(404).json({
+    message: 'Availability not found.'
+})
+
+res.status(200).json({
+  message: 'Availability deleted successfully.'
+});
 
   } catch(err){
 console.error(err);
-res.status(500);
+res.status(500).json({
+error:'Internal server error.'
+});
   }
 });
 
