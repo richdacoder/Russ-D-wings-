@@ -1,4 +1,4 @@
-export default async function Delete (){
+export default async function Delete (endPoint){
 
 
 }
