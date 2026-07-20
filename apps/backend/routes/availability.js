@@ -104,8 +104,12 @@ router.post('/availability', async (req, res) => {
 
 
 
-router.delete('/availabilty/:id', async (req,res) => {
+router.delete('/availability/:id', async (req,res) => {
+const {id} = req.params;
 
-})
+await knex('time_slot').
+where({id}).
+delete();
+});
 
 module.exports = router
