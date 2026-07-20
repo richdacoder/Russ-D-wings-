@@ -104,7 +104,7 @@ router.post('/availability', async (req, res) => {
 
 
 
-router.delete('availabilty/:id', async (res,req) => {
+router.delete('/availabilty/:id', async (req,res) => {
 
 })
 
