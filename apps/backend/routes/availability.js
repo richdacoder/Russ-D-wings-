@@ -114,7 +114,7 @@ delete();
 
 if(deletedRows === 0)return res.status(404).json({
     message: 'Availability not found.'
-})
+});
 
 res.status(200).json({
   message: 'Availability deleted successfully.'
@@ -128,5 +128,5 @@ error:'Internal server error.'
   }
 });
 
-
+t
 module.exports = router
