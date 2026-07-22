@@ -37,14 +37,6 @@ res.status(500).json({error:'fail to retrieve availability'});
 
 
 
-
-
-
-
-
-
-
-
 router.post('/availability', async (req, res) => {
   const data = req.body
   console.log(data);
@@ -91,22 +83,8 @@ router.post('/availability', async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 router.delete('/availability/:id', async (req,res) => {
   try{
-    console.log('delete');
 const {id} = req.params;
 
 const deletedRows = await db('time_slots').
@@ -120,6 +98,7 @@ if(deletedRows === 0)return res.status(404).json({
 res.status(200).json({
   message: 'Availability deleted successfully.'
 });
+    console.log('delete');
 
   } catch(err){
 console.error(err);
