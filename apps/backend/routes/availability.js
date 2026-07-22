@@ -108,7 +108,7 @@ router.delete('/availability/:id', async (req,res) => {
   try{
 const {id} = req.params;
 
-const deletedRows = await knex('time_slot').
+const deletedRows = await knex('time_slots').
 where({id}).
 delete();
 
