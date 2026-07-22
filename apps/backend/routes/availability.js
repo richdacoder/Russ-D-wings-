@@ -10,7 +10,7 @@ const db = require('../db/db.js');
 - make an array named required for required data or any other way to make sure data is valid
   and none is missing.
 
-  http://localhost:3001/api/availability
+  http://localhost:3000/api/availability
   http://localhost:3001/availability
 
 
@@ -106,9 +106,10 @@ router.post('/availability', async (req, res) => {
 
 router.delete('/availability/:id', async (req,res) => {
   try{
+    console.log('delete');
 const {id} = req.params;
 
-const deletedRows = await knex('time_slots').
+const deletedRows = await db('time_slots').
 where({id}).
 delete();
 
