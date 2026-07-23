@@ -16,7 +16,7 @@ try{
   });
 
   fetch(
-    ``
+    `${url}/api/${endPoint}/:id`
   )
 } catch(err){
 
