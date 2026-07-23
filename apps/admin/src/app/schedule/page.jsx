@@ -33,7 +33,7 @@ export default function Schedule(){
   const [showStartTime, setShowStartTime] = useState([]);
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
-  const [timeSlot, setTimeSlot] = useState();
+const [timeSlot, setTimeSlot] = useState({});
 
 
   useEffect(() =>  {
@@ -52,7 +52,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('time slot', timeSlot);
+console.log('new time slot id', typeof timeSlot);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
