@@ -3,6 +3,7 @@
 import {useState, useEffect} from "react";
 import Post from "../../../../lib/post.js";
 import Get from "../../../../lib/get.js";
+import Delete from "../../../../lib/delete.js";
 import TimeDisplay from "./extras/time-display.jsx";
 import AvailabilityManager from "./extras/availability-manager.jsx";
 
@@ -32,7 +33,6 @@ export default function Schedule(){
   const [showStartTime, setShowStartTime] = useState([]);
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
-
 
 
   useEffect(() =>  {
@@ -137,7 +137,7 @@ console.log('typeof Post:', typeof Post);
       <div>
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
-
+      <div><button type="button" onClick={() => Delete('availability')} >Test button</button></div>
       <button type="submit"> Add Time Block </button>
       </form>
       <TimeDisplay
