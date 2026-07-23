@@ -153,6 +153,7 @@ console.log('delete on parent page', Delete)
         />
 
       { showAvailabilityManager && <AvailabilityManager
+      timeSlot={timeSlot}
       onDelete={Delete}
       onPost={Post}
       />}
