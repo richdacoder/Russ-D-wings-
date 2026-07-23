@@ -9,7 +9,7 @@ objective
 
 */
 
-export default function AvailabilityManager({onDelete, onPost}){
+export default function AvailabilityManager({onDelete, onPost, timeSlot}){
   console.log('working child page');
 console.log('delete on child page', onDelete );
   return(
