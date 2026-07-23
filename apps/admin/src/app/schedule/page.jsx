@@ -137,7 +137,6 @@ console.log('typeof Post:', typeof Post);
       <div>
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
-      <div><button type="button" onClick={() => Delete('availability')} >Test button</button></div>
       <button type="submit"> Add Time Block </button>
       </form>
       <TimeDisplay
@@ -146,7 +145,10 @@ console.log('typeof Post:', typeof Post);
 
         />
 
-      { showAvailabilityManager && <AvailabilityManager/>}
+      { showAvailabilityManager && <AvailabilityManager
+      delete={Delete}
+      Post={Post}
+      />}
 
     </div>
   )

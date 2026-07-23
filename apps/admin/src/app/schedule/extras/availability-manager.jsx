@@ -9,6 +9,8 @@ objective
 
 */
 
+
+
 export default function AvailabilityManager(){
 
   return(
