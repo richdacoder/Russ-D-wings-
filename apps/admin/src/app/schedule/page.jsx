@@ -33,7 +33,7 @@ export default function Schedule(){
   const [showStartTime, setShowStartTime] = useState([]);
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
-  const [timeSlot, setTimeSlot] = useState([]);
+  const [timeSlot, setTimeSlot] = useState();
 
 
   useEffect(() =>  {
@@ -42,7 +42,7 @@ export default function Schedule(){
   const data = await Get('availability');
       setShowStartTime(data.map(time => time.start_time));
       setShowEndTime(data.map(time => time.end_time));
-
+      setTimeSlot(data[0]);
 
 
   } catch(err){
@@ -52,6 +52,7 @@ export default function Schedule(){
 
 }, []);
 
+console.log('time slot', timeSlot);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -89,6 +90,9 @@ console.log('typeof Post:', typeof Post);
   setStartTime("");
   setEndTime("");
 }
+
+
+console.log('delete on parent page', Delete)
 /*
 - most likely a form
 
@@ -137,6 +141,7 @@ console.log('typeof Post:', typeof Post);
         />
       </div>
       <div>
+        {/* <div>{timeSlot}</div> */}
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
       <button type="submit"> Add Time Block </button>
