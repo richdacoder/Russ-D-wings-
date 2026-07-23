@@ -33,6 +33,7 @@ export default function Schedule(){
   const [showStartTime, setShowStartTime] = useState([]);
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
+  const [timeSlot, setTimeSlot] = useState([]);
 
 
   useEffect(() =>  {
@@ -41,6 +42,7 @@ export default function Schedule(){
   const data = await Get('availability');
       setShowStartTime(data.map(time => time.start_time));
       setShowEndTime(data.map(time => time.end_time));
+
 
 
   } catch(err){

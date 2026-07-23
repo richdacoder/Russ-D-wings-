@@ -9,8 +9,6 @@ objective
 
 */
 
-
-
 export default function AvailabilityManager({onDelete, onPost}){
 
   return(
