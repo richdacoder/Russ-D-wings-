@@ -16,7 +16,9 @@ try{
   });
 
   fetch(
-    `${url}/api/${endPoint}/:id`
+    `${url}/api/${endPoint}/:id`,{
+      method:'DELETE'
+    }
   )
 } catch(err){
 
