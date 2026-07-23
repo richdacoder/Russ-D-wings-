@@ -15,11 +15,8 @@ try{
     'endpoint': endPoint,
   });
 
-  fetch(() =>{
-
-
-  }
-
+  fetch(
+    ``
   )
 } catch(err){
 
