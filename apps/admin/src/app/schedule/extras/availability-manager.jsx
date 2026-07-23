@@ -11,7 +11,7 @@ objective
 
 
 
-export default function AvailabilityManager(){
+export default function AvailabilityManager({onDelete, onPost}){
 
   return(
     <div>

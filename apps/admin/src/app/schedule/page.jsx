@@ -146,8 +146,8 @@ console.log('typeof Post:', typeof Post);
         />
 
       { showAvailabilityManager && <AvailabilityManager
-      delete={Delete}
-      Post={Post}
+      onDelete={Delete}
+      onPost={Post}
       />}
 
     </div>
