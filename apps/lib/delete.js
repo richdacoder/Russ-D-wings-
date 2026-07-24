@@ -21,7 +21,15 @@ try{
       method:'DELETE'
     }
   );
-res;
+if(!res.ok){
+  res.json({
+    'message': 'Delet not succesful'
+  })
+};
+
+const data = await res.json();
+
+
 console.log('deleted');
 
 } catch(err){
