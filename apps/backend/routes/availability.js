@@ -98,7 +98,7 @@ if(deletedRows === 0)return res.status(404).json({
 res.status(200).json({
   message: 'Availability deleted successfully.'
 });
-    console.log('delete');
+    console.log('deleted now');
 
   } catch(err){
 console.error(err);

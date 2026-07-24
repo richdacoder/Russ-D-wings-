@@ -16,11 +16,14 @@ try{
     'id': id
   });
 
-  const res = fetch(
+  const res = await fetch(
     `${url}/api/${endPoint}/${id}`,{
       method:'DELETE'
     }
-  )
+  );
+res;
+console.log('deleted');
+
 } catch(err){
 console.error(err);
 }
