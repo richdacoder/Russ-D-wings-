@@ -26,15 +26,17 @@ handle submit
 - if do pop up saying that time exist for the day and that if you save its replace current time
 - create delete
 
+problem
+there might always be time slot(delete all timeslots isactive===true )
 object
 strucuture
-                Add Time Block
+              xx  Add Time Block
                        │
                        ▼
-             What type is it?
+            xx What type is it?
                /            \
               /              \
-      Availability         Break
+      xAvailability x       xx Break
      (is_active=true)   (is_active=false)
             │                 │
             ▼                 ▼
@@ -106,9 +108,9 @@ console.log('new time slot id', typeof timeSlot);
     if(isActive){
       if(timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
-         console.log('theres a time slot')
+         console.log('theres a time slot');
+         return;
       }
-      return;
     }
 
     console.log('Post:', Post);

@@ -17,7 +17,7 @@ try{
   });
 
   const res = fetch(
-    `${url}/api/${endPoint}/:id`,{
+    `${url}/api/${endPoint}/${id}`,{
       method:'DELETE'
     }
   )
