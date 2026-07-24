@@ -104,8 +104,10 @@ console.log('new time slot id', typeof timeSlot);
     if (!startTime || !endTime) return;
 
     if(isActive){
-      console.log('if you save this youll be deleting current time');
-      setShowAvailabilityManager(true);//send to child page to put it back to false
+      if(timeSlot){
+         setShowAvailabilityManager(true);//send to child page to put it back to false
+         console.log('theres a time slot')
+      }
       return;
     }
 
