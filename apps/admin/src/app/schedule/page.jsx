@@ -25,6 +25,40 @@ handle submit
 - check database if an available time exist
 - if do pop up saying that time exist for the day and that if you save its replace current time
 - create delete
+
+object
+strucuture
+                Add Time Block
+                       │
+                       ▼
+             What type is it?
+               /            \
+              /              \
+      Availability         Break
+     (is_active=true)   (is_active=false)
+            │                 │
+            ▼                 ▼
+   Find existing        Find overlapping
+    availability          break(s)
+            │                 │
+            ├── None          ├── None
+            │                 │
+            ▼                 ▼
+         POST row          POST row
+            │                 │
+            └──── Exists      └──── Overlap found
+                     │                 │
+                     ▼                 ▼
+           Show confirmation    Show confirmation
+                     │                 │
+               Continue?        Continue?
+                     │                 │
+                     ▼                 ▼
+              DELETE old row     DELETE overlapping row
+                     │                 │
+                     ▼                 ▼
+                   POST             POST
+
 */
 export default function Schedule(){
   const [startTime, setStartTime] = useState("");
