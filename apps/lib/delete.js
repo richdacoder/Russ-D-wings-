@@ -21,16 +21,19 @@ try{
       method:'DELETE'
     }
   );
-if(!res.ok){
-  res.json({
-    'message': 'Delet not succesful'
-  })
-};
 
 const data = await res.json();
 
+if(!res.ok){
+throw new Error(res.message)
+};
 
 console.log('deleted');
+
+
+return data;
+
+
 
 } catch(err){
 console.error(err);
