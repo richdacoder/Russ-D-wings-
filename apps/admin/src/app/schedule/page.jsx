@@ -114,6 +114,10 @@ console.log('new time slot id', typeof timeSlot);
       }
     }
 
+    if(!continueSubmit){
+      return;
+    } ;
+
     console.log('Post:', Post);
 console.log('typeof Post:', typeof Post);
 
