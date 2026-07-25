@@ -69,7 +69,8 @@ export default function Schedule(){
   const [showStartTime, setShowStartTime] = useState([]);
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
-const [timeSlot, setTimeSlot] = useState({});
+  const [timeSlot, setTimeSlot] = useState({});
+  const [continueSubmit, setContinueSubmit] = useState(false);
 
 
   useEffect(() =>  {
