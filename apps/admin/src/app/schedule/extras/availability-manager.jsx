@@ -12,7 +12,6 @@ objective
 */
 
 export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit}){
-  console.log('working child page', timeSlot, timeSlot.id);
   return(
     <div>
       <h1>Saving these changes will replace your existing available time slots. Do you want to continue?</h1>

@@ -90,7 +90,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('new time slot id', typeof timeSlot);
+console.log('continue sumbit', continueSubmit);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -113,7 +113,6 @@ console.log('new time slot id', typeof timeSlot);
       if(timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
-         return;
       }
     }
 
