@@ -118,7 +118,7 @@ console.log('continue sumbit', continueSubmit);
 
     console.log('before conitnue submit', continueSubmit );
 
-    if(continueSubmit === false){
+    if(!continueSubmit){
       return ;
         } ;
 
