@@ -71,6 +71,8 @@ export default function Schedule(){
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
   const [timeSlot, setTimeSlot] = useState({});
   const [continueSubmit, setContinueSubmit] = useState(false);
+    const [continueSubmit, setContinueSubmit] = useState(false);
+
 
 
   useEffect(() =>  {
@@ -106,6 +108,8 @@ console.log('new time slot id', typeof timeSlot);
     e.preventDefault();
     if (!startTime || !endTime) return;
 
+        console.log('before isactive', continueSubmit );
+
     if(isActive){
       if(timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
@@ -114,9 +118,13 @@ console.log('new time slot id', typeof timeSlot);
       }
     }
 
+    console.log('before conitnue submit', continueSubmit );
+
     if(!continueSubmit){
       return;
     } ;
+
+        console.log('after conitnue submit', continueSubmit );
 
     console.log('Post:', Post);
 console.log('typeof Post:', typeof Post);
@@ -132,6 +140,7 @@ console.log('typeof Post:', typeof Post);
   console.log('after post')
   setStartTime("");
   setEndTime("");
+  setShowAvailabilityManager(false);
 }
 
 
@@ -199,6 +208,7 @@ console.log('delete on parent page', Delete)
       timeSlot={timeSlot}
       onDelete={Delete}
       onPost={Post}
+      setContinueSubmit={setContinueSubmit}
       />}
 
     </div>
