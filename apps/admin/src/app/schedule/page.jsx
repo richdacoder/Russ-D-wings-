@@ -70,7 +70,7 @@ export default function Schedule(){
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
   const [timeSlot, setTimeSlot] = useState({});
-  const [continueSubmit, setContinueSubmit] = useState(true);
+  const [continueSubmit, setContinueSubmit] = useState(false);
 
 
 
@@ -118,9 +118,9 @@ console.log('continue sumbit', continueSubmit);
 
     console.log('before conitnue submit', continueSubmit );
 
-    if(!continueSubmit){
-      return;
-    } ;
+    if(continueSubmit === false){
+      return ;
+        } ;
 
         console.log('after conitnue submit', continueSubmit );
 
@@ -207,6 +207,7 @@ console.log('delete on parent page', Delete)
       onDelete={Delete}
       onPost={Post}
       setContinueSubmit={setContinueSubmit}
+      handleSubmit={handleSubmit}
       />}
 
     </div>
