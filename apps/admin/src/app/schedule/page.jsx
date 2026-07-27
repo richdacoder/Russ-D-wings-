@@ -195,6 +195,15 @@ console.log('delete on parent page', Delete)
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
       <button type="submit"> Add Time Block </button>
+
+            { showAvailabilityManager && <AvailabilityManager
+      timeSlot={timeSlot}
+      onDelete={Delete}
+      onPost={Post}
+      setContinueSubmit={setContinueSubmit}
+      handleSubmit={handleSubmit}
+      />}
+
       </form>
       <TimeDisplay
       startTime={showStartTime}
@@ -202,13 +211,6 @@ console.log('delete on parent page', Delete)
 
         />
 
-      { showAvailabilityManager && <AvailabilityManager
-      timeSlot={timeSlot}
-      onDelete={Delete}
-      onPost={Post}
-      setContinueSubmit={setContinueSubmit}
-      handleSubmit={handleSubmit}
-      />}
 
     </div>
   )
