@@ -204,6 +204,7 @@ console.log('delete on parent page', Delete)
       onPost={Post}
       setContinueSubmit={setContinueSubmit}
       handleSubmit={handleSubmit}
+      isActive={isActive}
       />}
 
       </form>
