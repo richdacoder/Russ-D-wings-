@@ -90,7 +90,7 @@ export default function Schedule(){
       setShowStartTime(data.map(time => time.start_time));
       setShowEndTime(data.map(time => time.end_time));
       setBlockTime(data.filter(time => !time.is_active))
-      setTimeSlot(data[0]);
+      setTimeSlot(data.filter(time => time.is_active));
 
 
   } catch(err){
@@ -100,7 +100,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('block time start time', [blocktime].start_time, 'all times', allTimes);
+console.log('block time start time', blocktime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' times slot', timeSlot);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
