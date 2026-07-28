@@ -72,6 +72,7 @@ export default function Schedule(){
   const [timeSlot, setTimeSlot] = useState({});
   const [blocktime, setBlockTime] = useState({});
   const [continueSubmit, setContinueSubmit] = useState(false);
+  const [allTimes, setAllTimes] = useState([]);
 
 
 
@@ -81,6 +82,7 @@ export default function Schedule(){
   const data = await Get('availability');
       setShowStartTime(data.map(time => time.start_time));
       setShowEndTime(data.map(time => time.end_time));
+      setBlockTime(data.map(time => !time.is_active))
       setTimeSlot(data[0]);
 
 
@@ -91,7 +93,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('continue sumbit', continueSubmit);
+console.log('block time', blocktime, 'time slot',  );
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
