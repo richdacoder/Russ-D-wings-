@@ -11,7 +11,7 @@ objective
 
 */
 
-export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit}){
+export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive}){
   return(
     <div>
       <h1>Saving these changes will replace your existing available time slots. Do you want to continue?</h1>
