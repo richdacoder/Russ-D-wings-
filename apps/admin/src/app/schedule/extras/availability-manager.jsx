@@ -13,7 +13,7 @@ objective
 
 */
 
-export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive}){
+export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive, blockTime}){
   return(
     <div>
       <h1>

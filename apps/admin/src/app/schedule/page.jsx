@@ -76,7 +76,7 @@ export default function Schedule(){
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
   const [timeSlot, setTimeSlot] = useState([]);
-  const [blocktime, setBlockTime] = useState([]);
+  const [blockTime, setBlockTime] = useState([]);
   const [continueSubmit, setContinueSubmit] = useState(false);
   const [allTimes, setAllTimes] = useState([]);
 
@@ -100,7 +100,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('block time start time', blocktime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' times slot', timeSlot);
+console.log('block time start time', blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' times slot', timeSlot);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -119,7 +119,7 @@ console.log('block time start time', blocktime.some(time =>  endTime > time.star
 
         console.log('before isactive', continueSubmit );
 
-      if(timeSlot || blocktime){
+      if(timeSlot || blockTime){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
     }
@@ -213,7 +213,7 @@ console.log('delete on parent page', Delete)
       setContinueSubmit={setContinueSubmit}
       handleSubmit={handleSubmit}
       isActive={isActive}
-      blocktime={blocktime}
+      blockTime={blockTime}
       />}
 
       </form>
