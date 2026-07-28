@@ -70,7 +70,7 @@ export default function Schedule(){
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
   const [timeSlot, setTimeSlot] = useState({});
-  const [blocktime, setBlockTime] = usestate({});
+  const [blocktime, setBlockTime] = useState({});
   const [continueSubmit, setContinueSubmit] = useState(false);
 
 
