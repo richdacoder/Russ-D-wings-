@@ -16,7 +16,7 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
     <div>
       <h1>Saving these changes will replace your existing available time slots. Do you want to continue?</h1>
            <button type="submit" onClick={() => {setContinueSubmit(true);
-            onDelete('availability', timeSlot.id);
+            onDelete('availability', timeSlot[0].id);
            }}
            onSubmit={handleSubmit}
            >Continue</button>
