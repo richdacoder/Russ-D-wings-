@@ -80,9 +80,10 @@ export default function Schedule(){
         const loadData = async () =>{
   try{
   const data = await Get('availability');
+      setAllTimes(data)
       setShowStartTime(data.map(time => time.start_time));
       setShowEndTime(data.map(time => time.end_time));
-      setBlockTime(data.map(time => !time.is_active))
+      setBlockTime(data.filter(time => !time.is_active))
       setTimeSlot(data[0]);
 
 
@@ -93,7 +94,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('block time', blocktime, 'time slot',  );
+console.log('block time', blocktime, 'all times', allTimes);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
