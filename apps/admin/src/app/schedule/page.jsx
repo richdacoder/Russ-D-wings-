@@ -113,11 +113,9 @@ console.log('block time', blocktime, 'all times', allTimes);
 
         console.log('before isactive', continueSubmit );
 
-    if(isActive || !isActive){
       if(timeSlot || blocktime){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
-      }
     }
 
 
@@ -143,6 +141,7 @@ console.log('typeof Post:', typeof Post);
   console.log('after post')
   setStartTime("");
   setEndTime("");
+  setContinueSubmit(false);
   setShowAvailabilityManager(false);
 }
 
