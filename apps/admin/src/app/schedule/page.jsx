@@ -111,7 +111,7 @@ console.log('continue sumbit', continueSubmit);
         console.log('before isactive', continueSubmit );
 
     if(isActive || !isActive){
-      if(timeSlot || !timeSlot.is_active && timeSlot.){
+      if(timeSlot || blocktime){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
       }
