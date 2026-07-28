@@ -13,7 +13,10 @@ objective
 
 */
 
-export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive, blockTime}){
+export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive, blockTime, startTime, endTime}){
+  const overLapping = () => {
+
+  };
   return(
     <div>
       <h1>

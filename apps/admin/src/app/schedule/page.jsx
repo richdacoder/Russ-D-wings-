@@ -214,6 +214,8 @@ console.log('delete on parent page', Delete)
       handleSubmit={handleSubmit}
       isActive={isActive}
       blockTime={blockTime}
+      startTime={startTime}
+      endTime={endTime}
       />}
 
       </form>
