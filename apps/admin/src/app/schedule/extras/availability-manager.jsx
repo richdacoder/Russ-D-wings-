@@ -21,7 +21,7 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
   }
 </h1>
            <button type="submit" onClick={() => {setContinueSubmit(true);
-            onDelete('availability', timeSlot[0].id);
+            isActive? onDelete('availability', timeSlot[0].id) : onDelete('availability', timeSlot[0].id);
            }}
            onSubmit={handleSubmit}
            >Continue</button>
