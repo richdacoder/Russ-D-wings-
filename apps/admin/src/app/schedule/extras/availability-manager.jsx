@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 
 /*
 objective
-- add delete make sure timeslot exist when save
+- add delete make sure timeslot exist when save.,
 - add post
 - onclick will have handle submit
 

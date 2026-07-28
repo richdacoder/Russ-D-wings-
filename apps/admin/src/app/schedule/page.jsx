@@ -40,8 +40,8 @@ strucuture
      (is_active=true)   (is_active=false)
             │                 │
             ▼                 ▼
-   Find existing        Find overlapping
-    availability          break(s)
+   Find existingxx       Find overlapping
+    availability          break(s) (delete and replace)
             │                 │
             ├── None          ├── None
             │                 │
@@ -109,12 +109,13 @@ console.log('continue sumbit', continueSubmit);
 
         console.log('before isactive', continueSubmit );
 
-    if(isActive){
+    if(isActive || !isActive){
       if(timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
       }
     }
+
 
     console.log('before conitnue submit', continueSubmit );
 
