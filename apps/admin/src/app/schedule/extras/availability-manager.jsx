@@ -14,7 +14,12 @@ objective
 export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive}){
   return(
     <div>
-      <h1>Saving these changes will replace your existing available time slots. Do you want to continue?</h1>
+      <h1>
+  {isActive
+    ? "Saving these changes will replace your existing available time slots. Do you want to continue?"
+    : "Saving these changes will replace the existing overlapping time block(s). Do you want to continue?"
+  }
+</h1>
            <button type="submit" onClick={() => {setContinueSubmit(true);
             onDelete('availability', timeSlot[0].id);
            }}
