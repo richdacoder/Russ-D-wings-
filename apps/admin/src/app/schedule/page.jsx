@@ -213,6 +213,7 @@ console.log('delete on parent page', Delete)
       setContinueSubmit={setContinueSubmit}
       handleSubmit={handleSubmit}
       isActive={isActive}
+      blocktime={blocktime}
       />}
 
       </form>

@@ -8,6 +8,8 @@ objective
 - add post
 - onclick will have handle submit
 
+- creat function where shows which id is being overlapped
+
 
 */
 
@@ -21,7 +23,7 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
   }
 </h1>
            <button type="submit" onClick={() => {setContinueSubmit(true);
-            isActive? onDelete('availability', timeSlot[0].id) : onDelete('availability', timeSlot[0].id);
+            isActive? onDelete('availability', timeSlot[0].id) : onDelete('availability', blockTime[0].id);
            }}
            onSubmit={handleSubmit}
            >Continue</button>
