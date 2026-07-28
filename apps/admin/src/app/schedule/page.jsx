@@ -26,6 +26,12 @@ handle submit
 - if do pop up saying that time exist for the day and that if you save its replace current time
 - create delete
 
+7/28
+- now that theres block time finsh logic that block time doesnt over lap each other
+
+
+
+
 problem
 there might always be time slot(delete all timeslots isactive===true )
 object
@@ -69,8 +75,8 @@ export default function Schedule(){
   const [showStartTime, setShowStartTime] = useState([]);
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
-  const [timeSlot, setTimeSlot] = useState({});
-  const [blocktime, setBlockTime] = useState({});
+  const [timeSlot, setTimeSlot] = useState([]);
+  const [blocktime, setBlockTime] = useState([]);
   const [continueSubmit, setContinueSubmit] = useState(false);
   const [allTimes, setAllTimes] = useState([]);
 
@@ -94,7 +100,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('block time', blocktime, 'all times', allTimes);
+console.log('block time start time', [blocktime].start_time, 'all times', allTimes);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
