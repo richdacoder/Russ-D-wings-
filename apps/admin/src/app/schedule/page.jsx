@@ -70,6 +70,7 @@ export default function Schedule(){
   const [showEndTime, setShowEndTime] = useState([]);
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
   const [timeSlot, setTimeSlot] = useState({});
+  const [blocktime, setBlockTime] = usestate({});
   const [continueSubmit, setContinueSubmit] = useState(false);
 
 
@@ -110,7 +111,7 @@ console.log('continue sumbit', continueSubmit);
         console.log('before isactive', continueSubmit );
 
     if(isActive || !isActive){
-      if(timeSlot){
+      if(timeSlot || !timeSlot.is_active && timeSlot.){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
       }
