@@ -119,7 +119,17 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
 
         console.log('before isactive', continueSubmit );
 
-      if(timeSlot || blockTime){
+        /*
+        - if isactive
+        - pop up availmanager if if timeslot exist
+        - if not isactive
+        - pop up availmanager if blocktime overlap
+
+
+
+
+        */
+      if(isActive && timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
     }

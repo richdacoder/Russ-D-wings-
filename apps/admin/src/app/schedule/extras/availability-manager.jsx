@@ -18,8 +18,6 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
   const overLapTimes = blockTime.filter(time =>  endTime > time.start_time && startTime < time.end_time );
   console.log('overlap times', overLapTimes)
 
-  const overLapping = () => {
-  };
   return(
     <div>
       <h1>
