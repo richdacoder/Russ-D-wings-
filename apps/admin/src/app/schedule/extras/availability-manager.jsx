@@ -14,8 +14,11 @@ objective
 */
 
 export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive, blockTime, startTime, endTime}){
-  const overLapping = () => {
 
+  const overLapTimes = blockTime.filter(time =>  endTime > time.start_time && startTime < time.end_time );
+  console.log('overlap times', overLapTimes)
+
+  const overLapping = () => {
   };
   return(
     <div>
@@ -26,7 +29,11 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
   }
 </h1>
            <button type="submit" onClick={() => {setContinueSubmit(true);
-            isActive? onDelete('availability', timeSlot[0].id) : onDelete('availability', blockTime[0].id);
+            if(isActive){
+              onDelete('availability', timeSlot[0].id)
+            } else{
+              overLapTimes.forEach(time => onDelete('availability', time.id))
+           };
            }}
            onSubmit={handleSubmit}
            >Continue</button>
