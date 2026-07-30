@@ -139,7 +139,7 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
                setShowAvailabilityManager(true);
     }else if(!overlapCheck){
       setContinueSubmit(true)
-      console.log("afte", continueSubmit);
+      console.log("after", continueSubmit);
 
     };
 
