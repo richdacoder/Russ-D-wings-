@@ -30,6 +30,7 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
             if(isActive){
               onDelete('availability', timeSlot[0].id)
             } else{
+              console.log('stops here before overlap delete');
               overLapTimes.forEach(time => onDelete('availability', time.id))
            };
            }}

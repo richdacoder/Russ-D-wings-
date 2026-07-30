@@ -28,7 +28,7 @@ handle submit
 
 7/28
 - now that theres block time finsh logic that block time doesnt over lap each other
-
+- make so that when showavailmanager is open you cant click isactive buttons
 
 
 
@@ -100,7 +100,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('block time start time', blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' times slot', timeSlot);
+console.log('block time start time', blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' active?', !isActive);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -112,6 +112,8 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
      const [hour, min] = t.split(":").map(Number);
      return new Date(y,m - 1,d,hour, min);
   }
+
+  const overlapCheck = blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -129,11 +131,17 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
 
 
         */
+
       if(isActive && timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
-    }
+    } else if (!isActive && overlapCheck ){
+               setShowAvailabilityManager(true);
+    }else if(!overlapCheck){
+      setContinueSubmit(true)
+      console.log("afte", continueSubmit);
 
+    };
 
     console.log('before conitnue submit', continueSubmit );
 
