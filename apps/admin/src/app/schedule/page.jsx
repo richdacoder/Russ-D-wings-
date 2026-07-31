@@ -115,11 +115,19 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
 
   const overlapCheck = blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time );
 
+const testOverLap = blockTime.map(time => ({
+  start: time.start_time,
+  end: time.end_time
+}));
+
+console.log(testOverLap);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!startTime || !endTime) return;
 
-        console.log('before isactive', continueSubmit );
+    let submit = continueSubmit;
+        console.log('before isactive', continueSubmit, 'submit', submit);
 
         /*
         - if isactive
@@ -135,15 +143,17 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
       if(isActive && timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
          console.log('theres a time slot');
-    } else if (!isActive && overlapCheck ){
+    } ;
+    if (!isActive && overlapCheck ){
                setShowAvailabilityManager(true);
-    }else if(!overlapCheck){
-      setContinueSubmit(true)
+    };
+    console.log('overlap', overlapCheck, 'test', testOverLap);
+    if(!overlapCheck){
+      submit = true;
       console.log("after", continueSubmit);
-
     };
 
-    console.log('before conitnue submit', continueSubmit );
+    console.log('before conitnue submit', continueSubmit, 'submit', submit);
 
     if(!continueSubmit){
       return ;
