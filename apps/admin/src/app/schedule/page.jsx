@@ -115,11 +115,15 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
 
   const overlapCheck = blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time );
 
-const testOverLap = blockTime.map(time => ({
-  start: time.start_time,
-  end: time.end_time
-}));
+const testOverLap = blockTime.map(time => {
+  const [, start] = time.start_time.split("T");
+  const [, end] = time.end_time.split("T");
 
+  return {
+    start,
+    end
+  };
+});
 console.log(testOverLap);
 
   const handleSubmit = async (e) => {
