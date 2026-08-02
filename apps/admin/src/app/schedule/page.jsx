@@ -127,7 +127,6 @@ const testOverLap = blockTime.map(time => {
 });
 console.log(testOverLap);
 console.log(testOverLap);
-console.log(testOverLap);
 
 
 
