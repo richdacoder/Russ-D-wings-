@@ -157,6 +157,7 @@ console.log(testOverLap);
     console.log('overlap', overlapCheck, 'test', testOverLap);
     if(!overlapCheck){
       submit = true;
+      setContinueSubmit(true);
       console.log("after", continueSubmit);
     };
 
