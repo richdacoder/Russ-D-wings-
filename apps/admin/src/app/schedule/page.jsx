@@ -98,7 +98,7 @@ export default function Schedule(){
   }
 };    loadData();
 
-}, []);
+}, [continueSubmit]);
 
 console.log('block time start time', blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' active?', !isActive);
 
