@@ -125,7 +125,7 @@ const testOverLap = blockTime.map(time => {
     day
   };
 });
-console.log(testOverLap);
+console.log('testing overlap here', testOverLap);
 
 
 
