@@ -116,15 +116,16 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
   const overlapCheck = blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time );
 
 const testOverLap = blockTime.map(time => {
-  const [, start] = time.start_time.split("T")[0];
-  const [day, end] = time.end_time.split("T");
+  const start = time.start_time.split("T")[1];
+  const end = time.end_time.split("T")[1];
+
+
 
   console.log('testing inside overlap', {'start': time.start_time, 'end': time.end_time});
 
   return {
-    start: start.length,
+    start: start,
     end: end,
-    day,
   };
 });
 console.log('testing overlap here', testOverLap);
