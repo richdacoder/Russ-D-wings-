@@ -123,10 +123,8 @@ const testOverLap = blockTime.map(time => {
 
   return {
     start: start.length,
-    end: end.split(":"),
+    end: end,
     day,
-    twenty,
-    six
   };
 });
 console.log('testing overlap here', testOverLap);
