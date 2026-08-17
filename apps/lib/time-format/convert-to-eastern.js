@@ -1,4 +1,4 @@
-export default function ConvertToEastern(){
+export default function ConvertToEastern(time){
 
 
 }
