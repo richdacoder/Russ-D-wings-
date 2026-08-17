@@ -117,6 +117,14 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
     const existingStart = time.start_time.split("T")[1].split(".")[0];
     const existingEnd = time.end_time.split("T")[1].split(".")[0];
 
+      console.log('testing inside overlap', {
+        'start': startTime,
+         'end': endTime,
+        'existing start': existingStart,
+         'existing end': existingEnd
+      });
+
+
    return( endTime > existingStart &&
     startTime < existingEnd )
   });
@@ -124,11 +132,6 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
 const testOverLap = blockTime.map(time => {
   const start = time.start_time.split("T")[1].split(".")[0];
   const end = time.end_time.split("T")[1].split(".")[0];
-
-
-
-  console.log('testing inside overlap', {'start': startTime, 'end': endTime});
-
 
   return startTime > endTime;
 });
