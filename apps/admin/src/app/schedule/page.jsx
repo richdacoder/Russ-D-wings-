@@ -114,8 +114,8 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
   }
 
   const overlapCheck = blockTime.some(time =>  {
-    const existingStart = time.start_time.split("T")[1].split(".")[0];
-    const existingEnd = time.end_time.split("T")[1].split(".")[0];
+    const existingStart = time.start_time.split("T")[1].split(".")[0].slice(0,5);
+    const existingEnd = time.end_time.split("T")[1].split(".")[0].slice(0,5);
 
       console.log('testing inside overlap', {
         'start': startTime,
