@@ -278,6 +278,11 @@ console.log('delete on parent page', Delete)
       endTime={showEndTime}
 
         />
+        <div>
+          <div>
+            <h1>Schedule</h1>
+          </div>
+        </div>
 
 
     </div>
