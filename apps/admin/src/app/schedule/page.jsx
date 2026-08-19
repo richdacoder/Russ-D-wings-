@@ -6,7 +6,7 @@ import Get from "../../../../lib/get.js";
 import Delete from "../../../../lib/delete.js";
 import TimeDisplay from "./extras/time-display.jsx";
 import AvailabilityManager from "./extras/availability-manager.jsx";
-import ConvertToEastern from "../../../../lib/time-format/convert-to-eastern.js"
+import ConvertToEastern from "../../../../lib/time-format/convert-to-eastern.js";
 
 
 
