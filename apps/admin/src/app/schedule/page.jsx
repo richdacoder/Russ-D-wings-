@@ -283,7 +283,7 @@ console.log('delete on parent page', Delete)
             <h1>Schedule</h1>
           </div>
           <div>
-
+            <h2>Block Times</h2>
           </div>
         </div>
 
