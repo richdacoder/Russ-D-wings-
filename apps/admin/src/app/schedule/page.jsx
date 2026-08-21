@@ -220,7 +220,8 @@ console.log('delete on parent page', Delete)
  - make the time not able to over lap each other
  - the timing is for todayxxx
 
--
+8/20/26
+- make seperate page to display time and blck time
 
 
  **
@@ -279,6 +280,7 @@ console.log('delete on parent page', Delete)
 
         />
         <div>
+          <div></div>
           <div>
             <h1>Schedule</h1>
           </div>
