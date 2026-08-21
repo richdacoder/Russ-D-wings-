@@ -7,6 +7,7 @@ import Delete from "../../../../lib/delete.js";
 import TimeDisplay from "./extras/time-display.jsx";
 import AvailabilityManager from "./extras/availability-manager.jsx";
 import ConvertToEastern from "../../../../lib/time-format/convert-to-eastern.js";
+import Available from "./extras/available.jsx";
 
 
 
@@ -282,6 +283,7 @@ console.log('delete on parent page', Delete)
         <div>
           <div>
             <h1>Schedule</h1>
+            <Available/>
           </div>
           <div>
             <h2>Block Times</h2>
