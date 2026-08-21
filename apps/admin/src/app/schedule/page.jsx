@@ -280,7 +280,6 @@ console.log('delete on parent page', Delete)
 
         />
         <div>
-          <div></div>
                     <div></div>
 
           <div>
