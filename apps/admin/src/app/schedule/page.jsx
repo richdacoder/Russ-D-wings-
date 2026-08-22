@@ -8,6 +8,7 @@ import TimeDisplay from "./extras/time-display.jsx";
 import AvailabilityManager from "./extras/availability-manager.jsx";
 import ConvertToEastern from "../../../../lib/time-format/convert-to-eastern.js";
 import Available from "./extras/available.jsx";
+import BlockTime from ".extras/block-time.jsx";
 
 
 
