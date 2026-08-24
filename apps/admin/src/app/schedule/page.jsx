@@ -284,7 +284,9 @@ console.log('delete on parent page', Delete)
         <div>
           <div>
             <h1>Schedule</h1>
-            <Available/>
+            <Available
+            timeSlot={timeSlot}
+            />
           </div>
           <div>
             <h2>Block Times</h2>
