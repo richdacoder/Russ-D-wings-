@@ -1,12 +1,14 @@
 "use client";
 
 export default function Available({timeSlot}){
+  console.log('time slot', timeSlot);
 return(
   <>
   <div>
-    <p>
-      working for sure
-    </p>
+      {timeSlot.map((time, index) =>(
+        <p key={index}>{time.start_time}</p>
+      )
+      )}
   </div>
   </>
 )
