@@ -1,6 +1,6 @@
 "use client";
 
-export default function Available(){
+export default function Available({}){
 return(
   <>
   <div>
