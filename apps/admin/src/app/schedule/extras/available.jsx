@@ -5,10 +5,17 @@ export default function Available({timeSlot}){
 return(
   <>
   <div>
+    <h1>Start Time </h1>
       {timeSlot.map((time, index) =>(
         <p key={index}>{time.start_time}</p>
       )
       )}
+          <h2>End Time </h2>
+      {timeSlot.map((time, index) =>(
+        <p key={index}>{time.end_time}</p>
+      )
+      )}
+
   </div>
   </>
 )
