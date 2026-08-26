@@ -12,7 +12,7 @@ return(
       )}
           <h2>End Time </h2>
       {timeSlot.map((time, index) =>(
-        <p key={index}>{time.end_time}</p>
+        <p key={index}>{ConvertToEastern(time.end_time)}</p>
       )
       )}
 
