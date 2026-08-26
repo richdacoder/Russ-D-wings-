@@ -117,8 +117,8 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
   }
 
   const overlapCheck = blockTime.some(time =>  {
-        const easternStart = ConvertToEastern(time.start_time);
-        const easternEnd = ConvertToEastern(time.end_time);
+        const easternStart = ConvertToEastern(time.start_time, false);
+        const easternEnd = ConvertToEastern(time.end_time, false);
 
         console.log('time start', time.start_time, 'time end', time.end_time );
 
