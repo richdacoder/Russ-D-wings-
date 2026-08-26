@@ -1,6 +1,6 @@
 "use client";
 
-export default function Available({timeSlot}){
+export default function Available({timeSlot, ConvertToEastern}){
   console.log('time slot', timeSlot);
 return(
   <>
