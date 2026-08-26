@@ -1,4 +1,4 @@
-export default function ConvertToEastern(date){
+export default function ConvertToEastern(date, hour){
 const convertedDate = new Date(date);
 
 return convertedDate.toLocaleTimeString('en-US', {
