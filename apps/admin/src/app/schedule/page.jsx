@@ -145,7 +145,7 @@ const testOverLap = blockTime.map(time => {
 
   return startTime > endTime;
 });
- console.log('testing blocktime herfe', blockTime);
+ console.log('testing blocktime herfe s', blockTime);
 
 
 
