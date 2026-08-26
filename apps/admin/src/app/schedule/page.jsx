@@ -286,6 +286,7 @@ console.log('delete on parent page', Delete)
             <h1>Schedule</h1>
             <Available
             timeSlot={timeSlot}
+            ConvertToEastern={ConvertToEastern}
             />
           </div>
           <div>
