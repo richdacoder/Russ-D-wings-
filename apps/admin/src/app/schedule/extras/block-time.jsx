@@ -1,7 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function BlockTime({ConvertToEastern, blockTime, TimeFormat}){
-  console.log('block time', blockTime)
+  console.log('block time', blockTime);
+  us
 return(
   <div className="flex justify-center " >
     <div>
@@ -18,7 +21,7 @@ return(
         blockTime.map((time, index) => (
           <div key={index} className="flex flex-row">
           <p> {TimeFormat(time.end_time)} </p>
-          <button>X</button>
+          <button >X</button>
           </div>
         ))
       }
