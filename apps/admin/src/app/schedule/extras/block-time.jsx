@@ -1,7 +1,9 @@
 "use client";
 
-export default function BlockTime(){
+export default function BlockTime({ConvertToEastern, blockTime}){
 return(
-  <div> Block Time </div>
+  <div>
+
+  </div>
 )
 }

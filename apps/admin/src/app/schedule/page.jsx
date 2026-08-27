@@ -295,6 +295,7 @@ console.log('delete on parent page', Delete)
             <h2>Block Times</h2>
             <BlockTime
             ConvertToEastern={ConvertToEastern}
+            blockTime={blockTime}
             />
           </div>
         </div>
