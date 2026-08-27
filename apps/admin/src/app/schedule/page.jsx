@@ -296,6 +296,7 @@ console.log('delete on parent page', Delete)
             <BlockTime
             ConvertToEastern={ConvertToEastern}
             blockTime={blockTime}
+            setBlockTime={setBlockTime}
             TimeFormat={TimeFormat}
             Delete={Delete}
             />
