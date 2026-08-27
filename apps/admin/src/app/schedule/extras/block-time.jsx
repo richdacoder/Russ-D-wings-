@@ -1,6 +1,6 @@
 "use client";
 
-export default function BlockTime({ConvertToEastern, blockTime}){
+export default function BlockTime({ConvertToEastern, blockTime, TimeFormat}){
   console.log('block time', blockTime)
 return(
   <div>
@@ -8,7 +8,7 @@ return(
     <h1>Start Time</h1>
     {
     blockTime.map((time, index) => (
-      <p key={index}> {time.start_time} </p>
+      <p key={index}> {TimeFormat(time.start_time)} </p>
     ))
     }
     </div>
@@ -16,7 +16,7 @@ return(
       <h2> End Time </h2>
       {
         blockTime.map((time, index) => (
-          <p key={index}> {time.end_time} </p>
+          <p key={index}> {TimeFormat(time.end_time)} </p>
         ))
       }
     </div>
