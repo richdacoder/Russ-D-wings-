@@ -4,7 +4,7 @@ export default function BlockTime({ConvertToEastern, blockTime, TimeFormat}){
   console.log('block time', blockTime)
 return(
   <div className="flex justify-center " >
-    <div >
+    <div>
     <h1>Start Time</h1>
     {
     blockTime.map((time, index) => (
@@ -16,7 +16,10 @@ return(
       <h2> End Time </h2>
       {
         blockTime.map((time, index) => (
-          <p key={index}> {TimeFormat(time.end_time)} </p>
+          <div key={index}>
+          <p> {TimeFormat(time.end_time)} </p>
+          <button>X</button>
+          </div>
         ))
       }
     </div>
