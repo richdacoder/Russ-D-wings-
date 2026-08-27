@@ -3,8 +3,8 @@
 export default function BlockTime({ConvertToEastern, blockTime, TimeFormat}){
   console.log('block time', blockTime)
 return(
-  <div>
-    <div>
+  <div className="flex justify-center " >
+    <div >
     <h1>Start Time</h1>
     {
     blockTime.map((time, index) => (
