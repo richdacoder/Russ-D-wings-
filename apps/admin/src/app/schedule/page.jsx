@@ -297,6 +297,7 @@ console.log('delete on parent page', Delete)
             ConvertToEastern={ConvertToEastern}
             blockTime={blockTime}
             TimeFormat={TimeFormat}
+            Delete={Delete}
             />
           </div>
         </div>
