@@ -15,7 +15,9 @@ return(
     <div>
       <h2> End Time </h2>
       {
-        blockTime.map()
+        blockTime.map((time, index) => (
+          <p key={index}> {time.end_time} </p>
+        ))
       }
     </div>
   </div>
