@@ -16,7 +16,7 @@ return(
       <h2> End Time </h2>
       {
         blockTime.map((time, index) => (
-          <div key={index}>
+          <div key={index} className="flex flex-row">
           <p> {TimeFormat(time.end_time)} </p>
           <button>X</button>
           </div>
