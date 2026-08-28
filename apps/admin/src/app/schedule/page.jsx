@@ -206,6 +206,8 @@ console.log('typeof Post:', typeof Post);
   setEndTime("");
   setContinueSubmit(false);
   setShowAvailabilityManager(false);
+  setBlockTime(prev => [...prev]);
+
 }
 
 

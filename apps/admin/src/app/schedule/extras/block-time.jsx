@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function BlockTime({ConvertToEastern, blockTime, TimeFormat, Delete}){
+export default function BlockTime({ConvertToEastern, blockTime, setBlockTime, TimeFormat, Delete}){
   console.log('block time', blockTime);
 return(
   <div className="flex justify-center " >
@@ -20,8 +20,11 @@ return(
         blockTime.map((time, index) => (
           <div key={index} className="flex flex-row">
           <p> {TimeFormat(time.end_time)} </p>
-          <p> {TimeFormat(time.end_time)} </p>
-          <button onClick={() => Delete('availability', time.id)}>X</button>
+          <button onClick={() => {
+          Delete('availability', time.id)
+          setBlockTime(prev => prev.filter(item => item.id != time.id))
+          }
+          }>X</button>
           </div>
         ))
       }
