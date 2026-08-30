@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 export default function BlockTime({ConvertToEastern, blockTime, setBlockTime, TimeFormat, Delete}){
-  console.log('block tim', blockTime);
+  console.log('block time', blockTime);
 return(
   <div className="flex justify-center " >
     <div>
