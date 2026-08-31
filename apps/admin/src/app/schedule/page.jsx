@@ -104,7 +104,7 @@ export default function Schedule(){
 
 }, []);
 
-console.log('block time start time', blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' active?', !isActive);
+// console.log('block time start time', blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' active?', !isActive);
 
   const actualTime = (t) => {
      const [y, m, d] = new Date()
@@ -146,7 +146,7 @@ const testOverLap = blockTime.map(time => {
 
   return startTime > endTime;
 });
- console.log('testing blocktime here ', blockTime);
+//  console.log('testing blocktime here ', blockTime);
 
 
 
@@ -200,8 +200,8 @@ console.log('typeof Post:', typeof Post);
     is_active: isActive
   }
   console.log(timeBlocks, 'is active', isActive);
-  const newBlock = await Post(timeBlocks);
-  console.log('after post')
+  await Post(timeBlocks);
+  console.log('after post');
   setStartTime("");
   setEndTime("");
   setContinueSubmit(false);
@@ -210,7 +210,7 @@ console.log('typeof Post:', typeof Post);
 }
 
 
-console.log('delete on parent page', Delete)
+// console.log('delete on parent page', Delete)
 /*
 - most likely a form
 
