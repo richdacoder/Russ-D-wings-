@@ -128,7 +128,7 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
       const existingStart = easternStart.split(".")[0].slice(0,5);
       const existingEnd = easternEnd.split(".")[0].slice(0,5);
 
-      console.log('testings inside overlap', {
+      console.log('testings inside overlaps', {
         'start': startTime,
          'end': endTime,
         'existing start': existingStart,
