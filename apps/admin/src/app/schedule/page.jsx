@@ -121,19 +121,19 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
         const easternStart = ConvertToEastern(time.start_time, false);
         const easternEnd = ConvertToEastern(time.end_time, false);
 
-        console.log('time start', time.start_time, 'time end', time.end_time );
+        // console.log('time start', time.start_time, 'time end', time.end_time );
 
 
 
       const existingStart = easternStart.split(".")[0].slice(0,5);
       const existingEnd = easternEnd.split(".")[0].slice(0,5);
 
-      console.log('testings inside overlaps', {
-        'start': startTime,
-         'end': endTime,
-        'existing start': existingStart,
-         'existing send': existingEnd
-      });
+      // console.log('testings inside overlaps', {
+      //   'start': startTime,
+      //    'end': endTime,
+      //   'existing start': existingStart,
+      //    'existing send': existingEnd
+      // });
 
 
    return( endTime > existingStart &&
@@ -200,13 +200,12 @@ console.log('typeof Post:', typeof Post);
     is_active: isActive
   }
   console.log(timeBlocks, 'is active', isActive);
-  await Post(timeBlocks);
+  const newBlock = await Post(timeBlocks);
   console.log('after post')
   setStartTime("");
   setEndTime("");
   setContinueSubmit(false);
   setShowAvailabilityManager(false);
-  setBlockTime(prev => [...prev]);
 
 }
 

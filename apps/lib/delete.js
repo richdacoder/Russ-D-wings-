@@ -8,6 +8,7 @@ objective finsh:
 */
 
 export default async function Delete (endPoint, id){
+  console.log('delete page');
 try{
   const url = process.env.NEXT_PUBLIC_API_URL;
   console.log({

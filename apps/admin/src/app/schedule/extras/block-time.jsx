@@ -22,7 +22,7 @@ return(
           <p> {TimeFormat(time.end_time)} </p>
           <button onClick={() => {
           Delete('availability', time.id)
-          setBlockTime(prev => prev.filter(item => item.id != time.id))
+          setBlockTime(prev => prev.filter(item => item.id !== time.id))
           }
           }>X</button>
           </div>
