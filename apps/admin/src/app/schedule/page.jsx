@@ -271,6 +271,7 @@ console.log('typeof Post:', typeof Post);
       onPost={Post}
       setContinueSubmit={setContinueSubmit}
       handleSubmit={handleSubmit}
+      ConvertToEastern={ConvertToEastern}
       isActive={isActive}
       blockTime={blockTime}
       startTime={startTime}
