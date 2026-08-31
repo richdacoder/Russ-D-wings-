@@ -132,7 +132,7 @@ console.log('block time start time', blockTime.some(time =>  endTime > time.star
         'start': startTime,
          'end': endTime,
         'existing start': existingStart,
-         'existing end': existingEnd
+         'existing send': existingEnd
       });
 
 
