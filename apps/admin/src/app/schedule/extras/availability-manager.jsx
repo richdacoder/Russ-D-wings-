@@ -24,6 +24,8 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
           const existingStart = easternStart.split(".")[0].slice(0,5);
           const existingEnd = easternEnd.split(".")[0].slice(0,5);
 
+          console.log('exist times start and end', existingStart, existingEnd );
+
     endTime > existingStart && startTime < existingEnd
   } );
   console.log('overlap times', overLapTimes, 'block time after overlap', blockTime);
