@@ -13,9 +13,12 @@ objective
 
 */
 
-export default function AvailabilityManager({onDelete, onPost, timeSlot, setContinueSubmit, handleSubmit, isActive, blockTime, startTime, endTime, ConvertToEastern}){
+export default function AvailabilityManager({
+  onDelete, onPost, timeSlot, setContinueSubmit,
+  handleSubmit, isActive, blockTime, startTime,
+  endTime, ConvertToEastern
+}){
 
-  console.log('dont about this too much endtime then starttime',endTime , startTime );
   const overLapTimes = blockTime.filter(time =>  {
             const easternStart = ConvertToEastern(time.start_time, false);
             const easternEnd = ConvertToEastern(time.end_time, false);
@@ -34,7 +37,6 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
 
     return endTime > existingStart && startTime < existingEnd;
   } );
-  console.log('overlap times', overLapTimes, 'block time after overlap', blockTime);
 
   return(
     <div>
@@ -49,7 +51,8 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
               onDelete('availability', timeSlot[0].id)
             } else{
               console.log('stops here before overlap delete', overLapTimes);
-              overLapTimes.forEach(time => onDelete('availability', time.id))
+              overLapTimes.forEach(time => onDelete('availability', time.id));
+
            };
            }}
            onSubmit={handleSubmit}

@@ -274,6 +274,7 @@ console.log('typeof Post:', typeof Post);
       ConvertToEastern={ConvertToEastern}
       isActive={isActive}
       blockTime={blockTime}
+      setBlockTime={setBlockTime}
       startTime={startTime}
       endTime={endTime}
       />}
