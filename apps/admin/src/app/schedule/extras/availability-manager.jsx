@@ -24,7 +24,8 @@ export default function AvailabilityManager({onDelete, onPost, timeSlot, setCont
           const existingStart = easternStart.split(".")[0].slice(0,5);
           const existingEnd = easternEnd.split(".")[0].slice(0,5);
 
-          console.log('exist times start and end', existingStart, existingEnd );
+          console.log('dont about this too much exist times start and end', existingStart, existingEnd );
+          console.log('starttime then endtime', startTime, endTime);
 
     endTime > existingStart && startTime < existingEnd
   } );
