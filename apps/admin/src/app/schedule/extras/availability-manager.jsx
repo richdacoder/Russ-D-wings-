@@ -15,8 +15,8 @@ objective
 
 export default function AvailabilityManager({
   onDelete, onPost, timeSlot, setContinueSubmit,
-  handleSubmit, isActive, blockTime, startTime,
-  endTime, ConvertToEastern
+  handleSubmit, isActive, blockTime, setBlockTime,
+  startTime, endTime, ConvertToEastern
 }){
 
   const overLapTimes = blockTime.filter(time =>  {
@@ -30,13 +30,16 @@ export default function AvailabilityManager({
           console.log(' exist times start and end', existingStart, existingEnd );
           console.log('starttime then endtime', startTime, endTime);
 
-           const isOverlap =
-    endTime > time.start_time &&
-    startTime < time.end_time;
-
-
     return endTime > existingStart && startTime < existingEnd;
   } );
+
+  /*
+  - use overlap
+  - set new blocktime array in setblocktime
+  - new array for blocktime where evver there isnt useoverlap time.id
+
+
+  */
 
   return(
     <div>
@@ -52,6 +55,7 @@ export default function AvailabilityManager({
             } else{
               console.log('stops here before overlap delete', overLapTimes);
               overLapTimes.forEach(time => onDelete('availability', time.id));
+              setBlockTime()
 
            };
            }}
