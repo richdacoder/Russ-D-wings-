@@ -55,8 +55,6 @@ export default function AvailabilityManager({
             } else{
               console.log('stops here before overlap delete', overLapTimes);
               overLapTimes.forEach(time => onDelete('availability', time.id));
-              setBlockTime()
-
            };
            }}
            onSubmit={handleSubmit}

@@ -128,25 +128,12 @@ export default function Schedule(){
       const existingStart = easternStart.split(".")[0].slice(0,5);
       const existingEnd = easternEnd.split(".")[0].slice(0,5);
 
-      // console.log('testings inside overlaps', {
-      //   'start': startTime,
-      //    'end': endTime,
-      //   'existing start': existingStart,
-      //    'existing send': existingEnd
-      // });
 
 
    return( endTime > existingStart &&
     startTime < existingEnd )
   });
 
-const testOverLap = blockTime.map(time => {
-  const start = time.start_time.split("T")[1].split(".")[0];
-  const end = time.end_time.split("T")[1].split(".")[0];
-
-  return startTime > endTime;
-});
-//  console.log('testing blocktime here ', blockTime);
 
 
 
@@ -175,7 +162,7 @@ const testOverLap = blockTime.map(time => {
     if (!isActive && overlapCheck ){
                setShowAvailabilityManager(true);
     };
-    console.log('overlap', overlapCheck, 'test', testOverLap);
+    console.log('overlap', overlapCheck);
     if(!overlapCheck){
       submit = true;
       setContinueSubmit(true);
@@ -201,6 +188,7 @@ console.log('typeof Post:', typeof Post);
   }
   console.log(timeBlocks, 'is active', isActive);
   await Post(timeBlocks);
+  setBlockTime(prev =>[...prev, timeBlocks]);
   console.log('after post');
   setStartTime("");
   setEndTime("");
