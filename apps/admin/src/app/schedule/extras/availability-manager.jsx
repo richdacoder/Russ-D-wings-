@@ -10,6 +10,8 @@ objective
 
 - creat function where shows which id is being overlapped
 
+9/10/26
+- cant delete multiple block times at once
 
 */
 
