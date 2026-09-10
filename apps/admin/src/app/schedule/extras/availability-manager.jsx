@@ -20,7 +20,7 @@ objective
 export default function AvailabilityManager({
   onDelete, onPost, timeSlot, setContinueSubmit,
   handleSubmit, isActive, blockTime, setBlockTime,
-  startTime, endTime, ConvertToEastern
+  startTime, endTime, ConvertToEastern, setShowAvailabilityManager
 }){
 
   const overLapTimes = blockTime.filter(time =>  {
