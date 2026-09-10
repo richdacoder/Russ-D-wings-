@@ -20,6 +20,7 @@ return(
         blockTime.map((time, index) => (
           <div key={index} className="flex flex-row">
           <p> {TimeFormat(time.end_time)} </p>
+          <p>ID:{time.id}</p>
           <button onClick={() => {
           Delete('availability', time.id)
           setBlockTime(prev => prev.filter(item => item.id !== time.id))

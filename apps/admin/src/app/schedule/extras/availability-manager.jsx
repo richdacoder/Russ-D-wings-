@@ -71,7 +71,7 @@ export default function AvailabilityManager({
            }}
            onSubmit={handleSubmit}
            >Continue</button>
-           <button type="button">Cancel</button>
+           <button type="button" onClick={() => setShowAvailabilityManager(false)}>Cancel</button>
 
     </div>
   )
