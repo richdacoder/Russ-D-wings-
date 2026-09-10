@@ -265,6 +265,7 @@ console.log('typeof Post:', typeof Post);
       setBlockTime={setBlockTime}
       startTime={startTime}
       endTime={endTime}
+      setShowAvailabilityManager={setShowAvailabilityManager}
       />}
 
       </form>

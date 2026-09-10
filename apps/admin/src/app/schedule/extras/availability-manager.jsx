@@ -12,6 +12,8 @@ objective
 
 9/10/26
 - cant delete multiple block times at once
+- id = undefine chck why
+
 
 */
 
@@ -60,6 +62,8 @@ export default function AvailabilityManager({
               console.log('time id', time.id);
               }
           );
+
+                        console.log('overlap times', overLapTimes)
 
             setBlockTime(prev => prev.filter(time => overLapTimes.every(ltime => time !== ltime)))
 
