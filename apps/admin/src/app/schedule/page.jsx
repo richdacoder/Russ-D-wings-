@@ -187,9 +187,11 @@ console.log('typeof Post:', typeof Post);
     is_active: isActive
   }
   console.log(timeBlocks, 'is active', isActive);
-  await Post(timeBlocks);
-  setBlockTime(prev =>[...prev, timeBlocks]);
-  console.log('after post');
+  const newTimeBlocks = await Post(timeBlocks);
+  setBlockTime(prev =>[...prev, newTimeBlocks[0]]);
+
+console.log('new time block from database:', newTimeBlocks[0], 'time blocks', timeBlocks);
+
   setStartTime("");
   setEndTime("");
   setContinueSubmit(false);
