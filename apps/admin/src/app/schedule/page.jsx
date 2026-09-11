@@ -279,6 +279,7 @@ if(realBlock[0]){
             <h1>Schedule</h1>
             <Available
             timeSlot={timeSlot}
+            setTimeSlot={setTimeSlot}
             ConvertToEastern={ConvertToEastern}
             TimeFormat={TimeFormat}
             Delete={Delete}
