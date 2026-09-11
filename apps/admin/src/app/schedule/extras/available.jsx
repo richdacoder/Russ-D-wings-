@@ -2,7 +2,12 @@
 
 export default function Available({timeSlot, ConvertToEastern, TimeFormat}){
   console.log('time slot in available page', timeSlot[0]?.start_time);
+const unwantedTimeSlot = timeSlot.filter((value, index) =>{
+  console.log('value time',value, 'index', index);
+  return index !== 0;
 
+});
+console.log('unwanted time slot', unwantedTimeSlot);
 
 return(
   <>
