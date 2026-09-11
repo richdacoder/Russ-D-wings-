@@ -47,6 +47,7 @@ export default function AvailabilityManager({
   - create system where it deletes all other timeslots besides the latest one added
 
 
+
   */
 
   return(
@@ -59,6 +60,7 @@ export default function AvailabilityManager({
 </h1>
            <button type="submit" onClick={() => {setContinueSubmit(true);
             if(isActive){
+              console.log('before isactive delete');
               onDelete('availability', timeSlot[0].id)
             } else{
               console.log('stops here before overlap delete', overLapTimes);

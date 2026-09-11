@@ -171,22 +171,23 @@ export default function Schedule(){
       return ;
         } ;
 
-        console.log('after conitnue submit', continueSubmit );
-
-    console.log('Post:', Post);
-console.log('typeof Post:', typeof Post);
-
   const timeBlocks = {
     start_time: actualTime(startTime),
     end_time: actualTime(endTime),
     type:'availability',
     is_active: isActive
   }
+
   console.log(timeBlocks, 'is active', isActive);
   const newTimeBlocks = await Post(timeBlocks);
-  setBlockTime(prev =>[...prev, newTimeBlocks[0]]);
+  const realBlock = newTimeBlocks.filter(block => !block.is_active);
+console.log('check new time block post', newTimeBlocks, 'real block', realBlock);
 
-console.log('new time block from database:', newTimeBlocks[0], 'time blocks', timeBlocks);
+  setBlockTime(prev =>[...prev, realBlock[0] || null  ]);
+
+    //!newTimeBlocks[0].is_active
+
+  console.log('new time block from database:', newTimeBlocks[0], 'time blocks', timeBlocks);
 
   setStartTime("");
   setEndTime("");
