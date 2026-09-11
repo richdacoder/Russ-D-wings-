@@ -1,6 +1,6 @@
 "use client";
 
-export default function Available({timeSlot, ConvertToEastern, TimeFormat, Delete}){
+export default function Available({timeSlot, setTimeSlot, ConvertToEastern, TimeFormat, Delete}){
   console.log('time slot in available page', timeSlot[0]?.start_time);
 const unwantedTimeSlot = timeSlot.forEach((value, index) =>{
   console.log('value time',value.id, 'index', index);
