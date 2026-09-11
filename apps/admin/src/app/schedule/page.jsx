@@ -281,6 +281,7 @@ if(realBlock[0]){
             timeSlot={timeSlot}
             ConvertToEastern={ConvertToEastern}
             TimeFormat={TimeFormat}
+            Delete={Delete}
             />
           </div>
           <div>
