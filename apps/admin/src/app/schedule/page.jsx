@@ -142,7 +142,6 @@ export default function Schedule(){
     if (!startTime || !endTime) return;
 
     let submit = continueSubmit;
-        console.log('before isactive', continueSubmit, 'submit', submit);
 
         /*
         - if isactive
@@ -157,7 +156,6 @@ export default function Schedule(){
 
       if(isActive && timeSlot){
          setShowAvailabilityManager(true);//send to child page to put it back to false
-         console.log('theres a time slot');
     } ;
     if (!isActive && overlapCheck ){
                setShowAvailabilityManager(true);
@@ -166,10 +164,8 @@ export default function Schedule(){
     if(!overlapCheck){
       submit = true;
       setContinueSubmit(true);
-      console.log("after", continueSubmit);
     };
 
-    console.log('before conitnue submit', continueSubmit, 'submit', submit);
 
     if(!continueSubmit){
       return ;

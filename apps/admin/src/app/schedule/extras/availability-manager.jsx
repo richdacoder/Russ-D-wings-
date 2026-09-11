@@ -42,6 +42,10 @@ export default function AvailabilityManager({
   - set new blocktime array in setblocktime
   - new array for blocktime where evver there isnt useoverlap time.id
 
+  9/12/26
+  - check why availibile not deleting
+  - create system where it deletes all other timeslots besides the latest one added
+
 
   */
 
