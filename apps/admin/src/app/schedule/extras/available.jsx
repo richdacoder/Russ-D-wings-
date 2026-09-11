@@ -2,9 +2,11 @@
 
 export default function Available({timeSlot, ConvertToEastern, TimeFormat, Delete}){
   console.log('time slot in available page', timeSlot[0]?.start_time);
-const unwantedTimeSlot = timeSlot.filter((value, index) =>{
-  console.log('value time',value, 'index', index);
-  return index !== 0;
+const unwantedTimeSlot = timeSlot.forEach((value, index) =>{
+  console.log('value time',value.id, 'index', index);
+  if( index !== 0){
+    Delete('availability', value.id );
+  };
 
 });
 console.log('unwanted time slot', unwantedTimeSlot);
