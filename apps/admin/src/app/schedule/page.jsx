@@ -183,8 +183,9 @@ export default function Schedule(){
   const realBlock = newTimeBlocks.filter(block => !block.is_active);
 console.log('check new time block post', newTimeBlocks, 'real block', realBlock);
 
-  setBlockTime(prev =>[...prev, realBlock[0] || null  ]);
-
+if(realBlock[0]){
+  setBlockTime(prev =>[...prev, realBlock[0]]);
+}
     //!newTimeBlocks[0].is_active
 
   console.log('new time block from database:', newTimeBlocks[0], 'time blocks', timeBlocks);

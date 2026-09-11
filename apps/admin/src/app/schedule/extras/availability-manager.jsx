@@ -31,9 +31,6 @@ export default function AvailabilityManager({
           const existingStart = easternStart.split(".")[0].slice(0,5);
           const existingEnd = easternEnd.split(".")[0].slice(0,5);
 
-          console.log(' exist times start and end', existingStart, existingEnd );
-          console.log('starttime then endtime', startTime, endTime);
-
     return endTime > existingStart && startTime < existingEnd;
   } );
 
