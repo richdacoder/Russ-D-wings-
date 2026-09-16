@@ -1,4 +1,4 @@
-export default function RemoveTimeSlot(){
+export default function RemoveTimeSlot(timeSlot, setTimeSlot){
   timeSlot.forEach((value, index) =>{
   console.log('value time',value.id, 'index', index);
   if( index !== 0){
@@ -7,7 +7,6 @@ export default function RemoveTimeSlot(){
   };
 });
 
- setTimeSlot(prev => prev.filter((value, index) => index === 0));
 
-return;
+return setTimeSlot(prev => prev.filter((value, index) => index === 0));;
 }
