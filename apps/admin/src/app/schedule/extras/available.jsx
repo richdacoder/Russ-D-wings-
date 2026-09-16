@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 */
 
 export default function Available({timeSlot, setTimeSlot, ConvertToEastern, TimeFormat, Delete}){
-  console.log('time slot in available pag', timeSlot[0]?.start_time);
+  console.log('time slot in available page', timeSlot[0]?.start_time);
 
 
   useEffect(async () => {
