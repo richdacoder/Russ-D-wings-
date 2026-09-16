@@ -13,7 +13,7 @@ export default function Available({timeSlot, setTimeSlot, ConvertToEastern, Time
   console.log('time slot in available page', timeSlot[0]?.start_time);
 
 
-  useEffect(async () => {
+  useEffect( () => {
   timeSlot.forEach((value, index) =>{
   console.log('value time',value.id, 'index', index);
   if( index !== 0){
@@ -23,7 +23,7 @@ export default function Available({timeSlot, setTimeSlot, ConvertToEastern, Time
 
  setTimeSlot(prev => prev.filter((value, index) => index === 0));
   },
-  []
+  [Delete, timeSlot ]
 );
 
 return(
