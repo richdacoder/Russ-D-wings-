@@ -191,6 +191,7 @@ if(realBlock[0]){
 
   console.log('new time block from database:', newTimeBlocks[0], 'time blocks', timeBlocks);
 
+  RemoveTimeSlot(timeSlot, setTimeSlot);
   setStartTime("");
   setEndTime("");
   setContinueSubmit(false);
