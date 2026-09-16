@@ -13,8 +13,6 @@ export default function Available({timeSlot, setTimeSlot, ConvertToEastern, Time
   console.log('time slot in available page', timeSlot[0]?.start_time);
 
 
-
-
 return(
   <>
   <div>
