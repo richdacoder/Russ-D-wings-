@@ -185,9 +185,6 @@ export default function Schedule(){
   const realSlot = newTimeBlocks.filter(time => time.is_active);
 console.log('real real real slot', realSlot, 'real block', realBlock);
 
-if(realSlot[0]){
-  setTimeSlot(prev => [...prev, realSlot[0]]);
-}
 if(realBlock[0]){
   setBlockTime(prev =>[...prev, realBlock[0]]);
 }
@@ -196,6 +193,10 @@ if(realBlock[0]){
   console.log('new time block from database:', newTimeBlocks[0], 'time blocks', timeBlocks);
 
   RemoveTimeSlot(timeSlot, setTimeSlot);
+  if(realSlot[0]){
+  setTimeSlot([realSlot[0]]);
+}
+
   setStartTime("");
   setEndTime("");
   setContinueSubmit(false);
