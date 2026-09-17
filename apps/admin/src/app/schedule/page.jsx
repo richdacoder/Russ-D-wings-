@@ -183,7 +183,7 @@ export default function Schedule(){
   const newTimeBlocks = await Post(timeBlocks);
   const realBlock = newTimeBlocks.filter(block => !block.is_active);
   const realSlot = newTimeBlocks.filter(time => block.is_active);
-console.log('check new time block post', newTimeBlocks, 'real block', realBlock);
+console.log('real real real slot', realSlot, 'real block', realBlock);
 
 if(realBlock[0]){
   setBlockTime(prev =>[...prev, realBlock[0]]);
