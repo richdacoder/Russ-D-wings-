@@ -42,6 +42,11 @@ setPrice("");
 
 - mkae sure stock pop on GET
 
+9/18/26
+- get menu
+- seperate main , side, and drink with their own headers
+- add x for delete for each item
+
 */
   return(
     <div>

@@ -105,8 +105,6 @@ export default function Schedule(){
 
 }, []);
 
-// console.log('block time start time', blockTime.some(time =>  endTime > time.start_time && startTime < time.end_time ), ' active?', !isActive);
-
   const actualTime = (t) => {
      const [y, m, d] = new Date()
      .toISOString()
@@ -121,9 +119,6 @@ export default function Schedule(){
   const overlapCheck = blockTime.some(time =>  {
         const easternStart = ConvertToEastern(time.start_time, false);
         const easternEnd = ConvertToEastern(time.end_time, false);
-
-        // console.log('time start', time.start_time, 'time end', time.end_time );
-
 
 
       const existingStart = easternStart.split(".")[0].slice(0,5);
@@ -188,7 +183,6 @@ console.log('real real real slot', realSlot, 'real block', realBlock);
 if(realBlock[0]){
   setBlockTime(prev =>[...prev, realBlock[0]]);
 }
-    //!newTimeBlocks[0].is_active
 
   console.log('new time block from database:', newTimeBlocks[0], 'time blocks', timeBlocks);
 
