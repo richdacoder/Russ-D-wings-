@@ -1,4 +1,4 @@
-import Delete from "../delete.js";
+import {Delete }  from "../delete.js";
 
 export default function RemoveTimeSlot(timeSlot, setTimeSlot){
   timeSlot.forEach((value, index) =>{
