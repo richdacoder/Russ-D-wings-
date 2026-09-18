@@ -11,9 +11,10 @@ const [menuItem, setMenuItem] = useState("");
 const [price, setPrice] = useState("");
 const [description, setDescription] = useState("");
 const [stock, setStock] = useState(true);
+const [menu, setMenu] = useState([]);
 
 useEffect(() =>{
-
+  const data = Get('menu');
 },
 []
 )
