@@ -12,6 +12,9 @@ const [price, setPrice] = useState("");
 const [description, setDescription] = useState("");
 const [stock, setStock] = useState(true);
 const [menu, setMenu] = useState([]);
+const [menuitems, setMenuitems] = useState([]);
+const [prices, setPrices] = useState([]);
+const [descriptions, setDescriptions] = useState([]);
 
 useEffect(() =>{
   const getMenu = async () => {
@@ -22,7 +25,8 @@ useEffect(() =>{
 getMenu();
 },
 []
-)
+);
+
 
 console.log('menu', menu);
 

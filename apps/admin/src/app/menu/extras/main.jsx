@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 /*
-- do a GET inside use effect
-- pass GET to page,jsx
+- do a GET inside use effectxxx
+- pass GET to page,jsxxxxxx
 - create react variable for dish price and descrition (arrays)
 - create an array call main to make the headers
 -
