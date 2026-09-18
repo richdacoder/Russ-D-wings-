@@ -8,7 +8,12 @@ import { useEffect, useState } from "react";
 - create react variable for dish price and descrition (arrays)
 - create an array call main to make the headers
 -
-
+ 9/19/26
+ - send props through
+ - loop through each main
+ - make delete
+ - make edit
+ - add if in stock or not
 
 
 */
