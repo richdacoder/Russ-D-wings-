@@ -18,8 +18,10 @@ const [descriptions, setDescriptions] = useState([]);
 
 useEffect(() =>{
   const getMenu = async () => {
-  const data = await Get('menu');
-  setMenu(data);
+    const data = await Get('menu');
+    setMenuitems(data);
+    setPrices(data);
+    setDescriptions(data);
   };
 
 getMenu();
