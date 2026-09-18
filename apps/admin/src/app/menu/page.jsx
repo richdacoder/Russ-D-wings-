@@ -14,10 +14,18 @@ const [stock, setStock] = useState(true);
 const [menu, setMenu] = useState([]);
 
 useEffect(() =>{
-  const data = Get('menu');
+  const getMenu = async () => {
+  const data = await Get('menu');
+  setMenu(data);
+  };
+
+getMenu();
 },
 []
 )
+
+console.log('menu', menu);
+
 const handleSubmit = async (e) => {
   e.preventDefault();
   if(!category || !menuItem || !price) return;
