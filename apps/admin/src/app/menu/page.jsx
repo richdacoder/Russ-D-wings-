@@ -12,16 +12,16 @@ const [price, setPrice] = useState("");
 const [description, setDescription] = useState("");
 const [stock, setStock] = useState(true);
 const [menu, setMenu] = useState([]);
-const [menuitems, setMenuitems] = useState([]);
-const [prices, setPrices] = useState([]);
-const [descriptions, setDescriptions] = useState([]);
+const [main, setMainItems] = useState([]);
+const [side, setSide] = useState([]);
+const [drink, setDrink] = useState([]);
 
 useEffect(() =>{
   const getMenu = async () => {
     const data = await Get('menu');
-    setMenuitems(data);
-    setPrices(data);
-    setDescriptions(data);
+    setMainItems(data.filter(dish => dish.category === 'main'));
+    setSide(data);
+    setDrink(data);
   };
 
 getMenu();
@@ -30,7 +30,13 @@ getMenu();
 );
 
 
-console.log('menu', menu);
+console.log({
+      'setMenuitems': menuItems,
+    'setPrices': prices,
+    'setDescriptions': descriptions
+
+
+});
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -130,7 +136,7 @@ setPrice("");
         </div>
             <Main
               stock={stock}
-              menuitems={menuitems}
+              menuItems={menuItems}
               prices={prices}
               descriptions={descriptions}
             />
