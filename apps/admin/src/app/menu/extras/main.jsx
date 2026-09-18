@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 /*
 - do a GET inside use effect
-- pass GET to this page
+- pass GET to page,jsx
 - create react variable for dish price and descrition (arrays)
 - create an array call main to make the headers
 -

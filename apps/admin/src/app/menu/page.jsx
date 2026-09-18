@@ -2,8 +2,8 @@
 
 import {useState, useEffect} from "react";
 import Post from "../../../../lib/post.js";
-import Main from "./main.jsx"
-
+import Get from "../../../../lib/get.js";
+import Main from "./extras/main.jsx";
 
 export default function Menu(){
 const [category, setCategory] = useState("main");
@@ -108,6 +108,7 @@ setPrice("");
         <div>
           <h1>Menu</h1>
         </div>
+            <Main/>
         <div>
         </div>
 
