@@ -104,7 +104,10 @@ setPrice("");
         <button type="submit">Add</button>
       </form>
       <div>
-        <h1>Menu</h1>
+        <div>
+          <h1>Menu</h1>
+        </div>
+
       </div>
       </div>
   )
