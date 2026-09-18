@@ -2,6 +2,17 @@
 
 import { useEffect, useState } from "react";
 
+/*
+- do a GET inside use effect
+- pass GET to this page
+- create react variable for dish price and descrition (arrays)
+- create an array call main to make the headers
+-
+
+
+
+*/
+
 export default function Main(){
 
   return(
@@ -19,6 +30,9 @@ export default function Main(){
         <div>
           <h5>Description</h5>
         </div>
+      </div>
+      <div>
+
       </div>
 
     </>

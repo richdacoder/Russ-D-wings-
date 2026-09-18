@@ -2,6 +2,7 @@
 
 import {useState, useEffect} from "react";
 import Post from "../../../../lib/post.js";
+import Main from "./main.jsx"
 
 
 export default function Menu(){
