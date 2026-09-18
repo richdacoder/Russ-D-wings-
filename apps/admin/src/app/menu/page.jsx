@@ -108,9 +108,6 @@ setPrice("");
           <h1>Menu</h1>
         </div>
         <div>
-          <div>
-            <h2> Main </h2>
-          </div>
         </div>
 
       </div>
