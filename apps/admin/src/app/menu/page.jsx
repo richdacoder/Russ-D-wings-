@@ -12,14 +12,14 @@ const [price, setPrice] = useState("");
 const [description, setDescription] = useState("");
 const [stock, setStock] = useState(true);
 const [menu, setMenu] = useState([]);
-const [main, setMainItems] = useState([]);
+const [main, setMain] = useState([]);
 const [side, setSide] = useState([]);
 const [drink, setDrink] = useState([]);
 
 useEffect(() =>{
   const getMenu = async () => {
     const data = await Get('menu');
-    setMainItems(data.filter(dish => dish.category === 'main'));
+    setMain(data.filter(dish => dish.category === 'main'));
     setSide(data);
     setDrink(data);
   };
@@ -31,9 +31,9 @@ getMenu();
 
 
 console.log({
-      'setMenuitems': menuItems,
-    'setPrices': prices,
-    'setDescriptions': descriptions
+      'mains': main,
+    'sides': side,
+    'drinks': drink
 
 
 });
@@ -136,9 +136,8 @@ setPrice("");
         </div>
             <Main
               stock={stock}
-              menuItems={menuItems}
-              prices={prices}
-              descriptions={descriptions}
+              main={main}
+              setMain={setMain}
             />
         <div>
         </div>
