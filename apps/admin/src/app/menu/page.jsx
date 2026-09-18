@@ -45,6 +45,7 @@ setPrice("");
 9/18/26
 - get menu
 - seperate main , side, and drink with their own headers
+- will mention dish price and description
 - add x for delete for each item
 
 */
@@ -102,6 +103,9 @@ setPrice("");
         </div>
         <button type="submit">Add</button>
       </form>
+      <div>
+        <h1>Menu</h1>
+      </div>
       </div>
   )
 }
