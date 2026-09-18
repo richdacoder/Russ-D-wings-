@@ -126,7 +126,12 @@ setPrice("");
         <div>
           <h1>Menu</h1>
         </div>
-            <Main/>
+            <Main
+              stock={stock}
+              menuitems={menuitems}
+              prices={prices}
+              descriptions={descriptions}
+            />
         <div>
         </div>
 
