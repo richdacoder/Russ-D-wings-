@@ -20,6 +20,8 @@ import { useEffect, useState } from "react";
 
 export default function Main(){
 
+  const [ dish, setDish ] = useState([]);
+
   return(
     <>
       <div>
