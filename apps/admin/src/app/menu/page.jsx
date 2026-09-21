@@ -3,6 +3,7 @@
 import {useState, useEffect} from "react";
 import Post from "../../../../lib/post.js";
 import Get from "../../../../lib/get.js";
+import Delete from "../../../../lib/delete.js";
 import Main from "./extras/main.jsx";
 
 export default function Menu(){
