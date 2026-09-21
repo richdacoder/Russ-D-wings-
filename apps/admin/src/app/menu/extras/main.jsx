@@ -20,11 +20,6 @@ import { useEffect, useState } from "react";
 */
 
 export default function Main({ main, setMain, Delete }){
-
-  const [ dish, setDish ] = useState([]);
-  const [ price, setPrice ] = useState([]);
-  const [ description, setDescription ] = useState([]);
-
   console.log('page for main dish working', main);
 
   return(
