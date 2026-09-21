@@ -32,11 +32,10 @@ export default function Main({ main, setMain }){
       <div>
         <h2> Main </h2>
       </div>
-
+                <h3>Dish</h3>
       { main.map((dish, index) => (
       <div key={index}>
         <div>
-          <h3>Dish</h3>
            <p> {dish.dish} </p>
         </div>
         <div>
