@@ -20,7 +20,7 @@ useEffect(() =>{
   const getMenu = async () => {
     const data = await Get('menu');
     setMain(data.filter(dish => dish.category === 'main'));
-    setSide(data);
+    setSide(data.filter(dish => dish.category === 'side'));
     setDrink(data);
   };
 

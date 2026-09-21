@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 /*
 - do a GET inside use effectxxx
 - pass GET to page,jsxxxxxx
-- create react variable for dish price and descrition (arrays)
+- create react variable for dish price and descrition (arrays)xxxx
+- pass main variable as prop
 - create an array call main to make the headers
 -
  9/19/26
