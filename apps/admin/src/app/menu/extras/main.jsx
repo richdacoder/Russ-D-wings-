@@ -19,7 +19,7 @@ import { useEffect, useState } from "react";
 
 */
 
-export default function Main({ main, setMain }){
+export default function Main({ main, setMain, Delete }){
 
   const [ dish, setDish ] = useState([]);
   const [ price, setPrice ] = useState([]);

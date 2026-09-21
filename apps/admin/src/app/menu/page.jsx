@@ -139,6 +139,7 @@ setPrice("");
               stock={stock}
               main={main}
               setMain={setMain}
+              Delete={Delete}
             />
         <div>
         </div>
