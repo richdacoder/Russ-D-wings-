@@ -37,13 +37,15 @@ export default function Main({ main, setMain }){
       <div key={index}>
         <div>
           <h3>Dish</h3>
-          <p> {dish.dish} </p>
+           <p> {dish.dish} </p>
         </div>
         <div>
           <h4>Price</h4>
+           <p> {dish.price} </p>
         </div>
         <div>
           <h5>Description</h5>
+           <p> {dish.description} </p>
         </div>
       </div>
       ))
