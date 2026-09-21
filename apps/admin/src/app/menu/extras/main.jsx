@@ -22,7 +22,7 @@ export default function Main(){
 
   const [ dish, setDish ] = useState([]);
   const [ price, setPrice ] = useState([]);
-  // const [ description, setDescription ] = useState([]);
+  const [ description, setDescription ] = useState([]);
 
   return(
     <>
