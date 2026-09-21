@@ -46,7 +46,10 @@ export default function Main({ main, setMain, Delete }){
           <h5>Description</h5>
            <p> {dish.description} </p>
         </div>
-        <button type="button "> X </button>
+        <button type="button"
+        onClick={() =>
+          setMain(prev => prev.filter(m => m.id !== dish.id))
+         }> X </button>
       </div>
       ))
       }
