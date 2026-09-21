@@ -19,20 +19,25 @@ import { useEffect, useState } from "react";
 
 */
 
-export default function Main({ main, setMain}){
+export default function Main({ main, setMain }){
 
   const [ dish, setDish ] = useState([]);
   const [ price, setPrice ] = useState([]);
   const [ description, setDescription ] = useState([]);
+
+  console.log('page for main dish working', main);
 
   return(
     <>
       <div>
         <h2> Main </h2>
       </div>
-      <div>
+
+      { main.map((dish, index) => (
+      <div key={index}>
         <div>
           <h3>Dish</h3>
+          <p> {dish.dish} </p>
         </div>
         <div>
           <h4>Price</h4>
@@ -41,6 +46,8 @@ export default function Main({ main, setMain}){
           <h5>Description</h5>
         </div>
       </div>
+      ))
+      }
       <div>
 
       </div>
