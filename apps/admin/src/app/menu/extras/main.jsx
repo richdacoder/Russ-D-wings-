@@ -46,6 +46,7 @@ export default function Main({ main, setMain }){
           <h5>Description</h5>
            <p> {dish.description} </p>
         </div>
+        <button type="button "> X </button>
       </div>
       ))
       }
