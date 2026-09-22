@@ -76,7 +76,14 @@ console.error(err);
 
 router.delete('/menu/:id', async (req, res) => {
 
+  try{
+
+  } catch(err){
+
+  }
 }
 )
+
+
 
 module.exports = router
