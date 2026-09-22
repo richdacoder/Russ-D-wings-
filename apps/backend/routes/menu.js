@@ -84,7 +84,7 @@ console.log('reached delet but not deleted', req);
   try{
     const {id} = req.params;
 
-   await knex('menu')
+   await db('menu')
     .where({id})
     .delete();
 
