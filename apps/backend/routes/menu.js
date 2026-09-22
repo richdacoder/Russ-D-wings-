@@ -72,14 +72,24 @@ console.error(err);
 
 
 
+/*
+- make sure theres data
+- grab the data
+- speak to database
 
+*/
 
 router.delete('/menu/:id', async (req, res) => {
-
+console.log('reached delet but not deleted', req);
   try{
+    const {id} = req.params;
+
+   await knex('menu')
+    .where({id})
+    .delete();
 
   } catch(err){
-
+    console.error(err);
   }
 }
 )
