@@ -70,6 +70,13 @@ console.error(err);
 
 
 
-router.delete()
+
+
+
+
+router.delete('/menu/:id', async (req, res) => {
+
+}
+)
 
 module.exports = router
