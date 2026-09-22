@@ -6,8 +6,9 @@ import { useEffect, useState } from "react";
 - do a GET inside use effectxxx
 - pass GET to page,jsxxxxxx
 - create react variable for dish price and descrition (arrays)xxxx
-- pass main variable as prop
+- pass main variable as propxx
 - create an array call main to make the headers
+- create delete for menu in backend
 -
  9/19/26
  - send props through
@@ -20,7 +21,7 @@ import { useEffect, useState } from "react";
 */
 
 export default function Main({ main, setMain, Delete }){
-  console.log('page for main dish working', main);
+  console.log('page for main dish working', Delete);
 
   return(
     <>
@@ -42,8 +43,10 @@ export default function Main({ main, setMain, Delete }){
            <p> {dish.description} </p>
         </div>
         <button type="button"
-        onClick={() =>
+        onClick={() => {
+          Delete('menu', dish.id)
           setMain(prev => prev.filter(m => m.id !== dish.id))
+        }
          }> X </button>
       </div>
       ))

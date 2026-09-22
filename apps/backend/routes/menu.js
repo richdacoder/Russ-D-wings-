@@ -68,4 +68,8 @@ console.error(err);
 })
 
 
+
+
+router.delete()
+
 module.exports = router
