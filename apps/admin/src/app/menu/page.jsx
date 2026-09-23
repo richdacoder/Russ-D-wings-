@@ -149,6 +149,8 @@ setPrice("");
               <Side
                 Delete={Delete}
                 stock={stock}
+                side={side}
+                setSide={setSide}
 
 
               />
