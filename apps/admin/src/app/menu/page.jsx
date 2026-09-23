@@ -152,7 +152,6 @@ setPrice("");
                 side={side}
                 setSide={setSide}
 
-
               />
             </div>
             </div>
