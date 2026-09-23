@@ -88,6 +88,16 @@ console.log('reached delet but not deleted', req);
     .where({id})
     .delete();
 
+    if(deletedRows === 0)return res.status(404).json({
+    message: 'Availability not found.'
+});
+
+res.status(200).json({
+  message: 'Availability deleted successfully.'
+});
+    console.log('deleted from menu now');
+
+
   } catch(err){
     console.error(err);
     res.status(500).json({
