@@ -157,6 +157,9 @@ setPrice("");
             </div>
             <div>
               <Drink
+                Delete={Delete}
+                stock={stock}
+
               />
             </div>
             </div>
