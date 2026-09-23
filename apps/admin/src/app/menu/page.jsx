@@ -145,7 +145,14 @@ setPrice("");
               Delete={Delete}
             />
             </div>
+            <div>
+              <Side
+                Delete={Delete}
+                stock={stock}
 
+
+              />
+            </div>
             </div>
         <div>
         </div>
