@@ -3,16 +3,16 @@
 import { useEffect, useState } from "react";
 
 
-export default function Side({ side, setSide, Delete }){
-  console.log('page for side dish working', Delete);
+export default function drink({ drink, setDrink, Delete }){
+  console.log('page for drink  working', Delete);
 
   return(
     <>
       <div>
-        <h2> Side </h2>
+        <h2> drink </h2>
       </div>
                 <h3>Dish</h3>
-      { side.map((dish, index) => (
+      { drink.map((dish, index) => (
       <div key={index}>
         <div>
            <p> {dish.dish} </p>
@@ -28,7 +28,7 @@ export default function Side({ side, setSide, Delete }){
         <button type="button"
         onClick={() => {
           Delete('menu', dish.id)
-          setSide(prev => prev.filter(m => m.id !== dish.id))
+          setDrink(prev => prev.filter(m => m.id !== dish.id))
         }
          }> X </button>
       </div>
