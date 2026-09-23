@@ -80,7 +80,7 @@ console.error(err);
 */
 
 router.delete('/menu/:id', async (req, res) => {
-console.log('reached delet but not deleted', req);
+console.log('reached delet but not deleted');
   try{
     const {id} = req.params;
 
