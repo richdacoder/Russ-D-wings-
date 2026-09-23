@@ -6,6 +6,7 @@ import Get from "../../../../lib/get.js";
 import Delete from "../../../../lib/delete.js";
 import Main from "./extras/main.jsx";
 import Side from "./extras/side.jsx";
+import Drink from "./extras/drink.jsx";
 
 export default function Menu(){
 const [category, setCategory] = useState("main");
