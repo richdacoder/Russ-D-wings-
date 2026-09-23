@@ -90,6 +90,10 @@ console.log('reached delet but not deleted', req);
 
   } catch(err){
     console.error(err);
+    res.status(500).json({
+error:'Internal server error.'
+});
+
   }
 }
 )
