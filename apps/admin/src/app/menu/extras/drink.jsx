@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 
 
-export default function drink({ drink, setDrink, Delete, stock }){
+export default function Drink({ drink, setDrink, Delete, stock }){
   console.log('page for drink  working', Delete);
 
   return(
     <>
       <div>
-        <h2> drink </h2>
+        <h2> Drink </h2>
       </div>
                 <h3>Dish</h3>
       { drink.map((dish, index) => (
