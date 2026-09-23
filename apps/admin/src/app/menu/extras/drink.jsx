@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 
-export default function drink({ drink, setDrink, Delete }){
+export default function drink({ drink, setDrink, Delete, stock }){
   console.log('page for drink  working', Delete);
 
   return(
