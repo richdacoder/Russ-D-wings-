@@ -143,6 +143,7 @@ setPrice("");
         <div>
           <div>
             <Main
+              setStock={setStock}
               stock={stock}
               main={main}
               setMain={setMain}
@@ -153,6 +154,7 @@ setPrice("");
               <Side
                 Delete={Delete}
                 stock={stock}
+                setStock={setStock}
                 side={side}
                 setSide={setSide}
 
@@ -162,6 +164,7 @@ setPrice("");
               <Drink
                 Delete={Delete}
                 stock={stock}
+                setStock={setStock}
                 drink={drink}
                 setDrink={setDrink}
 
