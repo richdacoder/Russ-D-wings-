@@ -17,13 +17,16 @@ export default async function Put(formatData){
 
   const url = process.env.NEXT_PUBLIC_API_URL;
 
-  const res = fetch(`${url}/api/${type}/${id}`, {
+  const res = await fetch(`${url}/api/${type}/${id}`, {
     method:'PUT',
     headers: {'Content-Type' : 'application/json'},
     body: json.stringify(formatData)
   }
   );
 
+  if(!res.ok){
+    console.error({message:'error with PUT'});
+  }
 
 
 };
