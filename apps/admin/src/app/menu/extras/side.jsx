@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 
-export default function Side({ side, setSide, Delete, stock }){
+export default function Side({ side, setSide, Delete, stock  }){
   console.log('page for side dish working', Delete);
 
   return(

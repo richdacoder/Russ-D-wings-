@@ -31,6 +31,13 @@ export default function Drink({ drink, setDrink, Delete, stock }){
           setDrink(prev => prev.filter(m => m.id !== dish.id))
         }
          }> X </button>
+         <div>
+          <button type="button"
+          onClick={() => {
+
+          }}
+          > in </button>
+         </div>
       </div>
       ))
       }
