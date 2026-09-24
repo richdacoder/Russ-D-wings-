@@ -80,13 +80,15 @@ router.put('/menu/:id', async (req, res) => {
   try{
     const { id } = req.params;
 
-    await db('menu')
+    const updateRows = await db('menu')
     .where({id})
     .update(req.body);
 
+    res.status(200).json({message:'succesful'});
 
   }catch(err){
     console.error(err);
+    res.status(500).json({ error: 'Server error' });
   }
 });
 
