@@ -17,7 +17,7 @@ export default async function Put(formatData){
 
   const url = process.env.NEXT_PUBLIC_API_URL;
 
-  api(`${url}/api/${type}/${id}`)
+  fetch('PUT', `${url}/api/${type}/${id}`)
 
 
 }
