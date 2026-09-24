@@ -1,3 +1,3 @@
-export default async function Put(){
+export default async function Put(endpoint, id){
 
 }
