@@ -73,10 +73,13 @@ setPrice("");
 - mkae sure stock pop on GET
 
 9/18/26
-- get menu
-- seperate main , side, and drink with their own headers
-- will mention dish price and description
-- add x for delete for each item
+- get menuxx
+- seperate main , side, and drink with their own headersxxx
+- will mention dish price and descriptionxx
+- add x for delete for each itemxx
+
+9/23/26
+- make a button that can show if something is in stock and control if it is or is not
 
 */
   return(
