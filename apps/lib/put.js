@@ -17,12 +17,13 @@ export default async function Put(formatData){
 
   const url = process.env.NEXT_PUBLIC_API_URL;
 
-  fetch(`${url}/api/${type}/${id}`, {
+  const res = fetch(`${url}/api/${type}/${id}`, {
     method:'PUT',
     headers: {'Content-Type' : 'application/json'},
-    body: json.stringfy(formatData)
+    body: json.stringify(formatData)
   }
-  )
+  );
 
 
-}
+
+};
