@@ -31,6 +31,14 @@ export default function Side({ side, setSide, Delete, stock  }){
           setSide(prev => prev.filter(m => m.id !== dish.id))
         }
          }> X </button>
+         <div>
+          <button type="button"
+            onClick={() => {
+              setStock(prev => !prev)
+          }}
+          > {stock ? 'In stock': 'Out of stock'} </button>
+         </div>
+
       </div>
       ))
       }

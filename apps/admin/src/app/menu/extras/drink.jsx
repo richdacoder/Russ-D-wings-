@@ -33,10 +33,10 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock }){
          }> X </button>
          <div>
           <button type="button"
-          onClick={() => {
-            setStock(prev => !prev)
+            onClick={() => {
+              setStock(prev => !prev)
           }}
-          > {stock ? 'In sock': 'Out of stock'} </button>
+          > {stock ? 'In stock': 'Out of stock'} </button>
          </div>
       </div>
       ))

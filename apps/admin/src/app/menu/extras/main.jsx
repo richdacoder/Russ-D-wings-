@@ -48,12 +48,12 @@ export default function Main({ main, setMain, Delete, stock }){
           setMain(prev => prev.filter(m => m.id !== dish.id))
         }
          }> X </button>
-                  <div>
+         <div>
           <button type="button"
-          onClick={() => {
-            setStock(prev => !prev)
+            onClick={() => {
+              setStock(prev => !prev)
           }}
-          > {stock ? 'In sock': 'Out of stock'} </button>
+          > {stock ? 'In stock': 'Out of stock'} </button>
          </div>
 
       </div>
