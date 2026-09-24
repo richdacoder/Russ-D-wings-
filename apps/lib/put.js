@@ -19,7 +19,7 @@ export default async function Put(formatData){
 
   fetch(`${url}/api/${type}/${id}`, {
     method:'PUT',
-    headers: {'Content-Type' : 'aplication/json'},
+    headers: {'Content-Type' : 'application/json'},
     body: `${formatData}`
   }
   )
