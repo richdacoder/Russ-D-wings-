@@ -34,6 +34,7 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock }){
          <div>
           <button type="button"
             onClick={() => {
+              dish.stock
               setStock(prev => !prev)
           }}
           > {stock ? 'In stock': 'Out of stock'} </button>

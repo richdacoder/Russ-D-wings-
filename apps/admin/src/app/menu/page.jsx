@@ -34,11 +34,9 @@ getMenu();
 
 
 console.log({
-      'mains': main,
+    'mains': main,
     'sides': side,
     'drinks': drink
-
-
 });
 
 const handleSubmit = async (e) => {
@@ -79,7 +77,10 @@ setPrice("");
 - add x for delete for each itemxx
 
 9/23/26
-- make a button that can show if something is in stock and control if it is or is not
+- make a button that can show if something is in stock and control if it is or is notxx
+
+9/24/26
+make put route and make api call file
 
 */
   return(
