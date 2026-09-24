@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 
-export default function Drink({ drink, setDrink, Delete, stock }){
-  console.log('page for drink  working', Delete);
+export default function Drink({ drink, setDrink, Delete, stock, setStock }){
+  console.log('page for drink  working', stock);
 
   return(
     <>
@@ -34,7 +34,7 @@ export default function Drink({ drink, setDrink, Delete, stock }){
          <div>
           <button type="button"
           onClick={() => {
-
+            setStock(false)
           }}
           > in </button>
          </div>
