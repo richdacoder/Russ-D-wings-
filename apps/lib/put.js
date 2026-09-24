@@ -31,6 +31,4 @@ export default async function Put(formatData){
   const data = await res.json();
 
   return data;
-
-
 };

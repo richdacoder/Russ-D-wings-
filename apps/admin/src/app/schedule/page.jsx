@@ -3,6 +3,7 @@
 import {useState, useEffect} from "react";
 import Post from "../../../../lib/post.js";
 import Get from "../../../../lib/get.js";
+import Put from  "../../../../lib/put.js";
 import Delete from "../../../../lib/delete.js";
 import TimeDisplay from "./extras/time-display.jsx";
 import AvailabilityManager from "./extras/availability-manager.jsx";
