@@ -72,12 +72,40 @@ console.error(err);
 
 
 
+
+
+
+
+router.put('/menu/:id', async (req, res) => {
+  try{
+    const { id } = req.params;
+
+    await db('menu')
+    .where({id})
+    .update(req.body);
+
+
+  }catch(err){
+    console.error(err);
+  }
+});
+
 /*
 - make sure theres data
 - grab the data
 - speak to database
 
 */
+
+
+
+
+
+
+
+
+
+
 
 router.delete('/menu/:id', async (req, res) => {
 console.log('reached delet but not deleted');
