@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
 
 */
 
-export default function Main({ main, setMain, Delete, stock, setStock }){
+export default function Main({ main, setMain, Delete, stock, setStock, Put}){
   console.log('page for main dish working', main);
 
   return(
