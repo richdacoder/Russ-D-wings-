@@ -71,11 +71,6 @@ console.error(err);
 
 
 
-
-
-
-
-
 router.put('/menu/:id', async (req, res) => {
   try{
     const { id } = req.params;
@@ -83,6 +78,10 @@ router.put('/menu/:id', async (req, res) => {
     const updateRows = await db('menu')
     .where({id})
     .update(req.body);
+
+    if(updateRows === 0){
+      return res.status(404).json({message:'empety row'});
+    }
 
     res.status(200).json({message:'succesful'});
 
@@ -98,11 +97,6 @@ router.put('/menu/:id', async (req, res) => {
 - speak to database
 
 */
-
-
-
-
-
 
 
 
