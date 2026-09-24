@@ -9,7 +9,7 @@
 
 
 
-export default async function Put(formatData1, id){
+export default async function Put(formatData, id){
 
 
 }
