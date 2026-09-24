@@ -20,13 +20,17 @@ export default async function Put(formatData){
   const res = await fetch(`${url}/api/${type}/${id}`, {
     method:'PUT',
     headers: {'Content-Type' : 'application/json'},
-    body: json.stringify(formatData)
+    body:  JSON.stringify(formatData)
   }
   );
 
   if(!res.ok){
     console.error({message:'error with PUT'});
-  }
+  };
+
+  const data = await res.json();
+
+  return data;
 
 
 };
