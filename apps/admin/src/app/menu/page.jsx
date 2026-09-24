@@ -150,6 +150,7 @@ make put route and make api call file
               main={main}
               setMain={setMain}
               Delete={Delete}
+              Put={Put}
             />
             </div>
             <div>
