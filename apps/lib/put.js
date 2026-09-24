@@ -10,7 +10,11 @@
 
 
 export default async function Put(formatData, id){
- const url = process.env.NEXT_PUBLIC_API_URL;
+
+
+  const url = process.env.NEXT_PUBLIC_API_URL;
+
+  api(`${url}/api/${}`)
 
 
 }
