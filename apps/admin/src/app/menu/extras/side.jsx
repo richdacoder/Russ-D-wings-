@@ -47,7 +47,7 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
                 stock: stock
               })
           }}
-          > {stock ? 'In stock': 'Out of stock'} </button>
+          > {dish.stock ? 'In stock': 'Out of stock'} </button>
          </div>
 
       </div>
