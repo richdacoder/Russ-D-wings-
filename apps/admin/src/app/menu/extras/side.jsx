@@ -34,7 +34,13 @@ export default function Side({ side, setSide, Delete, stock, setStock  }){
          <div>
           <button type="button"
             onClick={() => {
-              setStock(prev => !prev)
+              const newStock = !stock.dish;
+              setSide(prev => prev.map(s => {
+                return s.id === dish.id?
+                {...s, stock:newStock}:
+                s
+              }));
+              setStock(newStock);
           }}
           > {stock ? 'In stock': 'Out of stock'} </button>
          </div>
