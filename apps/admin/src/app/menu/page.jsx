@@ -171,6 +171,7 @@ make put route and make api call file
                 setStock={setStock}
                 drink={drink}
                 setDrink={setDrink}
+                Put={Put}
 
               />
             </div>
