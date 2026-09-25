@@ -51,9 +51,22 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
          <div>
           <button type="button"
             onClick={() => {
-              setStock(prev => !prev)
+              const newStock = !dish.stock;
+               setMain(prev => prev.map(m => {
+               return m.id === dish.id ?
+                {...m, stock: newStock } :
+                m;
+              }
+              ))
+              setStock(newStock);
+              Put({
+                id:dish.id,
+                type:dish.type,
+                stock: stock
+
+              })
           }}
-          > {stock ? 'In stock': 'Out of stock'} </button>
+          > {dish.stock ? 'In stock': 'Out of stock'} </button>
          </div>
 
       </div>
