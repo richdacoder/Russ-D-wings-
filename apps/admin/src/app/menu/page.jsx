@@ -160,6 +160,7 @@ make put route and make api call file
                 setStock={setStock}
                 side={side}
                 setSide={setSide}
+                Put={Put}
 
               />
             </div>
