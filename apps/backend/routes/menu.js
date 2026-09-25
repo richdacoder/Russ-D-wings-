@@ -79,11 +79,15 @@ router.put('/menu/:id', async (req, res) => {
     .where({id})
     .update(req.body);
 
+    console.log('after updaterow');
+
     if(updateRows === 0){
       return res.status(404).json({message:'empety row'});
     }
+    console.log('after if else');
 
     res.status(200).json({message:'succesful'});
+     console.log('after status 200');
 
   }catch(err){
     console.error(err);
