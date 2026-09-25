@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 
-export default function Drink({ drink, setDrink, Delete, stock, setStock }){
+export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
   console.log('page for drink  working', stock);
 
   return(
@@ -34,10 +34,21 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock }){
          <div>
           <button type="button"
             onClick={() => {
-              dish.stock
-              setStock(prev => !prev)
+
+              const newStock = !dish.stock;
+              setDrink(prev => prev.map(d => {
+                return d.id === dish.id?
+                {...d, stock:newStock}:
+                d;
+              }))
+              setStock(newStock);
+              Put({
+                id: dish.id ,
+                type: dish.type,
+                stock: stock
+              });
           }}
-          > {stock ? 'In stock': 'Out of stock'} </button>
+          > {dish.stock ? 'In stock': 'Out of stock'} </button>
          </div>
       </div>
       ))
