@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
-  console.log('page for drink  working', stock);
+  console.log('page for drink  working', drink.map(d => d.stock));
 
   return(
     <>
