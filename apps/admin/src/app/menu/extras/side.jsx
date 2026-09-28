@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 
 export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
-  console.log('page for side dish working', Delete);
+                console.log('stock?', stock);
+
 
   return(
     <>
