@@ -133,6 +133,7 @@ make put route and make api call file
             onChange={(e)=>{
               setDescription(e.target.value)
             }}
+            required
             />
           </div>
         </div>
