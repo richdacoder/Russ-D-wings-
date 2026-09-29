@@ -59,6 +59,7 @@ console.log('after await post');
 setCategory("");
 setMenuItem("");
 setPrice("");
+setDescription("");
 }
 /*
 
@@ -133,6 +134,8 @@ make put route and make api call file
             onChange={(e)=>{
               setDescription(e.target.value)
             }}
+            value={description}
+
             required
             />
           </div>
