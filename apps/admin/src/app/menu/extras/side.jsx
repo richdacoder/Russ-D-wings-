@@ -41,11 +41,10 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
                 {...s, stock:newStock}:
                 s
               }));
-              setStock(newStock);
               Put({
                 id: dish.id,
                 type: dish.type,
-                stock: stock
+                stock: newStock
               })
           }}
           > {dish.stock ? 'In stock': 'Out of stock'} </button>
