@@ -58,11 +58,10 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
                 m;
               }
               ))
-              setStock(newStock);
               Put({
                 id:dish.id,
                 type:dish.type,
-                stock: stock
+                stock: newStock
 
               })
           }}

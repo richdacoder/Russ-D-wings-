@@ -38,7 +38,7 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
               const newStock = !dish.stock;
               setDrink(prev => prev.map(d => {
                 return d.id === dish.id?
-                {...d, stock:newStock}:
+                {...d, stock: newStock}:
                 d;
               }))
               Put({
