@@ -12,7 +12,6 @@ const db = require('../db/db.js');
 */
 router.get("/menu", async (req,res) =>{
   try{
-    console.log('before query req body', req.body);
    const menu = await db("menu")
   .select('*');
 
@@ -75,6 +74,7 @@ console.error(err);
 router.put('/menu/:id', async (req, res) => {
   try{
     const { id } = req.params;
+        console.log('before query req body', req.body);
 
     const updateRows = await db('menu')
     .where({id})

@@ -41,11 +41,10 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
                 {...d, stock:newStock}:
                 d;
               }))
-              setStock(newStock);
               Put({
                 id: dish.id ,
                 type: dish.type,
-                stock: stock
+                stock: newStock
               });
           }}
           > {dish.stock ? 'In stock': 'Out of stock'} </button>
