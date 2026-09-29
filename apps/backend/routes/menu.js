@@ -84,7 +84,7 @@ router.put('/menu/:id', async (req, res) => {
     if(updateRows === 0){
       return res.status(404).json({message:'empety row'});
     }
-    console.log('after if else');
+    console.log('after if else', req.body);
 
     res.status(200).json({message:'succesful'});
      console.log('after status 200');
