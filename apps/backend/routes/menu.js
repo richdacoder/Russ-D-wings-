@@ -12,6 +12,7 @@ const db = require('../db/db.js');
 */
 router.get("/menu", async (req,res) =>{
   try{
+    console.log('before query req body', req.body);
    const menu = await db("menu")
   .select('*');
 

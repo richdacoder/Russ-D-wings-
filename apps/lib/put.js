@@ -16,6 +16,8 @@ export default async function Put(formatData){
 
   const id = formatData.id;
 
+  console.log('stock? well see', formatData.dish, formatData.stock)
+
   const url = process.env.NEXT_PUBLIC_API_URL;
 
   console.log({
