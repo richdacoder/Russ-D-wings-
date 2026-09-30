@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Get from "../../../../lib/get.js";
 import Cart from "./components/cart.jsx";
+import PickUpTime from "./components/pick-up-time.jsx"
 
 /*
 *** each function gets own file
