@@ -3,13 +3,14 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import "./globals.css";
 
 
 function Home(){
 
 return(
   <div>
-    <h1 className="russ-d-wings" >Russ D wings</h1>
+    <h1 className=" text-4xl text-white-500"  >Russ D wings</h1>
 
     <video
       width={500}
