@@ -11,7 +11,7 @@ return(
   <div>
     <h1 className="russ-d-wings" >Russ D wings</h1>
 
-    <Image
+    <video
       width={100} height={100}
       className="russ-animation"
       alt="russ-animation"
