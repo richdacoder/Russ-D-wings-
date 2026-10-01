@@ -29,6 +29,10 @@ objective 7/13/26
 for catering use type to differient in code base all coding logic for catering done
 on next and express route
 
+10/1/26
+- we want to show all the times thats not block time
+-
+
 */
 
 export default function Order(){
@@ -47,6 +51,7 @@ export default function Order(){
   const [menu, setMenu] = useState([]);
   const [list, setList] = useState(["main", "side", "drink"]);
   const [addToCart, setAddToCart] = useState([]);
+  const [times, setTimes] = useState([]);
 
   useEffect( () => {
     async function getMenu(){
