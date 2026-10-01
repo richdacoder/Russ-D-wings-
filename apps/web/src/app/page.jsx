@@ -15,7 +15,7 @@ return(
       width={100} height={100}
       className="russ-animation"
       alt="russ-animation"
-      src="/russ-animation.png"
+      src="/public/videos/intro-video.mov"
     />
 
     <div>
