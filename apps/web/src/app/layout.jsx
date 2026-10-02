@@ -4,12 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function RootLayout({ children }) {
+  const
   return (
     <html
       lang="en"
     >
       <body className="min-h-full flex flex-col">
-              <header>
+              <header class="flex items-center justify-between px-6 py-4 shadow-md w-full">
         <Link href="/" >
         <Image
           src="/logo.png"
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
           height={100}        />
         </Link>
 
-        <nav>
+        <nav clas>
             <Link href="/menu"> Menu </Link>
             <Link href="/order"> Order </Link>
             <Link href="/catering"> Catering </Link>
