@@ -1,10 +1,10 @@
 "use client";
-
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function RootLayout({ children }) {
-  const [isOpen, setIsOpen]
+  const [isOpen, setIsOpen] =
   return (
     <html
       lang="en"
