@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         onClick={toggleMenu}>
             ☰
         </button>
-        <nav className={` md:${isOpen? "flex" : "hidden"}`}>
+        <nav className={`${isOpen? "flex" : "hidden"} md:flex`}>
             <Link href="/menu"> Menu </Link>
             <Link href="/order"> Order </Link>
             <Link href="/catering"> Catering </Link>
