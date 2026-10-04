@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
          />
         </Link>
 
-
+        <button>
+            ☰
+        </button>
         <nav clas>
             <Link href="/menu"> Menu </Link>
             <Link href="/order"> Order </Link>
