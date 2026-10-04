@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function RootLayout({ children }) {
-  const [isOpen, setIsOpen] =
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <html
       lang="en"
@@ -16,8 +18,10 @@ export default function RootLayout({ children }) {
           src="/logo.png"
           alt="logo"
           width={100}
-          height={100}        />
+          height={100}
+         />
         </Link>
+
 
         <nav clas>
             <Link href="/menu"> Menu </Link>
