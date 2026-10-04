@@ -22,10 +22,12 @@ export default function RootLayout({ children }) {
          />
         </Link>
 
-        <button>
+        <button
+        className="md: hidden"
+        onClick={toggleMenu}>
             ☰
         </button>
-        <nav clas>
+        <nav >
             <Link href="/menu"> Menu </Link>
             <Link href="/order"> Order </Link>
             <Link href="/catering"> Catering </Link>
