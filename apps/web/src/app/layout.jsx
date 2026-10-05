@@ -36,6 +36,20 @@ export default function RootLayout({ children }) {
         </nav>
       </header>
             {children}
+            <footer>
+  <div className="flex flex-col gap-2">
+          <h3 className="font-semibold text-white">Contact</h3>
+          <p>123 Main St, Your City</p>
+          <p>(555) 555-5555</p>
+          <p>hello@example.com</p>
+        </div>
+      {/* Bottom line */}
+      <div className="border-t border-gray-700 py-4 text-center text-sm">
+        © {new Date().getFullYear()} Russ D Wings. All rights reserved.
+      </div>
+
+  </footer>
+
   </body>
     </html>
   );
