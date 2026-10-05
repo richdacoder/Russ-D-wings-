@@ -21,7 +21,7 @@ function Home(){
 
 return(
   <div>
-    <h1 className=" text-5xl font-bold text-white-500"  >Russ D wings</h1>
+    <h1 className=" flex justify-center text-5xl font-bold text-white-500"  >Russ D wings</h1>
 
     <div className="relative overflow-hidden h-[500px]">
     <video
