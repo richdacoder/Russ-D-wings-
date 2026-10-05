@@ -5,6 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 
+/*
+10/3/26
+
+- make video wider
+- put order on video
+- find nice font
+- find logo
+- center menu on for laptop
+- add a div line for laptop header
+
+*/
 
 function Home(){
 
