@@ -24,9 +24,7 @@ return(
     <h1 className=" text-4xl text-white-500"  >Russ D wings</h1>
 
     <video
-      width={500}
-      height={500}
-      className="russ-animation"
+      className="russ-animation w-full h-auto"
       alt="russ-animation"
       src="/videos/intro-video.mov"
       autoPlay
