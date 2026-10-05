@@ -23,9 +23,9 @@ return(
   <div>
     <h1 className=" text-4xl text-white-500"  >Russ D wings</h1>
 
-    <div>
+    <div className="relative ">
     <video
-      className="russ-animation w-full h-auto"
+      className=" absolute w-full h-150"
       alt="russ-animation"
       src="/videos/intro-video.mov"
       autoPlay
@@ -34,8 +34,8 @@ return(
       playsInline
     />
 
-    <div>
-    <Link className="order-btn" href="/order">Order</Link>
+    <div className='relative z-10 flex item-center justify-center'>
+    <Link className="bg-white" href="/order">Order</Link>
     </div>
     </div>
     <h2 className="quote" >We Litty</h2>
