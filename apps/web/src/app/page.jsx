@@ -21,11 +21,11 @@ function Home(){
 
 return(
   <div>
-    <h1 className=" text-4xl text-white-500"  >Russ D wings</h1>
+    <h1 className=" text-5xl font-bold text-white-500"  >Russ D wings</h1>
 
-    <div className="relative ">
+    <div className="relative overflow-hidden h-[500px]">
     <video
-      className=" absolute w-full h-150"
+      className="absolute w-full inset-0"
       alt="russ-animation"
       src="/videos/intro-video.mov"
       autoPlay
@@ -34,9 +34,11 @@ return(
       playsInline
     />
 
-    <div className='relative z-10 flex item-center justify-center'>
-    <Link className="bg-white" href="/order">Order</Link>
+    <div className='relative z-10 flex item-center justify-center '>
+    <Link className="inline-block rounded-lg bg-red-500 px-8 py-4 text-xl font-semibold text-white
+    transition hover:bg-red-600 md:px-12 md:py-5 md:text-2xl" href="/order">Order</Link>
     </div>
+
     </div>
     <h2 className="quote" >We Litty</h2>
 
