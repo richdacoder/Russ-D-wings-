@@ -23,6 +23,7 @@ return(
   <div>
     <h1 className=" text-4xl text-white-500"  >Russ D wings</h1>
 
+    <div>
     <video
       className="russ-animation w-full h-auto"
       alt="russ-animation"
@@ -36,7 +37,7 @@ return(
     <div>
     <Link className="order-btn" href="/order">Order</Link>
     </div>
-
+    </div>
     <h2 className="quote" >We Litty</h2>
 
     <Image
