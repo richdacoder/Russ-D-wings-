@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import RussDLogo from "../../lib/img/russ-d-logo.PNG"
+import RussDLogo from "../../../lib/img/russ-d-logo.png"
 
 
 export default function RootLayout({ children }) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
               <header className="sticky z-4 top-0 flex items-center justify-between px-6 py-4 bg-black shadow-md w-full">
         <Link href="/" >
         <Image
-          src="/../../lib/img/russ-d-logo.PNG"
+          src={RussDLogo}
           alt="logo"
           width={100}
           height={100}
