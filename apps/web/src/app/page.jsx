@@ -21,7 +21,7 @@ function Home(){
 
 return(
   <div>
-    <h1 className=" flex justify-center text-5xl font-bold text-white-500 m-5"  >Russ D wings</h1>
+    <h1 className=" flex justify-center text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
 
     <div className="relative h-[500px] z-0 overflow-hidden">
     <video
@@ -40,7 +40,7 @@ return(
     </div>
 
     </div>
-    <h2 className="quote" >We Litty</h2>
+    <h2 className="quote flex justify-center" >We Litty</h2>
 
     <Image
       src="/logo.png"
