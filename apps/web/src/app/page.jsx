@@ -25,7 +25,7 @@ return(
 
     <div className="relative h-[500px] z-0 overflow-hidden">
     <video
-      className="absolute w-full inset-0 object-fill z-0 "
+      className="absolute w-full md:h-[900px] object-fill inset-0 z-0 "
       alt="russ-animation"
       src="/videos/intro-video.mov"
       autoPlay
