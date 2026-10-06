@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
       lang="en"
     >
       <body className="min-h-full flex flex-col">
-              <header className="sticky top-0 flex items-center justify-between px-6 py-4 shadow-md w-full">
+              <header className="sticky z-4 top-0 flex items-center justify-between px-6 py-4 shadow-md w-full">
         <Link href="/" >
         <Image
           src="/logo.png"
