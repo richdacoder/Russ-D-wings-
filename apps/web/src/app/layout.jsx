@@ -2,7 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import RussDLogo from "../../../lib/img/russ-d-logo.png"
+import RussDLogo from "../../../lib/img/russ-d-logo.png";
+import { Bungee } from "next/font/google";
+
 
 
 export default function RootLayout({ children }) {

@@ -8,12 +8,17 @@ import "./globals.css";
 /*
 10/3/26
 
-- make video wider
-- put order on video
+- make video widerxx
+- put order on videoxx
 - find nice font
-- find logo
+- find logoxx
 - center menu on for laptop
-- add a div line for laptop header
+- add a div line for laptop headerxx
+
+10/7/26
+- import fancy logo
+- put instagram page
+- customize we litty
 
 */
 
@@ -21,7 +26,7 @@ function Home(){
 
 return(
   <div>
-    <h1 className=" flex justify-center text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
+    <h1 className=" flex justify-center mt-40 mb-20 text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
 
     <div className="relative h-[500px] z-0 overflow-hidden">
     <video
@@ -40,7 +45,7 @@ return(
     </div>
 
     </div>
-    <h2 className="quote flex justify-center" >We Litty</h2>
+    <h2 className="quote flex justify-center font-bold mt-40" >We Litty</h2>
 
     <Image
       src="/logo.png"
