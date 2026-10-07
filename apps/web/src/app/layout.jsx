@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         onClick={toggleMenu}>
             ☰
         </button>
-        <nav className={`${isOpen? "flex" : "hidden"} md:flex md:flex-1 md:justify-evenly`}>
+        <nav className={`${isOpen? "flex flex-col" : "hidden"} md:flex md:flex-1 md:justify-evenly`}>
             <Link href="/menu"> Menu </Link>
             <Link href="/order"> Order </Link>
             <Link href="/catering"> Catering </Link>
