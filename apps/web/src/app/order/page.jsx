@@ -160,7 +160,7 @@ return(
             [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]"> {field} </label>
             <input
             type={field}
-            className="bg-white/5 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
+            className="bg-white/5 border border-white/50 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
             required/>
           </div>
          ) )
