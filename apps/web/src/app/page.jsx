@@ -24,17 +24,18 @@ import { Bungee } from "next/font/google";
 
 */
 
+const bungee = Bungee({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bungee",
+});
+
 function Home(){
 
-  const bungee = Bungee({
-    subsets: ["latin"],
-    weight: "400",
-    variable: "--font-bungee",
-  });
-
 return(
-  <div className={bungee.className} >
-    <h1 className="  flex justify-center mt-40 mb-20 text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
+  <div >
+    <h1 className={` ${bungee.className}  [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+    flex justify-center mt-40 mb-20 text-5xl font-bold text-white-500 m-5`}  >Russ D Wings</h1>
 
     <div className="relative h-[500px] z-0 overflow-hidden">
     <video
@@ -53,7 +54,8 @@ return(
     </div>
 
     </div>
-    <h2 className="quote flex justify-center font-bold mt-40" >We Litty</h2>
+    <h2 className={`${bungee.className} [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+    text-6xl  quote flex justify-center font-bold mt-40`} >We Litty</h2>
 
     <Image
       src="/logo.png"
