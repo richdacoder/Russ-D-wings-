@@ -33,8 +33,8 @@ function Home(){
   });
 
 return(
-  <div>
-    <h1 className=" font-retro flex justify-center mt-40 mb-20 text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
+  <div className={bungee.className} >
+    <h1 className="  flex justify-center mt-40 mb-20 text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
 
     <div className="relative h-[500px] z-0 overflow-hidden">
     <video
