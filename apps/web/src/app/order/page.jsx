@@ -160,18 +160,18 @@ return(
           Menu
         </h1>
             <div >
-            <h2 className="mx-auto"> Main </h2>
+            <h2 className="flex justify-center"> Main </h2>
             {sortByType('main')}
 
             </div>
 
             <div>
-            <h3> Side </h3>
+            <h3 className="flex justify-center" > Side </h3>
             {sortByType('side')}
             </div>
 
             <div>
-            <h4> Drink </h4>
+            <h4 className="flex justify-center" > Drink </h4>
             {sortByType('drink')}
 
             </div>
