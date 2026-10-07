@@ -12,15 +12,19 @@ import { Bungee } from "next/font/google";
 
 - make video widerxx
 - put order on videoxx
-- find nice font
+- find nice fontxx
 - find logoxx
 - center menu on for laptop
 - add a div line for laptop headerxx
 
 10/7/26
-- import fancy logo
+- import fancy logoxx
 - put instagram page
-- customize we litty
+- customize we littyxx
+
+10/8/26
+- make input line respond to mobile
+- customize line on input
 
 */
 
