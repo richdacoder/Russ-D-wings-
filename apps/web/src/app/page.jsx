@@ -4,6 +4,8 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
+import { Bungee } from "next/font/google";
+
 
 /*
 10/3/26
@@ -24,9 +26,15 @@ import "./globals.css";
 
 function Home(){
 
+  const bungee = Bungee({
+    subsets: ["latin"],
+    weight: "400",
+    variable: "--font-bungee",
+  });
+
 return(
   <div>
-    <h1 className=" flex justify-center mt-40 mb-20 text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
+    <h1 className=" font-retro flex justify-center mt-40 mb-20 text-5xl font-bold text-white-500 m-5"  >Russ D Wings</h1>
 
     <div className="relative h-[500px] z-0 overflow-hidden">
     <video
