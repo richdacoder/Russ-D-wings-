@@ -146,7 +146,7 @@ return(
     <form className="flex flex-col items-center">
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
-          <div key={field}>
+          <div className="flex flex-col" key={field}>
             <label> {field} </label>
             <input
             type={field}
