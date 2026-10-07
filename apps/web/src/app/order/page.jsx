@@ -155,11 +155,12 @@ return(
     <form className="flex flex-col items-center max-w-md w-full mx-auto">
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
-          <div className="flex flex-col w-full text-xl font-bold" key={field}>
+          <div className="flex flex-col w-full text-xl font-bold mt-5" key={field}>
             <label className="mx-auto
             [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]"> {field} </label>
             <input
             type={field}
+            className="bg-white/5"
             required/>
           </div>
          ) )
