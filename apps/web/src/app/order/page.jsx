@@ -143,7 +143,7 @@ console.log(changeType("First Name"));
 
 return(
   <div>
-    <form >
+    <form className="flex flex-col items-center">
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div key={field}>
