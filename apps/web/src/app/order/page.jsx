@@ -144,6 +144,7 @@ export default function Order(){
   })
 }
 
+const classNameMenu ="flex justify-center text-xl font-bold mt-5 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]";
 
 console.log(changeType("Email"));
 console.log(changeType("Phone"));
@@ -167,26 +168,23 @@ return(
       }
 
       <div>
-        <h1 className="flex justify-center text-4xl
+        <h1 className="flex justify-center text-4xl mt-10
         [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]">
           Menu
         </h1>
             <div >
-            <h2 className="flex justify-center text-xl font-bold
-            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]"> Main </h2>
+            <h2 className={classNameMenu}> Main </h2>
             {sortByType('main')}
 
             </div>
 
             <div>
-            <h3 className="flex justify-center text-xl font-bold
-            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]" > Side </h3>
+            <h3 className={classNameMenu} > Side </h3>
             {sortByType('side')}
             </div>
 
             <div>
-            <h4 className="flex justify-center text-xl font-bold
-            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]" > Drinks </h4>
+            <h4 className={classNameMenu} > Drinks </h4>
             {sortByType('drink')}
 
             </div>
