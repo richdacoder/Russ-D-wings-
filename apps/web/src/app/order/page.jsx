@@ -166,26 +166,26 @@ return(
       }
 
       <div>
-        <h1 className="flex justify-center
+        <h1 className="flex justify-center text-4xl
         [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]">
           Menu
         </h1>
             <div >
-            <h2 className="flex justify-center
+            <h2 className="flex justify-center text-xl font-bold
             [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]"> Main </h2>
             {sortByType('main')}
 
             </div>
 
             <div>
-            <h3 className="flex justify-center
+            <h3 className="flex justify-center text-xl font-bold
             [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]" > Side </h3>
             {sortByType('side')}
             </div>
 
             <div>
-            <h4 className="flex justify-center
-            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]" > Drink </h4>
+            <h4 className="flex justify-center text-xl font-bold
+            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]" > Drinks </h4>
             {sortByType('drink')}
 
             </div>
