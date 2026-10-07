@@ -37,6 +37,12 @@ on next and express route
 
 */
 
+const bungee = Bungee({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bungee",
+});
+
 
 export default function Order(){
   const [firstName, setFirstName] = useState("");
@@ -150,7 +156,8 @@ return(
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div className="flex flex-col w-full text-xl font-bold" key={field}>
-            <label className="mx-auto"> {field} </label>
+            <label className="mx-auto
+            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]"> {field} </label>
             <input
             type={field}
             required/>
