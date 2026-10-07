@@ -147,7 +147,7 @@ return(
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div className="flex flex-col w-full  " key={field}>
-            <label> {field} </label>
+            <label className="mx-auto"> {field} </label>
             <input
             type={field}
             required/>
