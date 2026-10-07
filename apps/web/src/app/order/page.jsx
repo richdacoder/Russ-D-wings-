@@ -156,11 +156,11 @@ return(
       }
 
       <div>
-        <h1>
+        <h1 className="flex justify-center">
           Menu
         </h1>
-            <div>
-            <h2> Main </h2>
+            <div >
+            <h2 className="mx-auto"> Main </h2>
             {sortByType('main')}
 
             </div>
