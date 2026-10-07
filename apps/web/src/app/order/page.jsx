@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Get from "../../../../lib/get.js";
 import Cart from "./components/cart.jsx";
 import PickUpTime from "./components/pick-up-time.jsx"
+import { Bungee } from "next/font/google";
+
 
 /*
 *** each function gets own file
@@ -34,6 +36,7 @@ on next and express route
 -
 
 */
+
 
 export default function Order(){
   const [firstName, setFirstName] = useState("");
@@ -146,7 +149,7 @@ return(
     <form className="flex flex-col items-center max-w-md w-full mx-auto">
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
-          <div className="flex flex-col w-full  " key={field}>
+          <div className="flex flex-col w-full text-xl font-bold" key={field}>
             <label className="mx-auto"> {field} </label>
             <input
             type={field}
