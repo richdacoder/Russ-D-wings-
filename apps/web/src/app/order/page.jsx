@@ -187,10 +187,11 @@ return(
         [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]">
           Menu
         </h1>
-            <div >
-            <h2 className={classNameMenu}> Main </h2>
+        <div>
+        <h2 className={classNameMenu}> Main </h2>
+            <div className="grid grid-cols-2 gap-4">
             {sortByType('main')}
-
+            </div>
             </div>
 
             <div>
