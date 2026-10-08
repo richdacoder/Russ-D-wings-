@@ -106,6 +106,7 @@ export default function Order(){
             </div>
             <div className="flex items-center rounded-full border border-white/30">
                      <button
+        className="w-8 h-8 rounded-full hover:bg-white/10"
        type="button"
        onClick={() => {
         setItemQuantity(prev => (
@@ -117,8 +118,12 @@ export default function Order(){
         )
        }
        }> - </button>
-       <label>{currentQtty}</label>
+       <label
+        className="w-8 text-center"
+
+       >{currentQtty}</label>
                             <button
+       className="w-8 h-8 rounded-full hover:bg-white/10"
        type="button"
        onClick={() => {
         setItemQuantity(prev => ({
@@ -131,7 +136,8 @@ export default function Order(){
             <div>
               <button
               value={item}
-              className="flex justify-center mx-auto"
+              className="rounded-full
+              bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
                 type="button"
                 onClick={() => {
                   console.log('button clicked'),
