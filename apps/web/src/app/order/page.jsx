@@ -104,7 +104,7 @@ export default function Order(){
               <p className="flex item-start justify-between gap-4
               text-lg font-bold">${item.price} </p>
             </div>
-            <div className="flex items-center rounded-full border border-white/30">
+            <div className="flex items-center rounded-full mr-19 border border-white/30">
                      <button
         className="w-8 h-8 rounded-full hover:bg-white/10"
        type="button"
@@ -136,7 +136,7 @@ export default function Order(){
             <div>
               <button
               value={item}
-              className="rounded-full
+              className="rounded-full mt-2
               bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
                 type="button"
                 onClick={() => {
