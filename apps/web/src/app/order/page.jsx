@@ -90,16 +90,18 @@ export default function Order(){
     const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
-    return <div className="border border-white mt-5 mb-5"
+    return <div className="border border-white mt-5 mb-5 "
     key={item.id}>
-      {item.dish}
+     <div className="flex p-4">
+     {item.dish}
+     </div>
       <div>
-        <p>{item.description}</p>
+        <p className="flex p-4">{item.description}</p>
       </div>
             <div>
-              <p>${item.price} </p>
+              <p className="flex p-4">${item.price} </p>
             </div>
-            <div>
+            <div className="flex p-4">
                      <button
        type="button"
        onClick={() => {
