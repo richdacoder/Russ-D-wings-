@@ -126,6 +126,7 @@ export default function Order(){
             <div>
               <button
               value={item}
+              className="flex justify-center mx-auto"
                 type="button"
                 onClick={() => {
                   console.log('button clicked'),
