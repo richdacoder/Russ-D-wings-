@@ -90,7 +90,7 @@ export default function Order(){
     const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
-    return <div className="flex flex-wrap"
+    return <div className="flex flex-wrap border border-white"
     key={item.id}>
       {item.dish}
             <div>
