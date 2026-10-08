@@ -196,16 +196,17 @@ return(
             </div>
 
             <div>
-            <h3 className={classNameMenu} > Side </h3>
-            <div className="grid grid-cols-2 gap-4">
-            {sortByType('side')}
-            </div>
+              <h3 className={classNameMenu} > Side </h3>
+              <div className="grid grid-cols-2 gap-4">
+              {sortByType('side')}
+              </div>
             </div>
 
             <div>
-            <h4 className={classNameMenu} > Drinks </h4>
-            {sortByType('drink')}
-
+              <h4 className={classNameMenu} > Drinks </h4>
+              <div className="grid grid-cols-2 gap-4">
+              {sortByType('drink')}
+              </div>
             </div>
 
             <div>
