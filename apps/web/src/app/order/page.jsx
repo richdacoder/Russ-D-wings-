@@ -90,18 +90,21 @@ export default function Order(){
     const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
-    return <div className="border border-white mt-5 mb-5 "
+    return <div className="border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
+     p-4 mt-5 mb-5 w-full rounded-xl"
     key={item.id}>
-     <div className="flex p-4">
+     <div className="flex item-start justify-between gap-4
+     text-lg semibold">
      {item.dish}
      </div>
       <div>
-        <p className="flex p-4">{item.description}</p>
+        <p className="mt-2 text-sm text-white/70">{item.description}</p>
       </div>
             <div>
-              <p className="flex p-4">${item.price} </p>
+              <p className="flex item-start justify-between gap-4
+              text-lg font-bold">${item.price} </p>
             </div>
-            <div className="flex p-4">
+            <div className="flex items-center rounded-full border border-white/30">
                      <button
        type="button"
        onClick={() => {
