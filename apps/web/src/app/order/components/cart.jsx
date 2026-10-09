@@ -102,9 +102,9 @@ p-4 grid justify-center
   addToCart.map((item, index)  => {
     return(
     <div key={item.id}>
-      <div className="flex justify-between">
-        <p>dish:{item.dish}</p>
-        <p>price:${item.price}</p>
+      <div className="flex justify-between pt-2 pb-2">
+        <p>{item.dish}</p>
+        <p>{item.price}</p>
       </div>
 <div>type:{item.category}</div>
 <button
