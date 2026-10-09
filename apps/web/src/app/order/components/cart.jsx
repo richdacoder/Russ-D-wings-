@@ -88,14 +88,14 @@ return setAddToCart(updatedCart) ;
  }
 
 return(
-<div className="border rounded-lg m-4
+<div className="border rounded-lg m-4 bg-white/10
 p-4 grid justify-center
 [box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
 ">
   <h1 className="font-bold text-4xl">Cart</h1>
   {
     addToCart.length === 0 && (
-    <div> Your cart is empty.</div>
+    <div className="text-white/50"> Your cart is empty.</div>
     )
   }
 {
