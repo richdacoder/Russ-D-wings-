@@ -95,7 +95,7 @@ p-4 grid justify-center
   <h1 className="font-bold text-4xl border-dotted border-b-2 p-2">Cart</h1>
   {
     addToCart.length === 0 && (
-    <div className="text-white/50"> Your cart is empty.</div>
+    <div className="text-white/50 pt-2 pb-2"> Your cart is empty.</div>
     )
   }
 {
