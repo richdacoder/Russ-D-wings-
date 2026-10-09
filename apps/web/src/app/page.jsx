@@ -23,8 +23,12 @@ import { Bungee } from "next/font/google";
 - customize we littyxx
 
 10/8/26
-- make input line respond to mobile
-- customize line on input
+- make input line respond to mobilexxx
+- customize line on inputxxx
+
+10/9/26
+- make sure email and phone number are required and built that
+  it accept numbers and emails with @
 
 */
 

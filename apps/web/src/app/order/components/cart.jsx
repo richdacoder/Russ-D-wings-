@@ -102,8 +102,10 @@ p-4 grid justify-center
   addToCart.map((item, index)  => {
     return(
     <div key={item.id}>
-  <div>dish:{item.dish}</div>
-<div>price:${item.price}</div>
+      <div className="flex justify-between">
+        <p>dish:{item.dish}</p>
+        <p>price:${item.price}</p>
+      </div>
 <div>type:{item.category}</div>
 <button
 type="button"
@@ -113,7 +115,7 @@ onClick={() => removeItem(index)}
 </div>
   );} )
 }
-<h2 className="font-bold ">Total</h2>
+<h2 className="font-bold text-lg">Total</h2>
 <p>${total.toFixed(2)}</p>
   </div>
  )
