@@ -89,7 +89,7 @@ return setAddToCart(updatedCart) ;
 
 return(
 <div className="border rounded-lg m-4 bg-white/10
-p-4 grid justify-center
+p-4 grid-cols-3 justify-center
 [box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
 ">
   <h1 className="font-bold text-4xl border-dotted border-b-2 p-2">Cart</h1>
