@@ -113,7 +113,7 @@ onClick={() => removeItem(index)}
 </div>
   );} )
 }
-<h2>Total</h2>
+<h2 className="font-bold ">Total</h2>
 <p>${total.toFixed(2)}</p>
   </div>
  )
