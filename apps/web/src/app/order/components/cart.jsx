@@ -88,8 +88,10 @@ return setAddToCart(updatedCart) ;
  }
 
 return(
-<div className="border border-white rounded-lg
-p-4 grid justify-center">
+<div className="border rounded-lg
+p-4 grid justify-center
+[box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+">
   <h1>Cart</h1>
   {
     addToCart.length === 0 && (

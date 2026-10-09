@@ -165,6 +165,8 @@ console.log(changeType("Email"));
 console.log(changeType("Phone"));
 console.log(changeType("First Name"));
 
+// [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+
 
 return(
   <div>
