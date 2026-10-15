@@ -63,13 +63,13 @@ export default function Order(){
   const [times, setTimes] = useState([]);
 
   useEffect( () => {
-    async function getMenu(){
+    async function getOrder(){
       const dataArray = await Get("menu");
       const getTimes = await Get("availability");
       setMenu(dataArray);
       setTimes(getTimes);
     }
-    getMenu();
+    getOrder();
   },
   []
   );
