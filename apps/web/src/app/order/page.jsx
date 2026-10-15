@@ -218,11 +218,11 @@ return(
                 itemQuantity={itemQuantity}
                 setItemQuantity={setItemQuantity}
               />
-              <h5>Total Amount</h5>
             </div>
 
             <div>
               <h6>Pick up time</h6>
+              <PickUpTime/>
               <input/>
             </div>
 
