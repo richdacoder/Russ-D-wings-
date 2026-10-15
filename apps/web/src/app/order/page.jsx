@@ -227,7 +227,9 @@ return(
 
             <div>
               <h6 className="text-4xl font-bold mt-10">Pick up time</h6>
-               <PickUpTime/>
+               <PickUpTime
+               times={times}
+               />
               <input/>
             </div>
 
