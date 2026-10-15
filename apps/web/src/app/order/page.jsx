@@ -65,12 +65,16 @@ export default function Order(){
   useEffect( () => {
     async function getMenu(){
       const dataArray = await Get("menu");
+      const getTimes = await Get("availability");
       setMenu(dataArray);
+      setTimes(getTimes);
     }
     getMenu();
   },
   []
   );
+
+  console.log('times', times);
 
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
@@ -221,7 +225,7 @@ return(
             </div>
 
             <div>
-              <h6 className="text-4xl font-bold mt-5 ">Pick up time</h6>
+              <h6 className="text-4xl font-bold mt-10">Pick up time</h6>
                <PickUpTime/>
               <input/>
             </div>
