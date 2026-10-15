@@ -62,12 +62,13 @@ export default function Order(){
   const [addToCart, setAddToCart] = useState([]);
   const [times, setTimes] = useState([]);
 
+
   useEffect( () => {
     async function getOrder(){
       const dataArray = await Get("menu");
       const getTimes = await Get("availability");
       setMenu(dataArray);
-      setTimes(getTimes);
+      setTimes(getTimes.filter(time => time.is_active));
     }
     getOrder();
   },
