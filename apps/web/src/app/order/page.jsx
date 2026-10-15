@@ -221,7 +221,7 @@ return(
             </div>
 
             <div>
-              <h6 className="text-4xl font-bold ">Pick up time</h6>
+              <h6 className="text-4xl font-bold mt-5 ">Pick up time</h6>
                <PickUpTime/>
               <input/>
             </div>
