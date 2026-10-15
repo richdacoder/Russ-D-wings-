@@ -221,8 +221,8 @@ return(
             </div>
 
             <div>
-              <h6>Pick up time</h6>
-              <PickUpTime/>
+              <h6 className="font-bold ">Pick up time</h6>
+               <PickUpTime/>
               <input/>
             </div>
 
