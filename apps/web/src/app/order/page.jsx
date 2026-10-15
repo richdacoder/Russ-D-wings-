@@ -75,8 +75,6 @@ export default function Order(){
   []
   );
 
-  console.log('times', times);
-
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
              return "text"
