@@ -1,7 +1,7 @@
 "use client"
 
 
-export default function PickUpTime({times}){
+export default function PickUpTime({times, TimeFormat}){
   // const timesObject =
   console.log('times on page', times?.[0]?.start_time.split("T")[1]);
     /*
