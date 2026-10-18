@@ -109,7 +109,7 @@ p-4 grid-cols-3 justify-center
           <button
             type="button"
             onClick={() => removeItem(index)}
-            >delete</button>
+            >X</button>
           </div>
       </div>
 <div>type:{item.category}</div>
