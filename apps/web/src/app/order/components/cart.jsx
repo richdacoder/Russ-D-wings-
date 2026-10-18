@@ -74,7 +74,7 @@ p-4 grid-cols-3 justify-center
     return(
     <div key={item.id}>
       <div className="flex justify-between pt-2 pb-2">
-        <p>{item.dish}</p>
+        <p className='capitalize'>{item.dish}</p>
         <div className='flex justify-between gap-2'>
           <p>{item.price}</p>
           <button
