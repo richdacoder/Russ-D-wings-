@@ -40,35 +40,6 @@ export default function Cart({addToCart, setAddToCart, itemQuantity, setItemQuan
       return sum + Number(item.price) * quantity ;
     }, 0);
 
-    // const itemCount = (id) => {
-    //   const currentQtty = itemQuantity[id] || 1;
-    //       console.log('working itemcount', currentQtty );
-    //   return(
-    //   <div>
-    //    <button
-    //    type="button"
-    //    onClick={() => {
-    //     setItemQuantity(prev => ({
-    //       ...prev,
-    //       [id]: currentQtty + 1
-    //     })
-    //   );
-    //    }}> + </button>
-    //    <label>{currentQtty}</label>
-    //    <button
-    //    type="button"
-    //    onClick={() => {
-    //     setItemQuantity(prev => (
-    //       {
-    //         ...prev,
-    //         [id]: currentQtty > 1? currentQtty -1 : 1
-    //       }
-    //     )
-    //     )
-    //    }
-    //    }> - </button>
-    //    </div>
-    // )}
 
 
  const removeItem = (removedIndex) => {
@@ -112,7 +83,6 @@ p-4 grid-cols-3 justify-center
             >X</button>
           </div>
       </div>
-<div>type:{item.category}</div>
 {/* {itemCount(item.id)} */}
 </div>
   );} )
