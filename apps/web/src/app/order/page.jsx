@@ -97,7 +97,7 @@ export default function Order(){
      p-4 mt-5 mb-5 w-full rounded-xl"
     key={item.id}>
      <div className="flex item-start justify-between gap-4
-     text-lg semibold">
+     text-lg semibold capitalize">
      {item.dish}
      </div>
       <div>
