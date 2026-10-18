@@ -83,7 +83,6 @@ p-4 grid-cols-3 justify-center
             >X</button>
           </div>
       </div>
-{/* {itemCount(item.id)} */}
 </div>
   );} )
 }
