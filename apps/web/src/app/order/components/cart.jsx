@@ -104,12 +104,13 @@ p-4 grid-cols-3 justify-center
     <div key={item.id}>
       <div className="flex justify-between pt-2 pb-2">
         <p>{item.dish}</p>
-        <p>{item.price}</p>
-        <button
-type="button"
-onClick={() => removeItem(index)}
->delete</button>
-
+        <div>
+          <p>{item.price}</p>
+          <button
+            type="button"
+            onClick={() => removeItem(index)}
+            >delete</button>
+          </div>
       </div>
 <div>type:{item.category}</div>
 {/* {itemCount(item.id)} */}
