@@ -101,7 +101,7 @@ export default function Order(){
      {item.dish}
      </div>
       <div>
-        <p className="mt-2 text-sm text-white/70">{item.description}</p>
+        <p className="mt-2 text-sm text-white/70 capitalize">{item.description}</p>
       </div>
             <div>
               <p className="flex item-start justify-between gap-4
