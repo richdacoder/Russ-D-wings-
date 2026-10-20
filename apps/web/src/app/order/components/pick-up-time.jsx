@@ -5,10 +5,13 @@ export default function PickUpTime({times, TimeFormat}){
   // const timesObject =
   // console.log('times on page', TimeFormat(times?.[0]?.start_time));
 
+  const time = times?.[0];
+
+
   console.log('times:', times);
   console.trace('timeformat time page', times.map( time => TimeFormat(time.start_time)[0]));
 console.log('first item:', times?.[0]);
-console.log('start_time:', times?.[0]?.start_time.split("T"));
+console.log('start_time:', times?.[0]?.start_time[0]);
     /*
     - convert to eastern
     - cinvert to display
@@ -19,8 +22,13 @@ console.log('start_time:', times?.[0]?.start_time.split("T"));
 
     */
 
-    for (let i = times?.[0]?.start_time; i < times?.[0]?.end_time; i++) {
-      console.log(i); }
+    const start = new Date(times[0].start_time);
+    const end = new Date(times[0].end_time);
+
+
+    for (let i = start.getHours(); i < end.getHours(); i++) {
+      console.log(i);
+    }
 
   return(
     <div>
