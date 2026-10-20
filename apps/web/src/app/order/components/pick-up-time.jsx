@@ -21,10 +21,9 @@ console.log('start_time:', times?.[0]?.start_time);
     <div>
     {
       times.map((time, index) => {
-        <div>{time?.id}</div>
+        return <div><p>{time.id}</p></div>
       })
     }
-    <p>pick up times</p>
     </div>
   )
 };
