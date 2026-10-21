@@ -8,7 +8,7 @@ export default function PickUpTime({times, TimeFormat}){
   const time = times?.[0];
 
 
-  console.log('times:', times);
+  console.log('time:', time);
   console.trace('timeformat time page', times.map( time => TimeFormat(time.start_time)[0]));
 console.log('first item:', times?.[0]);
 console.log('start_time:', times?.[0]?.start_time[0]);
@@ -22,8 +22,8 @@ console.log('start_time:', times?.[0]?.start_time[0]);
 
     */
 
-    const start = new Date(times[0].start_time);
-    const end = new Date(times[0].end_time);
+    const start = new Date(time?.start_time);
+    const end = new Date(time?.end_time);
 
 
     for (let i = start.getHours(); i < end.getHours(); i++) {
