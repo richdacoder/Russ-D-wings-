@@ -22,13 +22,15 @@ console.log('start_time:', times?.[0]?.start_time[0]);
 
     */
 
-    const start = new Date(time?.start_time);
-    const end = new Date(time?.end_time);
+    const start = TimeFormat(time?.start_time);
+    const end = TimeFormat(time?.end_time);
+
+    console.log('start and end', start, end);
 
 
-    for (let i = start.getHours(); i < end.getHours(); i++) {
-      console.log(i);
-    }
+    // for (let i = start.getHours(); i < end.getHours(); i++) {
+    //   console.log(i);
+    // }
 
   return(
     <div>
