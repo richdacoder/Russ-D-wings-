@@ -26,6 +26,8 @@ export default async function Get(endpoint){
 
   )
 
+  console.log("GET PAGE",res );
+
   if (!res.ok) {
     throw new Error(`Request failed: ${res.status}`);
   }

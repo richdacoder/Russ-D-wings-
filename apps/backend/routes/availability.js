@@ -24,6 +24,7 @@ try{
   console.log('working get avvaiibility');
 const data = await db('time_slots').select('*');
 
+console.log('availability backend page', data);
 
  res.status(200).json(data);
 
