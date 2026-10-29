@@ -169,7 +169,7 @@ export default function Order(){
   })
 }
 
-const classNameMenu ="flex justify-center text-xl font-bold mt-5 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]";
+const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold mt-5 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`;
 
 console.log(changeType("Email"));
 console.log(changeType("Phone"));
