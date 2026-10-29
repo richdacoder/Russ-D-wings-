@@ -9,9 +9,9 @@ export default function PickUpTime({times, TimeFormat}){
 
 
   console.log('time:', time);
-  console.log('sent to timeformat time page', times.map( time => TimeFormat(time.start_time)[0]));
+  console.log('map() sent to timeformat time page', times.map( time => TimeFormat(time.start_time))[0]);//TimeFormat(time.start_time)
   console.log('first item:', times?.[0]);
-  console.log('start_time:', times?.[0]?.start_time[0]);
+  console.log('start_time:', times?.[0]?.start_time);
     /*
     - convert to eastern
     - cinvert to display
@@ -22,10 +22,10 @@ export default function PickUpTime({times, TimeFormat}){
 
     */
 
-    // const start = TimeFormat(time?.start_time);
-    // const end = TimeFormat(time?.end_time);
+    const start = TimeFormat(time[0]?.start_time); //TimeFormat(time[0]?.start_time);
+    const end = time //TimeFormat(time?.end_time);
 
-    // console.log('start and end', start, end);
+    console.log('start and end', start, end);
 
 
     // for (let i = start.getHours(); i < end.getHours(); i++) {
