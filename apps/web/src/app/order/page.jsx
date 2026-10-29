@@ -100,8 +100,8 @@ export default function Order(){
     const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
-    return <div className={`${bungee.className} border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
-     p-4 mt-5 mb-5 w-full rounded-xl`}
+    return <div className="border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
+     p-4 mt-5 mb-5 w-full rounded-xl"
     key={item.id}>
      <div className="flex item-start justify-between gap-4
      text-lg semibold capitalize">
@@ -180,7 +180,7 @@ console.log(changeType("First Name"));
 
 return(
   <div>
-    <form className="flex flex-col items-center max-w-md w-full mx-auto">
+    <form className={`${bungee.className} flex flex-col items-center max-w-md w-full mx-auto`}>
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div className="flex flex-col w-full text-xl font-bold mt-5" key={field}>
