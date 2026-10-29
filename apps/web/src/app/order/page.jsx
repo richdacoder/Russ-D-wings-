@@ -100,7 +100,7 @@ export default function Order(){
     const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
-    return <div className="border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
+    return <div className=" border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
      p-4 mt-5 mb-5 w-full rounded-xl"
     key={item.id}>
      <div className="flex item-start justify-between gap-4
@@ -108,10 +108,10 @@ export default function Order(){
      {item.dish}
      </div>
       <div>
-        <p className="mt-2 text-sm text-white/70 capitalize">{item.description}</p>
+        <p className="font-sans mt-2 text-sm text-white/70 capitalize">{item.description}</p>
       </div>
             <div>
-              <p className="flex item-start justify-between gap-4
+              <p className="font-sans flex item-start justify-between gap-4
               text-lg font-bold">${item.price} </p>
             </div>
             <div className="flex items-center rounded-full mr-19 border border-white/30">
@@ -146,8 +146,8 @@ export default function Order(){
             <div>
               <button
               value={item}
-              className={`${bungee.className} rounded-full mt-2
-              bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95`}
+              className="rounded-full mt-2
+              bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
                 type="button"
                 onClick={() => {
                   console.log('button clicked'),
@@ -180,12 +180,12 @@ console.log(changeType("First Name"));
 
 return(
   <div>
-    <form className={`${bungee.className} flex flex-col items-center max-w-md w-full mx-auto`}>
+    <form className={` flex flex-col items-center max-w-md w-full mx-auto`}>
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div className="flex flex-col w-full text-xl font-bold mt-5" key={field}>
-            <label className="mx-auto
-            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]"> {field} </label>
+            <label className={`${bungee.className} mx-auto
+            [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`}> {field} </label>
             <input
             type={field}
             className="bg-white/5 border border-white/50 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
