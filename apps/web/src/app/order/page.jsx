@@ -6,6 +6,8 @@ import Cart from "./components/cart.jsx";
 import PickUpTime from "./components/pick-up-time.jsx";
 import TimeFormat from "../../../../lib/time-format/display-time.js"
 import { Bungee } from "next/font/google";
+import "./../globals.css";
+
 
 
 /*
@@ -45,6 +47,7 @@ const bungee = Bungee({
 });
 
 
+
 export default function Order(){
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -76,7 +79,8 @@ export default function Order(){
   []
   );
 
-  console.log('timessssssssss:', times);
+
+  console.log('classname??', bungee);
 
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
@@ -96,8 +100,8 @@ export default function Order(){
     const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
-    return <div className="border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
-     p-4 mt-5 mb-5 w-full rounded-xl"
+    return <div className={`${bungee.className} border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
+     p-4 mt-5 mb-5 w-full rounded-xl`}
     key={item.id}>
      <div className="flex item-start justify-between gap-4
      text-lg semibold capitalize">
@@ -142,8 +146,8 @@ export default function Order(){
             <div>
               <button
               value={item}
-              className="rounded-full mt-2
-              bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
+              className={`${bungee.className} rounded-full mt-2
+              bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95`}
                 type="button"
                 onClick={() => {
                   console.log('button clicked'),
