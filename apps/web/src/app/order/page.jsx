@@ -195,8 +195,8 @@ return(
       }
 
       <div>
-        <h1 className="flex justify-center text-4xl mt-10
-        [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]">
+        <h1 className={`${bungee.className} flex justify-center text-4xl mt-10
+        [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`}>
           Menu
         </h1>
 
