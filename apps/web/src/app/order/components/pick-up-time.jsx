@@ -22,8 +22,8 @@ export default function PickUpTime({times, TimeFormat}){
 
     */
 
-    const start = TimeFormat(time[0]?.start_time);
-    const end = TimeFormat(time[0]?.end_time).slice(0,5);
+    const start = TimeFormat(time[0].start_time);
+    const end = TimeFormat(time[0].end_time)?.slice(0,5);
 
     console.log('start and end', start, end);
 
