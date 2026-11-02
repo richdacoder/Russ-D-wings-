@@ -14,6 +14,7 @@ export default function PickUpTime({times, TimeFormat}){
   console.log('map() sent to timeformat time page', times.map( time => TimeFormat(time.start_time))[0]);//TimeFormat(time.start_time)
   console.log('first item:', times?.[0]);
   console.log('start_time:', times?.[0]?.start_time);
+
     /*
     - convert to eastern
     - cinvert to display
@@ -22,26 +23,36 @@ export default function PickUpTime({times, TimeFormat}){
     seperate
     - function that creates loop numbers through start and end times
 
+    11/3/26
+    - get the hours
+    - make a list between start and end
+    - in nonactive times must time should be prevented displayed
+    (create condidtion)
+    - put it in bubble or slot
+
     */
 
-      const start = time[0]?.start_time;
+    //const hourMaker = () => {
+
+          const start = time[0]?.start_time;
       const end = time[0]?.end_time;
+      const startHour = new Date(start).getHours();
+      const endHour = new Date(end).getHours();
+
+
+      Array.from((startHour,endHour))
+
       console.log('start and end', new Date(start).getHours(), new Date(end).getHours());
 
-
-
-    for (let i = new Date(start).getHours(); i <= new Date(end).getHours(); i++) {
-      console.log('loop', i);
-    }
+  //}
 
   return(
     <div>
-    {
-      times.map((time, index) => {
-        {let i = 0; 0 <= 9; i++}
-        return <div key={index}><p>{time.dish}</p></div>
-      })
-    }
+      <label>Time</label>
+      <input
+      type="time"
+      min={startHour}
+      />
     </div>
   )
 };
