@@ -22,17 +22,17 @@ export default function PickUpTime({times, TimeFormat}){
 
     */
       const start = time[0]?.start_time;
-      const end = TimeFormat(time[0]?.end_time);
-      console.log('start and end', new Date(start).getHours(), end);
+      const end = time[0]?.end_time;
+      console.log('start and end', new Date(start).getHours(), new Date(end).getHours());
 
 
 
-    for (let i = new Date(start).getHours(); i < new Date(end).getHours(); i++) {
+    for (let i = new Date(start).getHours(); i <= new Date(end).getHours(); i++) {
       console.log('loop', i);
     }
 
   return(
-    <div> hi
+    <div>
     {
       times.map((time, index) => {
         {let i = 0; 0 <= 9; i++}
