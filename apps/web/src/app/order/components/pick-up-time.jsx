@@ -21,11 +21,12 @@ export default function PickUpTime({times, TimeFormat}){
     - function that creates loop numbers through start and end times
 
     */
+    if(time){
+      const start = TimeFormat(time[0].start_time);
+      const end = TimeFormat(time[0].end_time)?.slice(0,5);
+      console.log('start and end', start, end);
 
-    const start = TimeFormat(time[0].start_time);
-    const end = TimeFormat(time[0].end_time)?.slice(0,5);
-
-    console.log('start and end', start, end);
+    } return;
 
 
     // for (let i = start.getHours(); i < end.getHours(); i++) {
