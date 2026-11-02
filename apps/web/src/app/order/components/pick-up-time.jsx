@@ -23,7 +23,7 @@ export default function PickUpTime({times, TimeFormat}){
     */
       const start = time[0]?.start_time;
       const end = TimeFormat(time[0]?.end_time);
-      console.log('start and end', new Date(start).getHours, end);
+      console.log('start and end', new Date(start).getHours(), end);
 
 
 
