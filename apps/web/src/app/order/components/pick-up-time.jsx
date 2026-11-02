@@ -5,10 +5,11 @@ export default function PickUpTime({times, TimeFormat}){
   // const timesObject =
   // console.log('times on page', TimeFormat(times?.[0]?.start_time));
 
+  const [ hours, setHours ] = useState([]);
   const time = times;
 
 
-  console.log('time:', time);
+  console.log('time:', time, times);
   console.log('map() sent to timeformat time page', times.map( time => TimeFormat(time.start_time))[0]);//TimeFormat(time.start_time)
   console.log('first item:', times?.[0]);
   console.log('start_time:', times?.[0]?.start_time);
@@ -21,6 +22,7 @@ export default function PickUpTime({times, TimeFormat}){
     - function that creates loop numbers through start and end times
 
     */
+
       const start = time[0]?.start_time;
       const end = time[0]?.end_time;
       console.log('start and end', new Date(start).getHours(), new Date(end).getHours());
