@@ -11,7 +11,7 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
 
 
 
-  const formattedBlockTimes = blockTimes.map( time => new Date(time.start_time));
+  const formattedBlockTimes = blockTimes.map(time => ConvertToEastern(time.start_time, false));
 
   console.log('blockTimes FORAMted', formattedBlockTimes);
 
@@ -58,8 +58,7 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
     <div>
       <label>Time</label>
       <input
-      type="time"
-      min={startHour}
+        type="time"
       />
     </div>
   )
