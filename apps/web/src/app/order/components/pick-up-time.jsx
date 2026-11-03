@@ -40,9 +40,11 @@ export default function PickUpTime({times, TimeFormat}){
       const endHour = new Date(end).getHours();
 
 
-      Array.from((startHour,endHour))
+      const array = Array.from([startHour, endHour], (x) => x + 1);
 
-      console.log('start and end', new Date(start).getHours(), new Date(end).getHours());
+      console.log('array', array);
+
+      console.log('start and end', startHour, endHour);
 
   //}
 
