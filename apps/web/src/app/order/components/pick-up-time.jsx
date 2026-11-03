@@ -11,9 +11,10 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
 
 
 
-  const formattedBlockTimes = blockTimes.map(time => ConvertToEastern(time.start_time, false));
+  const formattedStartBlockTimes = blockTimes.map(time => ConvertToEastern(time.start_time, false));
+  const formattedEndBlockTimes = blockTimes.map(time => ConvertToEastern(time.end_time, false));
 
-  console.log('blockTimes FORAMted', formattedBlockTimes);
+  console.log('blockTimes FORAMted', formattedStartBlockTimes , formattedEndBlockTimes);
 
 
     /*
@@ -25,18 +26,20 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
     - function that creates loop numbers through start and end times
 
     11/3/26
+    create array where the start and end hours are from scheduled start and end with
+    minutes going up by 15
     - get the hours xxx
     - make a list between start and end xxx
     - create blocktimesxx
-    - compare the times and blocktimes (add minutes)
+    - compare the times arry and blocktimes arry (add minutes to times)
     - make it an array
     - in nonactive times must time should be prevented displayed
+    - display
     (create condidtion)
     - put it in bubble or slot
 
     */
 
-    //const hourMaker = () => {
 
         const start = time[0]?.start_time;
         const end = time[0]?.end_time;
@@ -52,7 +55,10 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
 
       console.log('start and end', startHour, endHour);
 
-  //}
+          const hourMaker = formattedBlockTimes.map((time) => {
+
+
+          })
 
   return(
     <div>
