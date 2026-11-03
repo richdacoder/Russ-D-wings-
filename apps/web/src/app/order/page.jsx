@@ -74,6 +74,7 @@ export default function Order(){
       const getTimes = await Get("availability");
       setMenu(dataArray);
       setTimes(getTimes.filter(time => time.is_active));
+      setBlockTimes(getTimes.filter(time => !time.is_active));
     }
     getOrder();
   },
@@ -82,6 +83,8 @@ export default function Order(){
 
 
   console.log('classname??', bungee);
+  console.log('blockTimes', blockTimes);
+
 
   const changeType = (field) => {
     if(field !== 'Phone' && field !== 'Email'){
@@ -95,7 +98,6 @@ export default function Order(){
 
 
   const sortByType = (type) => {
-    console.log('type', type);
     return menu.map((item, index) => {
 
     const currentQtty = itemQuantity[item.id] || 1;
