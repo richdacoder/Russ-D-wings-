@@ -16,18 +16,16 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
 
 const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour)
   .flatMap(hour => [
-    `${hour}:15:00`,
-    `${hour}:30:00`,
-    `${hour}:45:00`
+    `${String(hour).padStart(2,'0')}:15:00`,
+    `${String(hour).padStart(2,'0')}:30:00`,
+    `${String(hour).padStart(2,'0')}:45:00`
   ]
   );
 
 
 
   const formattedStartBlockTimes = blockTimes.map(time => availableHours.filter(hour =>
-    `${hour}:15:00` > ConvertToEastern(time.start_time, false) &&
-    `${hour}:30:00` > ConvertToEastern(time.start_time, false) &&
-    `${hour}:45:00` > ConvertToEastern(time.start_time, false)
+    hour > ConvertToEastern(time.start_time, false)
     )
   );
   const formattedEndBlockTimes = blockTimes.map(time => ConvertToEastern(time.end_time, false));
