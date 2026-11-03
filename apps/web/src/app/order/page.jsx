@@ -238,6 +238,7 @@ return(
                <PickUpTime
                TimeFormat={TimeFormat}
                times={times}
+               blockTimes={blockTimes}
                />
               <input/>
             </div>
