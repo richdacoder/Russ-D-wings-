@@ -24,8 +24,8 @@ export default function PickUpTime({times, TimeFormat}){
     - function that creates loop numbers through start and end times
 
     11/3/26
-    - get the hours
-    - make a list between start and end
+    - get the hours xxx
+    - make a list between start and end xxx
     - in nonactive times must time should be prevented displayed
     (create condidtion)
     - put it in bubble or slot
@@ -42,7 +42,7 @@ export default function PickUpTime({times, TimeFormat}){
 
 
 
-      const availableHours = Array.from({length: Math.ceil(endHour - startHour) }, (_, i) => i + startHour );
+      const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour);
 
 
       console.log('availableHours', availableHours);

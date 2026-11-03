@@ -65,6 +65,7 @@ export default function Order(){
   const [list, setList] = useState(["main", "side", "drink"]);
   const [addToCart, setAddToCart] = useState([]);
   const [times, setTimes] = useState([]);
+  const [blockTimes, setBlockTimes] = useState([]);
 
 
   useEffect( () => {
