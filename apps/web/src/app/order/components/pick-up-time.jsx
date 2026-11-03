@@ -14,21 +14,25 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
   const startHour = new Date(start).getHours();
   const endHour = new Date(end).getHours();
 
-const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour);
+const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour)
+  .flatMap(hour => [
+    `${hour}:15:00`,
+    `${hour}:30:00`,
+    `${hour}:45:00`
+  ]
+  );
 
 
 
-  const formattedStartBlockTimes = blockTimes.map(time => availableHours.map(hour =>
+  const formattedStartBlockTimes = blockTimes.map(time => availableHours.filter(hour =>
     `${hour}:15:00` > ConvertToEastern(time.start_time, false) &&
     `${hour}:30:00` > ConvertToEastern(time.start_time, false) &&
     `${hour}:45:00` > ConvertToEastern(time.start_time, false)
-
     )
-
   );
   const formattedEndBlockTimes = blockTimes.map(time => ConvertToEastern(time.end_time, false));
 
-  console.log('blockTimes FORAMted', formattedStartBlockTimes , formattedEndBlockTimes);
+  console.log('blockTimes START FORAMted', formattedStartBlockTimes , 'blockTimes END FORAMted', formattedEndBlockTimes);
 
 
     /*
