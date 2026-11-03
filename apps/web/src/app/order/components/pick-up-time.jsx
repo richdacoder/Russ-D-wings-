@@ -10,10 +10,11 @@ export default function PickUpTime({times, TimeFormat, blockTimes}){
   const time = times;
 
 
-  console.log('time:', time, times);
-  console.log('map() sent to timeformat time page', times.map( time => TimeFormat(time.start_time))[0]);//TimeFormat(time.start_time)
-  console.log('first item:', times?.[0]);
-  console.log('start_time:', times?.[0]?.start_time);
+
+  const formattedBlockTimes = blockTimes.map( time => new Date(time.start_time));
+
+  console.log('blockTimes FORAMted', formattedBlockTimes);
+
 
     /*
     - convert to eastern
@@ -26,6 +27,9 @@ export default function PickUpTime({times, TimeFormat, blockTimes}){
     11/3/26
     - get the hours xxx
     - make a list between start and end xxx
+    - create blocktimesxx
+    - compare the times and blocktimes (add minutes)
+    - make it an array
     - in nonactive times must time should be prevented displayed
     (create condidtion)
     - put it in bubble or slot
@@ -34,15 +38,14 @@ export default function PickUpTime({times, TimeFormat, blockTimes}){
 
     //const hourMaker = () => {
 
-          const start = time[0]?.start_time;
-      const end = time[0]?.end_time;
-      const startHour = new Date(start).getHours();
-      const endHour = new Date(end).getHours();
-
-
+        const start = time[0]?.start_time;
+        const end = time[0]?.end_time;
+        const startHour = new Date(start).getHours();
+        const endHour = new Date(end).getHours();
 
 
       const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour);
+
 
 
       console.log('availableHours', availableHours);

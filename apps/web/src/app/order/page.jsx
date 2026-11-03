@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Get from "../../../../lib/get.js";
 import Cart from "./components/cart.jsx";
 import PickUpTime from "./components/pick-up-time.jsx";
-import TimeFormat from "../../../../lib/time-format/display-time.js"
+import TimeFormat from "../../../../lib/time-format/display-time.js";
+import ConvertToEastern from "../../../../lib/time-format/convert-to-eastern.js"
 import { Bungee } from "next/font/google";
 import "./../globals.css";
 
