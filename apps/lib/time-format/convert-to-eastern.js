@@ -2,7 +2,6 @@ export default function ConvertToEastern(date, hourType){
 const convertedDate = new Date(date);
 if(!date) return;
 
-console.log('converted date?', convertedDate );
 
 return convertedDate.toLocaleTimeString('en-US', {
   timeZone: 'America/New_York',

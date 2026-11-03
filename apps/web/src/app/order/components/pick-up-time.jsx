@@ -9,9 +9,23 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
   const [ hours, setHours ] = useState([]);
   const time = times;
 
+  const start = time[0]?.start_time;
+  const end = time[0]?.end_time;
+  const startHour = new Date(start).getHours();
+  const endHour = new Date(end).getHours();
+
+const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour);
 
 
-  const formattedStartBlockTimes = blockTimes.map(time => ConvertToEastern(time.start_time, false));
+
+  const formattedStartBlockTimes = blockTimes.map(time => availableHours.map(hour =>
+    `${hour}:15:00` > ConvertToEastern(time.start_time, false) &&
+    `${hour}:30:00` > ConvertToEastern(time.start_time, false) &&
+    `${hour}:45:00` > ConvertToEastern(time.start_time, false)
+
+    )
+
+  );
   const formattedEndBlockTimes = blockTimes.map(time => ConvertToEastern(time.end_time, false));
 
   console.log('blockTimes FORAMted', formattedStartBlockTimes , formattedEndBlockTimes);
@@ -41,13 +55,6 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
     */
 
 
-        const start = time[0]?.start_time;
-        const end = time[0]?.end_time;
-        const startHour = new Date(start).getHours();
-        const endHour = new Date(end).getHours();
-
-
-      const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour);
 
 
 
@@ -55,10 +62,10 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
 
       console.log('start and end', startHour, endHour);
 
-          const hourMaker = formattedBlockTimes.map((time) => {
+          // const hourMaker = formattedBlockTimes.map((time) => {
 
 
-          })
+          // })
 
   return(
     <div>
