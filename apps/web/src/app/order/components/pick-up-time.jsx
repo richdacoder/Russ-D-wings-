@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 
-export default function PickUpTime({times, TimeFormat, blockTimes}){
+export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEastern}){
   // const timesObject =
   // console.log('times on page', TimeFormat(times?.[0]?.start_time));
 
