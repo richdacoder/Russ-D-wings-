@@ -26,7 +26,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
 // console.log('BLOCK', block)
 // 11:15 should be missing from array when tested on console
   const formattedStartBlockTimes = availableHours.map(hour =>
-    blockTimes.map(time => ConvertToEastern(time.start_time, false)
+    blockTimes.filter(time => hour > ConvertToEastern(time.start_time, false) && hour < ConvertToEastern(time.end_time, false)
 
     // === hour.slice(0,2)) &&
     // time.slice(3,8) > hour.slice(3,8)
