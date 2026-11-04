@@ -247,7 +247,7 @@ return(
 
 
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className="border p-4 text-lg rounded-md">Submit</button>
     </form>
   </div>
 )
