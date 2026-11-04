@@ -16,27 +16,26 @@ export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEast
 
 const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour)
   .flatMap(hour => [
+    `${String(hour).padStart(2,'0')}:00:00`,
     `${String(hour).padStart(2,'0')}:15:00`,
     `${String(hour).padStart(2,'0')}:30:00`,
     `${String(hour).padStart(2,'0')}:45:00`
   ]
   );
 
-  // const block = blockTimes.map(time =>  ConvertToEastern(time.start_time, false) )
+  const block = blockTimes.map(time =>  ConvertToEastern(time.start_time, false) )
 // console.log('BLOCK', block)
 // 11:15 should be missing from array when tested on console
-  const formattedStartBlockTimes = availableHours.map(hour =>
-    blockTimes.filter(time => hour > ConvertToEastern(time.start_time, false) && hour < ConvertToEastern(time.end_time, false)
+  const formattedStartBlockTimes = blockTimes.map(time =>
+    availableHours.map(hour => hour < ConvertToEastern(time.start_time, false) || hour > ConvertToEastern(time.end_time, false)
 
-    // === hour.slice(0,2)) &&
-    // time.slice(3,8) > hour.slice(3,8)
     ))
   ;
   const formattedEndBlockTimes = blockTimes.map(time => ConvertToEastern(time.end_time, false)
     .slice(3,8)
   );
 
-  console.log('blockTimes START FORAMted', formattedStartBlockTimes , 'blockTimes END FORAMted', formattedEndBlockTimes);
+  console.log('blockTimes START FORAMted', formattedStartBlockTimes, block , 'blockTimes END FORAMted', formattedEndBlockTimes);
 
 
     /*
