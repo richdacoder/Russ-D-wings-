@@ -22,13 +22,15 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
   ]
   );
 
-  const block = blockTimes.map(time =>  ConvertToEastern(time.start_time, false) )
+  // const block = blockTimes.map(time =>  ConvertToEastern(time.start_time, false) )
 // console.log('BLOCK', block)
+// 11:15 should be missing from array when tested on console
+  const formattedStartBlockTimes = availableHours.map(hour =>
+    blockTimes.map(time => ConvertToEastern(time.start_time, false)
 
-  const formattedStartBlockTimes = availableHours.flatMap(hour =>
-    block.filter(time => time.slice(0,2) === hour.slice(0,2)) &&
-    time.slice(3,8) < hour.slice(3,8)
-    )
+    // === hour.slice(0,2)) &&
+    // time.slice(3,8) > hour.slice(3,8)
+    ))
   ;
   const formattedEndBlockTimes = blockTimes.map(time => ConvertToEastern(time.end_time, false)
     .slice(3,8)
