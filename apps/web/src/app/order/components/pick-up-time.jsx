@@ -16,7 +16,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
   ]
   );
 
-  const formattedAvailableTimes = blockTimes.map(time =>
+  const formattedAvailableTimes = blockTimes.flatMap(time =>
     availableHours.filter(hour => hour < ConvertToEastern(time.start_time, false) || hour > ConvertToEastern(time.end_time, false)
 
     ))
@@ -48,7 +48,9 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
 
     */
 
-
+    formattedAvailableTimes.map((time) => (
+      console.log('chekc if format working', time )
+    ))
 
 
 
@@ -65,13 +67,12 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     <div>
       <label>Time Slots</label>
       {
-        formattedAvailableTimes.map((time) => {
-          return(
-            <div key={time.id}>
+        formattedAvailableTimes.map((time, i) => (
+            <div key={i}>
               {time}
             </div>
-          )
-        })
+
+        ))
       }
     </div>
   )
