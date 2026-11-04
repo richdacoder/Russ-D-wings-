@@ -63,10 +63,16 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
 
   return(
     <div>
-      <label>Time</label>
-      <input
-        type="time"
-      />
+      <label>Time Slots</label>
+      {
+        formattedAvailableTimes.map((time) => {
+          return(
+            <div key={time.id}>
+              {time}
+            </div>
+          )
+        })
+      }
     </div>
   )
 };
