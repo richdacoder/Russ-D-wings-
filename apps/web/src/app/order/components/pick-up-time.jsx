@@ -22,7 +22,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     ))
   ;
 
-  console.log('new times that are new date to string', new Date().toISOString() );
+  console.log('new times that are tiimes', times, startHour  );
 
 
     /*
