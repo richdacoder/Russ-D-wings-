@@ -67,10 +67,10 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
   <div>
     <label>Time Slots</label>
   </div>
-    <div className="grid grid-cols-3 ">
+    <div className="grid grid-cols-4 ">
       {
         formattedAvailableTimes.map((time, i) => (
-            <div key={i}>
+            <div className=" flex justify-evenly mb-3" key={i}>
               {TimeFormat(time)}
             </div>
 
