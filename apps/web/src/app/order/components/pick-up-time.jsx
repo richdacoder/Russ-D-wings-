@@ -3,16 +3,9 @@
 import {useState} from "react";
 
 export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEastern}){
-  // const timesObject =
-  // console.log('times on page', TimeFormat(times?.[0]?.start_time));
 
-  const [ hours, setHours ] = useState([]);
-  const time = times;
-
-  const start = time[0]?.start_time;
-  const end = time[0]?.end_time;
-  const startHour = new Date(start).getHours();
-  const endHour = new Date(end).getHours();
+  const startHour = new Date(times[0]?.start_time).getHours();
+  const endHour = new Date(times[0]?.end_time).getHours();
 
 const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, i) => i + startHour)
   .flatMap(hour => [
@@ -23,16 +16,13 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
   ]
   );
 
-  const block = blockTimes.map(time =>  ConvertToEastern(time.start_time, false) )
-// console.log('BLOCK', block)
-// 11:15 should be missing from array when tested on console
   const formattedAvailableTimes = blockTimes.map(time =>
     availableHours.filter(hour => hour < ConvertToEastern(time.start_time, false) || hour > ConvertToEastern(time.end_time, false)
 
     ))
   ;
 
-  console.log('times that are FORAMted', formattedAvailableTimes );
+  console.log('new times that are FORAMted', formattedAvailableTimes );
 
 
     /*
@@ -64,7 +54,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
 
       console.log('availableHours', availableHours);
 
-      console.log('start and end', startHour, endHour);
+      // console.log('start and end', startHour, endHour);
 
           // const hourMaker = formattedBlockTimes.map((time) => {
 
