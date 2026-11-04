@@ -26,16 +26,13 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
   const block = blockTimes.map(time =>  ConvertToEastern(time.start_time, false) )
 // console.log('BLOCK', block)
 // 11:15 should be missing from array when tested on console
-  const formattedStartBlockTimes = blockTimes.map(time =>
+  const formattedAvailableTimes = blockTimes.map(time =>
     availableHours.filter(hour => hour < ConvertToEastern(time.start_time, false) || hour > ConvertToEastern(time.end_time, false)
 
     ))
   ;
-  const formattedEndBlockTimes = blockTimes.map(time => ConvertToEastern(time.end_time, false)
-    .slice(3,8)
-  );
 
-  console.log('blockTimes START FORAMted', formattedStartBlockTimes, block , 'blockTimes END FORAMted', formattedEndBlockTimes);
+  console.log('times that are FORAMted', formattedAvailableTimes );
 
 
     /*
