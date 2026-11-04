@@ -236,7 +236,7 @@ return(
             </div>
 
             <div>
-              <h6 className={`${bungee.className} mt-20
+              <h6 className={`${bungee.className} mt-20 mb-15 flex justify-center
                 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
                 text-4xl font-bold mt-10`}>Pick up time</h6>
                <PickUpTime

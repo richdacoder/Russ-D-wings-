@@ -64,13 +64,14 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
           // })
 
   return(<>
-  <div className={`${bungee.className} flex justify-center mt-3 mb-3 text-xl`}>
+  <div className={`${bungee.className} flex justify-center mt-3 mb-10 text-xl`}>
     <label>Choose a Pick Up Time</label>
   </div>
     <div className="grid grid-cols-4 ">
       {
         formattedAvailableTimes.map((time, i) => (
-            <button type="button" className="flex justify-evenly mb-3 mx-2 border rounded-xl
+            <button type="button" className="flex justify-evenly mb-5 mx-2 border rounded-lg
+            bg-white/15
               [box-shadow:0_0_5px_#fff,0_0_1px_#fff,0_0_1px_#ff2d2d,0_0_4px_#ff2d2d,0_0_10px_#ff2d2d]
               hover:bg-[#e02626]
                             "
