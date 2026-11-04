@@ -63,9 +63,11 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
 
           // })
 
-  return(
-    <div>
-      <label>Time Slots</label>
+  return(<>
+  <div>
+    <label>Time Slots</label>
+  </div>
+    <div className="grid grid-cols-3 ">
       {
         formattedAvailableTimes.map((time, i) => (
             <div key={i}>
@@ -75,5 +77,6 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
         ))
       }
     </div>
+    </>
   )
 };
