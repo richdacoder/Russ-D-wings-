@@ -22,7 +22,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     ))
   ;
 
-  console.log('new times that are FORAMted', formattedAvailableTimes );
+  console.log('new times that are new date to string', new Date().toISOString() );
 
 
     /*
@@ -49,7 +49,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     */
 
     formattedAvailableTimes.map((time) => (
-      console.log('chekc if format working', time )
+      console.log('chekc if format time time time working', TimeFormat(time))
     ))
 
 
@@ -69,7 +69,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
       {
         formattedAvailableTimes.map((time, i) => (
             <div key={i}>
-              {time}
+              {TimeFormat(time)}
             </div>
 
         ))
