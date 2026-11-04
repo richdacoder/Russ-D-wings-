@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 
-export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEastern}){
+export default function PickUpTime({times, TimeFormat, blockTimes, ConvertToEastern, bungee}){
 
   const startHour = new Date(times[0]?.start_time).getHours();
   const endHour = new Date(times[0]?.end_time).getHours();
@@ -64,7 +64,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
           // })
 
   return(<>
-  <div className="flex justify-center mt-3 mb-3 text-2xl ">
+  <div className={`${bungee.className} flex justify-center mt-3 mb-3 text-xl`}>
     <label>Choose a Pick Up Time</label>
   </div>
     <div className="grid grid-cols-4 ">

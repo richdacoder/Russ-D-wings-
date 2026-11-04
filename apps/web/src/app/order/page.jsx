@@ -200,7 +200,8 @@ return(
 
       <div>
         <h1 className={`${bungee.className} flex justify-center text-4xl mt-10
-        [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`}>
+        [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+        `}>
           Menu
         </h1>
 
@@ -235,12 +236,15 @@ return(
             </div>
 
             <div>
-              <h6 className="text-4xl font-bold mt-10">Pick up time</h6>
+              <h6 className={`${bungee.className} mt-20
+                [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+                text-4xl font-bold mt-10`}>Pick up time</h6>
                <PickUpTime
                TimeFormat={TimeFormat}
                times={times}
                blockTimes={blockTimes}
                ConvertToEastern={ConvertToEastern}
+               bungee={bungee}
                />
               <input/>
             </div>
