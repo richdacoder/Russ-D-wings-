@@ -64,7 +64,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
           // })
 
   return(<>
-  <div>
+  <div className="flex justify-center">
     <label>Time Slots</label>
   </div>
     <div className="grid grid-cols-4 ">
