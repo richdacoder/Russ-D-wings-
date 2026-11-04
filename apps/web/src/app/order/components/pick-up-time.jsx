@@ -70,12 +70,13 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     <div className="grid grid-cols-4 ">
       {
         formattedAvailableTimes.map((time, i) => (
-            <div className="flex justify-evenly mb-3 mx-2 border rounded-xl
+            <button type="button" className="flex justify-evenly mb-3 mx-2 border rounded-xl
             [box-shadow:0_0_5px_#fff,0_0_1px_#fff,0_0_1px_#ff2d2d,0_0_4px_#ff2d2d,0_0_10px_#ff2d2d]
+            hover:text-shadow-[0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`}>
 
             " key={i}>
               {TimeFormat(time)}
-            </div>
+            </button>
 
         ))
       }
