@@ -35,16 +35,20 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
 
     11/3/26
     create array where the start and end hours are from scheduled start and end with
-    minutes going up by 15
+    minutes going up by 15 xx
     - get the hours xxx
     - make a list between start and end xxx
     - create blocktimesxx
     - compare the times arry and blocktimes arry (add minutes to times)
-    - make it an array
-    - in nonactive times must time should be prevented displayed
-    - display
+    - make it an array xx
+    - in nonactive times must time should be prevented displayedxx
+    - displayxx
     (create condidtion)
-    - put it in bubble or slot
+    - put it in bubble or slotxx
+
+    11/5/26
+    - design submit button
+    - design admin layout
 
     */
 

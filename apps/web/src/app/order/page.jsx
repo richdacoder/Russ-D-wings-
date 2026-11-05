@@ -251,8 +251,14 @@ return(
 
 
       </div>
-      <button type="submit" className="border p-4 text-lg rounded-md">Submit</button>
-    </form>
+      <button
+  type="submit"
+  className="border p-4 text-lg rounded-md bg-white/10
+  hover:[box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+  transition-shadow duration-300"
+>
+  Submit
+</button>    </form>
   </div>
 )
 }
