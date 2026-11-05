@@ -104,8 +104,9 @@ export default function Order(){
     const currentQtty = itemQuantity[item.id] || 1;
     if (type === item.category)
 
-    return <div className=" border border-white/20 bg-white/5 transition hover:border-[#ff2d2d]/60
-     p-4 mt-5 mb-5 w-full rounded-xl"
+    return <div className=" border border-white/20 bg-white/5 transition
+    hover:[box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+    p-4 mt-5 mb-5 w-full rounded-xl"
     key={item.id}>
      <div className="flex item-start justify-between gap-4
      text-lg semibold capitalize">
