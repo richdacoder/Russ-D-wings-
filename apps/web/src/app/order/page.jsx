@@ -253,11 +253,11 @@ return(
       </div>
       <button
   type="submit"
-  className="border p-4 text-lg rounded-md bg-white/10
+  className={`${bungee.className} border p-4 text-lg rounded-md bg-[#ff2d2d]/50
   hover:[box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
-  transition-shadow duration-300"
+  transition-shadow duration-300`}
 >
-  Submit
+  Order
 </button>    </form>
   </div>
 )
