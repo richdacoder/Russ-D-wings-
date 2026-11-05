@@ -47,7 +47,9 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     - put it in bubble or slotxx
 
     11/5/26
-    - design submit button
+    - design submit buttonxx
+    - make popup when someone click add to cart
+    - make phone number and email type for input
     - design admin layout
 
     */
