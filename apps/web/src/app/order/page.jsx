@@ -87,8 +87,10 @@ export default function Order(){
   console.log('blockTimes', blockTimes);
 
   const phoneNumerFormatter = (number) => {
-    // const pattern = number.replace(number.length === 3, ")");
-    console.log('pattern in phinfirm', number);
+      let digits = number.replace(/\D/g, "").substring(0,10);
+
+
+    console.log('pattern in phinfirm', digits);
   }
 
 
