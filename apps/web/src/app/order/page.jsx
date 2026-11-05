@@ -88,9 +88,11 @@ export default function Order(){
 
   const phoneNumerFormatter = (number) => {
       let digits = number.replace(/\D/g, "").substring(0,10);
-
+      if(digits.length <= 3) return setPhone(digits);
+      if(digits.length <= 6) return setPhone(`(${digits.slice(0,3)})${digits.slice(6)}`);
 
     console.log('pattern in phinfirm', digits);
+    return ``
   }
 
 
@@ -202,6 +204,7 @@ return(
             type={field === 'Phone'? 'tel': field}
             className="bg-white/5 border border-white/50 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
             onChange={e => field === 'Phone'? phoneNumerFormatter(e.target.value): e.target }
+            value={field === 'Phone'? phone : field}
             required/>
           </div>
          ) )
