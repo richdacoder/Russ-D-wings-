@@ -5,6 +5,15 @@ import Link from "next/link";
 import RussDLogo from "../../../lib/img/russ-d-logo.png";
 import { useState, useEffect } from "react";
 import "./styles/globals.css";
+import { Bungee } from "next/font/google";
+
+
+const bungee = Bungee({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bungee",
+});
+
 
 export default function  RootLayout( {children} ){
 const [menuOpen, setMenuOpen] =  useState(false);
