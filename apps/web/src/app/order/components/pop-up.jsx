@@ -10,7 +10,7 @@ import {useState} from "react";
 - what causes to disappeat after 3 sec
 - make sure once its in cart the pop up wont continue to pop up
 */
-export default function PopUp({menu,itemName}){
+export default function PopUp({menu,itemName,bungee}){
   return(
     <div className="fixed flex left-3/8 border rounded-sm bg-white text-black p-4">
       <h1>{itemName} added to cart</h1>

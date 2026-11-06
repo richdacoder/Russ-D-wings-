@@ -194,6 +194,7 @@ return(
     <PopUp
     itemName={itemName}
     menu={menu}
+    bungee={bungee}
     />
     <form className={` flex flex-col items-center max-w-md w-full mx-auto`}>
       {
