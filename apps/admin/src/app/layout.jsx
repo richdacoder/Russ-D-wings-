@@ -29,8 +29,10 @@ return(
 </head>
 <body>
   <header className="header border-b-1 py-5">
-    <Image src={RussDLogo} width={100} height={100} alt="russ-d-wings logo" href="/">
-    </Image>
+    <Link href="/">
+    <Image src={RussDLogo} width={100} height={100} alt="russ-d-wings logo" href="/"/>
+    </Link>
+
       <div>
 
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
