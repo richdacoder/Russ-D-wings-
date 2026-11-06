@@ -12,7 +12,7 @@ import {useState} from "react";
 */
 export default function PopUp({menu,itemName}){
   return(
-    <div className="fixed flex left-3/8 ">
+    <div className="fixed flex left-3/8 border rounded-sm bg-white text-black p-4">
       <h1>{itemName} added to cart</h1>
     </div>
   )
