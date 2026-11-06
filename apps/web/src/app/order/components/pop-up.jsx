@@ -8,7 +8,7 @@ import {useState} from "react";
 - place where it cant movexx
 - what causes it to pop upxx
 - what causes to disappear after 3 secxx
-- make sure once its in cart the pop up wont continue to pop up
+- make sure once its in cart the pop up wont continue to pop upxx
 */
 export default function PopUp({menu,itemName,bungee,addToCart, showElement}){
   return(

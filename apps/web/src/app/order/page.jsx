@@ -213,8 +213,13 @@ return(
             <input
             type={field === 'Phone'? 'tel': field}
             className="bg-white/5 border border-white/50 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
-            onChange={e => field === 'Phone'? phoneNumerFormatter(e.target.value): e.target }
-            value={field === 'Phone'? phone : ""}
+            onChange={e => field === 'Phone'? phoneNumerFormatter(e.target.value): e.target.value }
+            value={field === 'Phone'?
+            phone : field === 'Email'?
+             email : field.split(" ")[0] === "First"?
+             firstName : field.split(" ")[0] === "Last"?
+             lastName : ""
+              }
             required/>
           </div>
          ) )
