@@ -51,7 +51,7 @@ return(
 
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
 
-     <nav className={`navbar ${menuOpen? "open" : "" }`}>
+     <nav className={`navbar ${menuOpen? "open" : "" } flex flex-col`}>
       <Link href="/">Home</Link>
       <Link href="/request">Request</Link>
       <Link href="/schedule">Schedule</Link>
