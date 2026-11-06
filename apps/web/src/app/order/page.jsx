@@ -68,7 +68,7 @@ export default function Order(){
   const [addToCart, setAddToCart] = useState([]);
   const [times, setTimes] = useState([]);
   const [blockTimes, setBlockTimes] = useState([]);
-  const [itemName, setItemName] = useState("");
+  const [itemName, setItemName] = useState(false);
   const [showElement, setShowElement] = useState("");
 
 
@@ -81,7 +81,7 @@ export default function Order(){
       setBlockTimes(getTimes.filter(time => !time.is_active));
     }
     const timer = setTimeout(() => {
-      setItemName("");
+      setItemName(false);
     }, 3000);
     timer
 
@@ -170,12 +170,13 @@ export default function Order(){
                 type="button"
                 onClick={(e) => {
                   setShowElement(e.target.value)
-                  setItemName(e.target.value);
                   setAddToCart(prevCart => {
                     const matchId = prevCart.some(obj => obj.id === item.id);
                     if(matchId){
                       return prevCart;
                     }
+                    console.log('inside function item.dish', item.dish);
+                    setItemName(true)
                       return [...prevCart, item]
 
                  }
@@ -193,17 +194,16 @@ console.log('button clicked set event', itemName);
 
 const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold mt-5 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`;
 
-// [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
 
 
 return(
   <div>
     <PopUp
-    showElement={showElement}
-    addToCart={addToCart}
-    itemName={itemName}
-    menu={menu}
-    bungee={bungee}
+      showElement={showElement}
+      addToCart={addToCart}
+      itemName={itemName}
+      menu={menu}
+      bungee={bungee}
     />
     <form className={` flex flex-col items-center max-w-md w-full mx-auto`}>
       {
