@@ -9,19 +9,6 @@ import "./styles/globals.css";
 export default function  RootLayout( {children} ){
 const [menuOpen, setMenuOpen] =  useState(false);
 
-useEffect(() => {
-  // Check if we are on a desktop screen on mount
-  // if (window.innerWidth > 768) {
-  //   setMenuOpen(true);
-  //   setShowBurger(false);
-  //   console.log('burger', showBurger, 'menu', menuOpen );
-  // } else if(window.innerWidth <= 768){
-  //   setMenuOpen(false);
-  //   setShowBurger(true);
-
-  // }
-}, []);
-
 console.log( 'menu', menuOpen );
 
 const toggleMenu = ()=>{setMenuOpen(!menuOpen) };
@@ -42,16 +29,13 @@ return(
 </head>
 <body>
   <header className="header border-b-1 py-5">
-  <div>
-    <Image src="/russ-d-logo.png" width="100" height="100" href="/">
-      logo place here
+    <Image src={RussDLogo} width={100} height={100} alt="russ-d-wings logo" href="/">
     </Image>
-  </div>
       <div>
 
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
 
-     <nav className={`navbar ${menuOpen? "open" : "" } flex flex-col`}>
+     <nav className={` ${menuOpen? "flex flex-col" : "hidden" } md:flex md:flex-1`}>
       <Link href="/">Home</Link>
       <Link href="/request">Request</Link>
       <Link href="/schedule">Schedule</Link>
@@ -59,10 +43,11 @@ return(
       </nav>
       </div>
   </header>
-<footer>
-<main>
+  <main>
 {children}
   </main>
+
+<footer>
   </footer>
 </body>
 </html>
