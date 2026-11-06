@@ -199,6 +199,7 @@ const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold 
 return(
   <div>
     <PopUp
+    showElement={showElement}
     addToCart={addToCart}
     itemName={itemName}
     menu={menu}

@@ -10,7 +10,7 @@ import {useState} from "react";
 - what causes to disappear after 3 secxx
 - make sure once its in cart the pop up wont continue to pop up
 */
-export default function PopUp({menu,itemName,bungee,addToCart}){
+export default function PopUp({menu,itemName,bungee,addToCart, showElement}){
   console.log('add to cart', itemName)
   //itemName, addToCart.some(i => i.dish !== 'yogurt'));
   return(
