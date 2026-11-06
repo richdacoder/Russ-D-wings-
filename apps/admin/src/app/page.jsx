@@ -22,7 +22,10 @@ return(
   <>
 <div>
   <h1 className="flex justify-center text-4xl">orders</h1>
-  <div className="flex justify-center ">
+
+  <div className="grid grid-col-3 justify-center ">
+
+  <div className="flex justify center">
     <h2>Date</h2>
     <h3>Name</h3>
     <h4>Time</h4>
@@ -42,6 +45,9 @@ return(
   </button>
   </div>
   </div>
+  </div>
+
+
   {
     selectedOrder &&
   <ActiveOrder
@@ -49,6 +55,7 @@ return(
   onClose={()=> setSelectedOrder(null)}
   />
   }
+
   </>
 )
 }
