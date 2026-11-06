@@ -197,6 +197,7 @@ const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold 
 return(
   <div>
     <PopUp
+    addToCart={addToCart}
     itemName={itemName}
     menu={menu}
     bungee={bungee}

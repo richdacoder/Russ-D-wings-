@@ -6,14 +6,14 @@ import {useState} from "react";
 -  make an event happen when clicking add cartxx
 - send that name as a propxx
 - place where it cant movexx
-- what causes it to pop up
-- what causes to disappear after 3 sec
+- what causes it to pop upxx
+- what causes to disappear after 3 secxx
 - make sure once its in cart the pop up wont continue to pop up
 */
-export default function PopUp({menu,itemName,bungee}){
+export default function PopUp({menu,itemName,bungee,addToCart}){
   return(
     <>
-    { itemName &&
+    { itemName && itemName  &&
     <div className={`${bungee.className} fixed flex left-3/8 border rounded-sm bg-white text-black p-4`}>
       <h1>{itemName} added to cart</h1>
     </div>
