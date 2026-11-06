@@ -68,7 +68,7 @@ export default function Order(){
   const [addToCart, setAddToCart] = useState([]);
   const [times, setTimes] = useState([]);
   const [blockTimes, setBlockTimes] = useState([]);
-  const [itemName, setItemName] = useState(false);
+  const [itemName, setItemName] = useState("");
   const [showElement, setShowElement] = useState("");
 
 
@@ -81,7 +81,7 @@ export default function Order(){
       setBlockTimes(getTimes.filter(time => !time.is_active));
     }
     const timer = setTimeout(() => {
-      setItemName(false);
+      setItemName("");
     }, 3000);
     timer
 
@@ -169,14 +169,13 @@ export default function Order(){
               bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
                 type="button"
                 onClick={(e) => {
-                  setShowElement(e.target.value)
                   setAddToCart(prevCart => {
                     const matchId = prevCart.some(obj => obj.id === item.id);
                     if(matchId){
                       return prevCart;
                     }
                     console.log('inside function item.dish', item.dish);
-                    setItemName(true)
+                    setItemName(e.target.value)
                       return [...prevCart, item]
 
                  }
