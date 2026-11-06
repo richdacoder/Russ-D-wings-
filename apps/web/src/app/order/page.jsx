@@ -79,9 +79,14 @@ export default function Order(){
       setTimes(getTimes.filter(time => time.is_active));
       setBlockTimes(getTimes.filter(time => !time.is_active));
     }
+    const timer = setTimeout(() => {
+      setItemName("");
+    }, 3000);
+    timer
+
     getOrder();
   },
-  []
+  [itemName]
   );
 
 
