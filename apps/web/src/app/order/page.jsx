@@ -195,6 +195,9 @@ console.log(changeType("First Name"));
 
 return(
   <div>
+    <PopUp
+    menu={menu}
+    />
     <form className={` flex flex-col items-center max-w-md w-full mx-auto`}>
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
