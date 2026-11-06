@@ -51,7 +51,7 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     - make popup when someone click add to cartxx
     - make phone number and email type for inputxxx
     - fixed inputxxx
-    - make time light up onclick for phone
+    - make time light up onclick for phonexx
     - design admin layout
     - confirmiation page
 

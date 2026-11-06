@@ -40,7 +40,7 @@ return(
 <head>
 </head>
 <body>
-  <header className="header">
+  <header className="header border-b-1 py-5">
   <div>
     <Link href="/">
       logo place here
