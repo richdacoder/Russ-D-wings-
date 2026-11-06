@@ -192,10 +192,10 @@ export default function Order(){
 
 const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold mt-5 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`;
 
-const change = (v) => {
-  setFirstName(v)
-  setLastName(v)
-  setEmail(v)
+const change = (k,v) => {
+ k === 'First Name'? setFirstName(v) :
+  k === 'Last Name'? setLastName(v) :
+  k === 'Email'? setEmail(v) : "";
 }
 
 return(
@@ -216,7 +216,7 @@ return(
             <input
             type={field === 'Phone'? 'tel': field}
             className="bg-white/5 border border-white/50 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
-            onChange={e => field === 'Phone'? phoneNumerFormatter(e.target.value): change(e.target.value) }
+            onChange={e => field === 'Phone'? phoneNumerFormatter(e.target.value): change(field,e.target.value) }
             value={field === 'Phone'?
             phone : field === 'Email'?
              email : field.split(" ")[0] === "First"?
