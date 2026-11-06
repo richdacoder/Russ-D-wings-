@@ -68,6 +68,7 @@ export default function Order(){
   const [addToCart, setAddToCart] = useState([]);
   const [times, setTimes] = useState([]);
   const [blockTimes, setBlockTimes] = useState([]);
+  const [itemName, setItemName] = useState("");
 
 
   useEffect( () => {
@@ -162,7 +163,7 @@ export default function Order(){
               bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
                 type="button"
                 onClick={(e) => {
-                  console.log('button clicked event', e.target.value, item),
+                  setItemName(e.target.value);
                   setAddToCart(prevCart => {
                     const matchId = prevCart.some(obj => obj.id === item.id);
                     if(matchId){
@@ -181,6 +182,8 @@ export default function Order(){
   })
 }
 
+console.log('button clicked set event', itemName);
+
 const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold mt-5 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`;
 
 // [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
@@ -189,6 +192,7 @@ const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold 
 return(
   <div>
     <PopUp
+    itemName={itemName}
     menu={menu}
     />
     <form className={` flex flex-col items-center max-w-md w-full mx-auto`}>
