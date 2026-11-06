@@ -50,6 +50,8 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     - build phone formatxxx
     - make popup when someone click add to cartxx
     - make phone number and email type for inputxxx
+    - fixed inputxxx
+    - make time light up onclick for phone
     - design admin layout
     - confirmiation page
 
@@ -66,7 +68,8 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
             <button type="button" className="flex justify-evenly mb-5 mx-2 border rounded-lg
             bg-white/15
               [box-shadow:0_0_5px_#fff,0_0_1px_#fff,0_0_1px_#ff2d2d,0_0_4px_#ff2d2d,0_0_10px_#ff2d2d]
-              hover:bg-[#e02626]"
+              hover:bg-[#e02626]
+              active:bg-[#e02626]"
              key={i}>
               {TimeFormat(time)}
             </button>
