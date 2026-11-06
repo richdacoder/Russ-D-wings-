@@ -84,15 +84,12 @@ export default function Order(){
   );
 
 
-  console.log('classname??', bungee);
-  console.log('blockTimes', blockTimes);
 
   const phoneNumerFormatter = (number) => {
       let digits = number.replace(/\D/g, "").substring(0,10);
       if(digits.length <= 3) return setPhone(digits);
       if(digits.length <= 6) return setPhone(`(${digits.slice(0,3)})${digits.slice(3)}`);
 
-    console.log('pattern in phinfirm', digits);
     return setPhone(`(${digits.slice(0,3)})${digits.slice(3,6)}-${digits.slice(6)}`);
   }
 
@@ -160,12 +157,12 @@ export default function Order(){
             </div>
             <div>
               <button
-              value={item}
+              value={item.dish}
               className="rounded-full mt-2
               bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
                 type="button"
-                onClick={() => {
-                  console.log('button clicked'),
+                onClick={(e) => {
+                  console.log('button clicked event', e.target.value, item),
                   setAddToCart(prevCart => {
                     const matchId = prevCart.some(obj => obj.id === item.id);
                     if(matchId){
@@ -185,10 +182,6 @@ export default function Order(){
 }
 
 const classNameMenu =`${bungee.className} flex justify-center text-xl font-bold mt-5 [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`;
-
-console.log(changeType("Email"));
-console.log(changeType("Phone"));
-console.log(changeType("First Name"));
 
 // [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
 

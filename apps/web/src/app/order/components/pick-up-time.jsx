@@ -22,7 +22,6 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
     ))
   ;
 
-  console.log('new times that are tiimes', times, startHour  );
 
 
     /*
@@ -56,20 +55,6 @@ const availableHours = Array.from({length: Math.ceil(endHour - startHour)}, (_, 
 
     */
 
-    formattedAvailableTimes.map((time) => (
-      console.log('chekc if format time time time working', TimeFormat(time))
-    ))
-
-
-
-      console.log('availableHours', availableHours);
-
-      // console.log('start and end', startHour, endHour);
-
-          // const hourMaker = formattedBlockTimes.map((time) => {
-
-
-          // })
 
   return(<>
   <div className={`${bungee.className} flex justify-center mt-3 mb-10 text-xl`}>
