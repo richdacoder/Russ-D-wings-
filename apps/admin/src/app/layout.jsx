@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import RussDLogo from "../../../lib/img/russ-d-logo.png";
 import { useState, useEffect } from "react";
 import "./styles/globals.css";
 
@@ -42,10 +43,9 @@ return(
 <body>
   <header className="header border-b-1 py-5">
   <div>
-    <Link href="/">
+    <Image src="/russ-d-logo.png" width="100" height="100" href="/">
       logo place here
-      <link className="logo"></link>
-    </Link>
+    </Image>
   </div>
       <div>
 
