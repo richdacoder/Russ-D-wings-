@@ -9,6 +9,9 @@ export default function HomePage() {
   /*
 
   - add status and send emails for each status
+
+  11/6/26
+  - change structure make date in same element as data date and same for all
   */
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [orders, setOrders] = useState([]);
