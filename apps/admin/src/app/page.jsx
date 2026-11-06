@@ -21,10 +21,12 @@ export default function HomePage() {
 return(
   <>
 <div>
-  <h1>orders</h1>
-    <span>Date</span>
-    <span>Name</span>
-    <span>Time</span>
+  <h1 className="flex justify-center text-4xl">orders</h1>
+  <div className="flex justify-center ">
+    <h2>Date</h2>
+    <h3>Name</h3>
+    <h4>Time</h4>
+    </div>
 <div>
   <button
   onClick={
