@@ -11,9 +11,11 @@ import {useState} from "react";
 - make sure once its in cart the pop up wont continue to pop up
 */
 export default function PopUp({menu,itemName,bungee,addToCart}){
+  console.log('add to cart', itemName)
+  //itemName, addToCart.some(i => i.dish !== 'yogurt'));
   return(
     <>
-    { itemName && itemName  &&
+    { itemName && addToCart.some(i => i.dish !== 'yogurt')  &&
     <div className={`${bungee.className} fixed flex left-3/8 border rounded-sm bg-white text-black p-4`}>
       <h1>{itemName} added to cart</h1>
     </div>

@@ -69,6 +69,7 @@ export default function Order(){
   const [times, setTimes] = useState([]);
   const [blockTimes, setBlockTimes] = useState([]);
   const [itemName, setItemName] = useState("");
+  const [showElement, setShowElement] = useState("");
 
 
   useEffect( () => {
@@ -168,6 +169,7 @@ export default function Order(){
               bg-[#ff2d2d] px-4 py-2 text-sm font-semibold transition hover:bg-[#e02626] active:scale-95"
                 type="button"
                 onClick={(e) => {
+                  setShowElement(e.target.value)
                   setItemName(e.target.value);
                   setAddToCart(prevCart => {
                     const matchId = prevCart.some(obj => obj.id === item.id);
