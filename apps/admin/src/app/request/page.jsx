@@ -35,17 +35,19 @@ export default function Request(){
 
   return(
     <>
+    <h1 className="flex justify-center text-4xl pt-5">Requests</h1>
+
     <div>
-     <h1 className="flex justify-center text-4xl pt-5">Requests</h1>
-     <div>
-      <div className="flex grid-col-3 justify-center">
+     <div className="flex grid-col-3 justify-center">
+      <div className="flex">
         <h1>Date</h1>
         <h2>Name</h2>
         <h3>Time</h3>
       </div>
-      </div>
       <div>
-        <button onClick={ (e) =>{
+        <button
+        className="flex"
+        onClick={ (e) =>{
           e.stopPropagation();
           setSelectedRequest(requests)
         }
@@ -55,6 +57,8 @@ export default function Request(){
           <p>5:00 PM</p>
         </button>
       </div>
+      </div>
+
       {
         selectedRequest &&
         <ActiveRequest
