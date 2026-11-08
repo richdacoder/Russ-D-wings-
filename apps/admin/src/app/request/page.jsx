@@ -36,11 +36,11 @@ export default function Request(){
   return(
     <>
     <div>
-     <h1 className="flex justify-center">Requests</h1>
+     <h1 className="flex justify-center text-4xl pt-5">Requests</h1>
       <div>
-        <span>Date</span>
-        <span>Name</span>
-        <span>Time</span>
+        <div>Date</div>
+        <div>Name</div>
+        <div>Time</div>
       </div>
       <div>
         <button onClick={ (e) =>{
