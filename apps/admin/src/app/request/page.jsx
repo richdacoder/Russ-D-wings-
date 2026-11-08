@@ -37,10 +37,12 @@ export default function Request(){
     <>
     <div>
      <h1 className="flex justify-center text-4xl pt-5">Requests</h1>
-      <div>
-        <div>Date</div>
-        <div>Name</div>
-        <div>Time</div>
+     <div>
+      <div className="flex grid-col-3 justify-center">
+        <h1>Date</h1>
+        <h2>Name</h2>
+        <h3>Time</h3>
+      </div>
       </div>
       <div>
         <button onClick={ (e) =>{
