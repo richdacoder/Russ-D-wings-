@@ -36,7 +36,7 @@ export default function Request(){
   return(
     <>
     <div>
-     <h1>Requests</h1>
+     <h1 className="flex justify-center">Requests</h1>
       <div>
         <span>Date</span>
         <span>Name</span>
