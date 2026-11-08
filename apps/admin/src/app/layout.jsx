@@ -37,7 +37,7 @@ return(
 <head>
 </head>
 <body>
-  <header className="border-b-1 py-5 flex justify-between">
+  <header className="sticky border-b-1 py-5 px-5 flex justify-between">
     <Link href="/">
     <Image src={RussDLogo} width={100} height={100} alt="russ-d-wings logo" href="/"/>
     </Link>
