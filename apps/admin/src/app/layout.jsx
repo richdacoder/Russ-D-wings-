@@ -37,7 +37,7 @@ return(
 <head>
 </head>
 <body>
-  <header className="header border-b-1 py-5">
+  <header className="border-b-1 py-5 ">
     <Link href="/">
     <Image src={RussDLogo} width={100} height={100} alt="russ-d-wings logo" href="/"/>
     </Link>
@@ -46,7 +46,7 @@ return(
 
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
 
-     <nav className={` ${menuOpen? "flex flex-col" : "hidden" } md:flex md:flex-1`}>
+     <nav className={` ${menuOpen? "flex flex-col" : "hidden" } md:flex md:justify-evenly md:flex-1`}>
       <Link href="/">Home</Link>
       <Link href="/request">Request</Link>
       <Link href="/schedule">Schedule</Link>
