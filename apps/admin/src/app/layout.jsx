@@ -37,22 +37,22 @@ return(
 <head>
 </head>
 <body>
-  <header className="border-b-1 py-5 ">
+  <header className="border-b-1 py-5 flex justify-between">
     <Link href="/">
     <Image src={RussDLogo} width={100} height={100} alt="russ-d-wings logo" href="/"/>
     </Link>
 
-      <div>
+
 
       <button className="nav-button" onClick={toggleMenu} > ☰</button>
 
-     <nav className={` ${menuOpen? "flex flex-col" : "hidden" } md:flex md:justify-evenly md:flex-1`}>
+     <nav className={` ${menuOpen? "flex flex-col" : "hidden" } md:flex md:justify-evenly md:flex-1 md:items-center`}>
       <Link href="/">Home</Link>
       <Link href="/request">Request</Link>
       <Link href="/schedule">Schedule</Link>
       <Link href="/menu">Menu</Link>
       </nav>
-      </div>
+
   </header>
   <main>
 {children}
