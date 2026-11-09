@@ -175,11 +175,9 @@ export default function Schedule(){
     is_active: isActive
   }
 
-  console.log(timeBlocks, 'is active', isActive);
   const newTimeBlocks = await Post(timeBlocks);
   const realBlock = newTimeBlocks.filter(block => !block.is_active);
   const realSlot = newTimeBlocks.filter(time => time.is_active);
-console.log('real real real slot', realSlot, 'real block', realBlock);
 
 if(realBlock[0]){
   setBlockTime(prev =>[...prev, realBlock[0]]);
@@ -200,6 +198,7 @@ if(realBlock[0]){
 }
 
 
+const timeInputs = '';
 // console.log('delete on parent page', Delete)
 /*
 - most likely a form
@@ -233,6 +232,7 @@ if(realBlock[0]){
           Start Time
         </label>
         <input
+          className={timeInputs}
           type="time"
           value={startTime}
           onChange={(e) => {setStartTime(e.target.value)}}
@@ -244,6 +244,7 @@ if(realBlock[0]){
           End Time
         </label>
         <input
+          className={timeInputs}
           type="time"
           value={endTime}
           min={startTime}
@@ -254,7 +255,7 @@ if(realBlock[0]){
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
       <div>
-      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900"> Add Time Block </button>
+      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5"> Add Time Block </button>
       </div>
             { showAvailabilityManager && <AvailabilityManager
       timeSlot={timeSlot}
