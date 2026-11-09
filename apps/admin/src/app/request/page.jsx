@@ -31,20 +31,24 @@ export default function Request(){
 
   // if (loading) return <p className="loading">Loading Bookings...</p>;
   // if (error) return <p className="error">{error}</p>;
+/*
 
+- make 2 rows
+
+*/
 
   return(
     <>
     <h1 className="flex justify-center text-4xl pt-5">Requests</h1>
 
     <div>
-     <div className="flex grid-col-3 justify-center">
-      <div className="flex">
+     <div className="grid grid-cols-3 grid-auto justify-center">
+      <div className="flex col-span-3 ">
         <h1>Date</h1>
         <h2>Name</h2>
         <h3>Time</h3>
       </div>
-      <div>
+      <div className=" row-start-2 col-span-3 ">
         <button
         className="flex"
         onClick={ (e) =>{
