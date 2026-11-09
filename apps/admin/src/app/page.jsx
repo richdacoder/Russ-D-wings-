@@ -30,13 +30,14 @@ const dateNameTime = "flex justify-center"
 return(
   <>
 <div>
-  <h1 className="flex justify-center text-4xl">orders</h1>
+  <h1 className="flex justify-center text-4xl my-5">Orders</h1>
 
   <div className="grid grid-cols-3 justify-center ">
 
     <h2 className={`${dateNameTime}`}>Date</h2>
     <h3 className={`${dateNameTime}`}>Name</h3>
     <h4 className={`${dateNameTime}`}>Time</h4>
+    {orders.map(i => (
   <button
   className="col-span-3 grid grid-cols-3 hover:bg-black/20"
   onClick={
@@ -46,10 +47,11 @@ return(
 
     }
   }>
-    <span>4/15/26</span>
-    <span>Jim Jones</span>
-    <span>5:30 PM</span>
+    <p>{i.date}</p>
+    <p>{i.name}</p>
+    <p>{i.time}</p>
   </button>
+  ))}
   </div>
   </div>
 
