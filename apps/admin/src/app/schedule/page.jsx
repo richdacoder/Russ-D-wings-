@@ -304,7 +304,7 @@ const centerOnFlex = 'flex justify-center';
             />
           </div>
           <div>
-            <h2 className="flex justify-center">Block Times</h2>
+            <h2 className="flex justify-center text-3xl my-4">Block Times</h2>
             <BlockTime
             ConvertToEastern={ConvertToEastern}
             blockTime={blockTime}

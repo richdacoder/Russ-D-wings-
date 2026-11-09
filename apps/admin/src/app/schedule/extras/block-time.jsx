@@ -5,9 +5,14 @@ import { useEffect } from "react";
 export default function BlockTime({ConvertToEastern, blockTime, setBlockTime, TimeFormat, Delete}){
   console.log('block times ', blockTime);
 return(
-  <div className="flex justify-center " >
+  <div className="flex flex-col relative mx-auto" >
+    <div className="flex flex-row ">
+        <h1>Start Time</h1>
+         <h2> End Time </h2>
+    </div>
+
+    <div className="flex flex-row">
     <div>
-    <h1>Start Time</h1>
     {
     blockTime.map((time, index) => (
       <p key={index}> {TimeFormat(time.start_time)} </p>
@@ -15,7 +20,6 @@ return(
     }
     </div>
     <div>
-      <h2> End Time </h2>
       {
         blockTime.map((time, index) => (
           <div key={index} className="flex flex-row">
@@ -29,6 +33,7 @@ return(
           </div>
         ))
       }
+    </div>
     </div>
   </div>
 )
