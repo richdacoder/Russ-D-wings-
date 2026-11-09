@@ -198,7 +198,7 @@ if(realBlock[0]){
 }
 
 
-const timeInputs = 'border';
+const timeInputs = 'border my-3 appearance-none';
 const timeLabels = '';
 
 // console.log('delete on parent page', Delete)
@@ -242,7 +242,6 @@ const timeLabels = '';
           onChange={(e) => {setStartTime(e.target.value)}}
        />
       </div>
-
       <div>
         <label
          className={timeLabels}
@@ -261,7 +260,7 @@ const timeLabels = '';
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
       <div>
-      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5"> Add Time Block </button>
+      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5 text-white"> Add Time Block </button>
       </div>
             { showAvailabilityManager && <AvailabilityManager
       timeSlot={timeSlot}
