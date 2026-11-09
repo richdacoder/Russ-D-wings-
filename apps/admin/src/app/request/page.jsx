@@ -27,6 +27,11 @@ export default function Request(){
   const [selectedRequest, setSelectedRequest] = useState(null);
   const [loading, setLoading ] = useState(true);
   const [error, setError] = useState(null);
+  const [request, setRequest] = useState([
+    {date:'11/2/26', name:'roberto', time:'9:00PM'},
+    {date:'11/2/26', name:'carlos', time:'10:00PM'},
+    {date:'11/2/26', name:'john', time:'7:00PM'}
+  ])
 
 
   // if (loading) return <p className="loading">Loading Bookings...</p>;
@@ -40,13 +45,14 @@ const dateNameTime = "flex justify-center";
 
   return(
     <>
-    <h1 className="flex justify-center text-4xl pt-5">Requests</h1>
+    <h1 className="flex justify-center text-4xl pt-5 mb-5">Requests</h1>
 
     <div>
      <div className="grid grid-cols-3 grid-auto justify-center">
         <h1 className={`${dateNameTime}`}>Date</h1>
         <h2 className={`${dateNameTime}`}>Name</h2>
         <h3 className={`${dateNameTime}`}>Time</h3>
+        {request.map(i =>(
         <button
         className="col-span-3 grid grid-cols-3 hover:bg-black/20"
         onClick={ (e) =>{
@@ -54,10 +60,11 @@ const dateNameTime = "flex justify-center";
           setSelectedRequest(requests)
         }
         }>
-          <p>4/15/26</p>
-          <p>Timmy Turner</p>
-          <p>5:00 PM</p>
+          <p>{i.date}</p>
+          <p>{i.name}</p>
+          <p>{i.time}</p>
         </button>
+        ))}
       </div>
 
       {
