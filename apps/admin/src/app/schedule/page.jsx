@@ -198,8 +198,8 @@ if(realBlock[0]){
 }
 
 
-const timeInputs = 'border my-3 appearance-none';
-const timeLabels = '';
+const timeInputs = 'border h-10 my-3 appearance-none w-full rounded-md';
+const timeLabels = 'text-sm';
 
 // console.log('delete on parent page', Delete)
 /*
@@ -227,8 +227,8 @@ const timeLabels = '';
       <h1 className="flex justify-center text-4xl my-5 italic">
         Create Time Blocks
       </h1>
-      <form className="flex justify-center" onSubmit={handleSubmit}>
-        <div>
+      <form className="flex w-full justify-center" onSubmit={handleSubmit}>
+        <div className="flex flex-col w-3/4">
       <div>
         <label
          className={timeLabels}
