@@ -260,7 +260,7 @@ const timeLabels = 'text-sm';
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
       <div>
-      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5 text-white"> Add Time Block </button>
+      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5 text-white hover:bg-black/20"> Add Time Block </button>
       </div>
             { showAvailabilityManager && <AvailabilityManager
       timeSlot={timeSlot}
