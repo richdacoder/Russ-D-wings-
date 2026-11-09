@@ -43,14 +43,11 @@ export default function Request(){
 
     <div>
      <div className="grid grid-cols-3 grid-auto justify-center">
-      <div className="flex col-span-3 ">
-        <h1>Date</h1>
+        <h1 className="">Date</h1>
         <h2>Name</h2>
         <h3>Time</h3>
-      </div>
-      <div className=" row-start-2 col-span-3 ">
         <button
-        className="flex"
+        className=""
         onClick={ (e) =>{
           e.stopPropagation();
           setSelectedRequest(requests)
@@ -60,7 +57,6 @@ export default function Request(){
           <p>Timmy Turner</p>
           <p>5:00 PM</p>
         </button>
-      </div>
       </div>
 
       {
