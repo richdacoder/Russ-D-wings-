@@ -268,7 +268,7 @@ const centerOnFlex = 'flex justify-center';
           </select>
       </div>
       <div>
-      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5 text-white hover:bg-black/20"> Add Time Block </button>
+      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5 text-white hover:bg-black/20 flex justify-center mx-auto"> Add Time Block </button>
       </div>
             { showAvailabilityManager && <AvailabilityManager
       timeSlot={timeSlot}
