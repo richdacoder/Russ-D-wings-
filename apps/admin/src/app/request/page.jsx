@@ -36,6 +36,7 @@ export default function Request(){
 - make 2 rows
 
 */
+const dateNameTime = "flex justify-center";
 
   return(
     <>
@@ -43,9 +44,9 @@ export default function Request(){
 
     <div>
      <div className="grid grid-cols-3 grid-auto justify-center">
-        <h1 className="">Date</h1>
-        <h2>Name</h2>
-        <h3>Time</h3>
+        <h1 className={`${dateNameTime}`}>Date</h1>
+        <h2 className={`${dateNameTime}`}>Name</h2>
+        <h3 className={`${dateNameTime}`}>Time</h3>
         <button
         className="col-span-3 grid grid-cols-3"
         onClick={ (e) =>{
