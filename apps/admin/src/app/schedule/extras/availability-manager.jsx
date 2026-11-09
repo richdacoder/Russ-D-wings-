@@ -47,6 +47,8 @@ export default function AvailabilityManager({
 
   */
 
+  const continueCancelButton = "border my-5 mx-3 p-4 py-2 rounded-md hover:bg-black/20"
+
   return(
     <div>
       <h1>
@@ -72,9 +74,11 @@ export default function AvailabilityManager({
 
            };
            }}
+           className={`${continueCancelButton} bg-green-700 text-white`}
            onSubmit={handleSubmit}
            >Continue</button>
-           <button type="button" onClick={() => setShowAvailabilityManager(false)}>Cancel</button>
+           <button type="button" className={`${continueCancelButton} bg-red-700 text-white`}
+           onClick={() => setShowAvailabilityManager(false)}>Cancel</button>
 
     </div>
   )
