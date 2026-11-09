@@ -125,14 +125,12 @@ export default function Schedule(){
       const existingStart = easternStart.split(".")[0].slice(0,5);
       const existingEnd = easternEnd.split(".")[0].slice(0,5);
 
-
-
    return( endTime > existingStart &&
     startTime < existingEnd )
   });
 
 
-
+  console.log('isactive?????', isActive);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -256,8 +254,16 @@ const timeLabels = 'text-sm';
           onChange={(e) => {setEndTime(e.target.value)}}
         />
       </div>
-      <div>
-        <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
+      <div >
+        <select type="button p-5"
+        className="border rounded-sm "
+          onClick={(e) => setIsActive(e.target.value === "available")}
+         >
+          {/* {isActive? 'Available Time' : 'Block Time'} */}
+          <option value="available" >Available Time</option>
+          <option value="block">Block Time</option>
+
+          </select>
       </div>
       <div>
       <button type="submit" className="border p-5 text-lg rounded-md bg-red-900 my-5 text-white hover:bg-black/20"> Add Time Block </button>
