@@ -48,7 +48,7 @@ const dateNameTime = "flex justify-center";
         <h2 className={`${dateNameTime}`}>Name</h2>
         <h3 className={`${dateNameTime}`}>Time</h3>
         <button
-        className="col-span-3 grid grid-cols-3"
+        className="col-span-3 grid grid-cols-3 hover:bg-black/20"
         onClick={ (e) =>{
           e.stopPropagation();
           setSelectedRequest(requests)
