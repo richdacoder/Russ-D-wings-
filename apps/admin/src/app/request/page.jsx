@@ -47,7 +47,7 @@ export default function Request(){
         <h2>Name</h2>
         <h3>Time</h3>
         <button
-        className=""
+        className="col-span-3 grid grid-cols-3"
         onClick={ (e) =>{
           e.stopPropagation();
           setSelectedRequest(requests)
