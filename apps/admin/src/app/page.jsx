@@ -14,7 +14,12 @@ export default function HomePage() {
   - change structure make date in same element as data date and same for all
   */
   const [selectedOrder, setSelectedOrder] = useState(null);
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([
+    {date:'11/2/26', name:'roberto', time:'9:00PM'},
+    {date:'11/2/26', name:'carlos', time:'10:00PM'},
+    {date:'11/2/26', name:'john', time:'7:00PM'}
+  ])
+;
   const [loading, setLoading ] = useState(true);
   const [error, setError] = useState(null);
 
