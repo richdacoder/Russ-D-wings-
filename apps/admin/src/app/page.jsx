@@ -30,16 +30,17 @@ const dateNameTime = "flex justify-center"
 return(
   <>
 <div>
-  <h1 className="flex justify-center text-4xl my-5">Orders</h1>
+  <h1 className="flex justify-center text-4xl my-5 italic">Orders</h1>
 
   <div className="grid grid-cols-3 justify-center ">
 
     <h2 className={`${dateNameTime}`}>Date</h2>
     <h3 className={`${dateNameTime}`}>Name</h3>
     <h4 className={`${dateNameTime}`}>Time</h4>
-    {orders.map(i => (
+    {orders.map((i, k) => (
   <button
   className="col-span-3 grid grid-cols-3 hover:bg-black/20"
+  key={k}
   onClick={
     (e) =>{
       e.stopPropagation();
