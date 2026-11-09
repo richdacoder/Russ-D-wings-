@@ -292,7 +292,7 @@ const timeLabels = 'text-sm';
         />
         <div>
           <div>
-            <h1>Schedule</h1>
+            <h1 className="flex justify-center text-3xl my-4">Schedule</h1>
             <Available
             timeSlot={timeSlot}
             setTimeSlot={setTimeSlot}
