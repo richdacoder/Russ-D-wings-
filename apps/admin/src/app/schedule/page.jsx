@@ -198,7 +198,9 @@ if(realBlock[0]){
 }
 
 
-const timeInputs = '';
+const timeInputs = 'border';
+const timeLabels = '';
+
 // console.log('delete on parent page', Delete)
 /*
 - most likely a form
@@ -228,7 +230,9 @@ const timeInputs = '';
       <form className="flex justify-center" onSubmit={handleSubmit}>
         <div>
       <div>
-        <label>
+        <label
+         className={timeLabels}
+        >
           Start Time
         </label>
         <input
@@ -240,7 +244,9 @@ const timeInputs = '';
       </div>
 
       <div>
-        <label>
+        <label
+         className={timeLabels}
+        >
           End Time
         </label>
         <input
