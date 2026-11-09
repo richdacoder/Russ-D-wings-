@@ -26,21 +26,19 @@ export default function HomePage() {
 
   // if (loading) return <p className="loading">Loading Bookings...</p>;
   // if (error) return <p className="error">{error}</p>;
-
+const dateNameTime = "flex justify-center"
 return(
   <>
 <div>
   <h1 className="flex justify-center text-4xl">orders</h1>
 
-  <div className="grid grid-col-3 justify-center ">
+  <div className="grid grid-cols-3 justify-center ">
 
-  <div className="flex justify center">
-    <h2>Date</h2>
-    <h3>Name</h3>
-    <h4>Time</h4>
-    </div>
-<div>
+    <h2 className={`${dateNameTime}`}>Date</h2>
+    <h3 className={`${dateNameTime}`}>Name</h3>
+    <h4 className={`${dateNameTime}`}>Time</h4>
   <button
+  className="col-span-3 grid grid-cols-3 hover:bg-black/20"
   onClick={
     (e) =>{
       e.stopPropagation();
@@ -52,7 +50,6 @@ return(
     <span>Jim Jones</span>
     <span>5:30 PM</span>
   </button>
-  </div>
   </div>
   </div>
 
