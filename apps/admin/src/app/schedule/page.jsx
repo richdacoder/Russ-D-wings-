@@ -197,7 +197,7 @@ if(realBlock[0]){
 
 
 const timeInputs = 'border h-10 my-3 appearance-none w-2/4 rounded-md flex justify-center mx-auto';
-const timeLabels = 'text-sm flex justify-center mx-auto';
+const timeLabels = 'text-sm left-1/4 relative';
 const centerOnFlex = 'flex justify-center';
 
 
