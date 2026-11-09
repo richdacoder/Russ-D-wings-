@@ -196,8 +196,10 @@ if(realBlock[0]){
 }
 
 
-const timeInputs = 'border h-10 my-3 appearance-none w-full rounded-md';
-const timeLabels = 'text-sm';
+const timeInputs = 'border h-10 my-3 appearance-none w-2/4 rounded-md flex justify-center mx-auto';
+const timeLabels = 'text-sm flex justify-center mx-auto';
+const centerOnFlex = 'flex justify-center';
+
 
 // console.log('delete on parent page', Delete)
 /*
@@ -226,7 +228,7 @@ const timeLabels = 'text-sm';
         Create Time Blocks
       </h1>
       <form className="flex w-full justify-center" onSubmit={handleSubmit}>
-        <div className="flex flex-col w-3/4">
+        <div className="flex justify-center flex-col w-3/4 ">
       <div>
         <label
          className={timeLabels}
@@ -255,8 +257,8 @@ const timeLabels = 'text-sm';
         />
       </div>
       <div >
-        <select type="button p-5"
-        className="border rounded-sm "
+        <select type="button"
+        className="border mx-auto flex justify-center rounded-sm "
           onClick={(e) => setIsActive(e.target.value === "available")}
          >
           {/* {isActive? 'Available Time' : 'Block Time'} */}
