@@ -223,7 +223,7 @@ if(realBlock[0]){
 */
   return(
     <div>
-      <h1 className="flex justify-center text-4xl my-5">
+      <h1 className="flex justify-center text-4xl my-5 italic">
         Create Time Blocks
       </h1>
       <form className="flex justify-center" onSubmit={handleSubmit}>
@@ -254,7 +254,7 @@ if(realBlock[0]){
         <button type="button" onClick={() => setIsActive(!isActive)} >{isActive? 'Available Time' : 'Block Time'}</button>
       </div>
       <div>
-      <button type="submit"> Add Time Block </button>
+      <button type="submit" className="border p-5 text-lg rounded-md bg-red-900"> Add Time Block </button>
       </div>
             { showAvailabilityManager && <AvailabilityManager
       timeSlot={timeSlot}
