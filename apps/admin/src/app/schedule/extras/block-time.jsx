@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function BlockTime({ConvertToEastern, blockTime, setBlockTime, TimeFormat, Delete}){
   console.log('block times ', blockTime);
 return(
-  <div className="flex flex-col relative mx-auto" >
+  <div className="flex flex-col relative items-center gap-2" >
     <div className="flex flex-row ">
         <h1>Start Time</h1>
          <h2> End Time </h2>
