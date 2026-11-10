@@ -24,17 +24,17 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
   console.log('page for main dish working', main);
 
   return(
-    <div className="flex flex-col">
-      <div >
+    <>
+      <div>
         <h2 className="text-2xl my-5 flex justify-center items-center"> Main Dish </h2>
       </div>
       <div className="grid grid-cols-2 gap-6">
       { main.map((dish, index) => (
-      <div className=" bg-black/10 justify-items-center rounded-md border" key={index}>
-          <div className="flex ml-auto gap-12 px-3">
-           <p className=" font-semibold flex-1"> {dish.dish} </p>
+      <div className=" bg-black/10 rounded-md p-3 border" key={index}>
+          <div className="grid grid-cols-2">
+           <p className=" font-semibold "> {dish.dish} </p>
            <button type="button"
-                className="mr-auto hover:text-black/10"
+                className="justify-self-end hover:text-black/10"
         onClick={() => {
           Delete('menu', dish.id)
           setMain(prev => prev.filter(m => m.id !== dish.id))
@@ -77,7 +77,6 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
       </div>
       </div>
 
-    </div>
-
+    </>
   )
 }
