@@ -134,7 +134,7 @@ make put route and make api call file
           <div  className=" my-5 flex flex-col">
             <label  className="text-2xl "> Description </label>
             <input
-             className="border"
+             className="border w-full min-h-32 "
             onChange={(e)=>{
               setDescription(e.target.value)
             }}
