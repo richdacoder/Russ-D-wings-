@@ -15,7 +15,7 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
       { drink.map((dish, index) => (
       <div className="border rounded-md p-3 bg-red-400/20" key={index}>
         <div className="grid grid-cols-2">
-           <p> {dish.dish} </p>
+           <p className="font-semibold"> {dish.dish} </p>
            <button type="button"
            className="justify-self-end hover:text-black/20"
         onClick={() => {
@@ -26,13 +26,14 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
 
         </div>
         <div>
-           <p> {dish.price} </p>
+           <p> ${dish.price} </p>
         </div>
         <div>
-           <p> {dish.description} </p>
+           <p className="text-black/70"> {dish.description} </p>
         </div>
          <div>
           <button type="button"
+          className="hover:text-black/20"
             onClick={() => {
 
               const newStock = !dish.stock;
