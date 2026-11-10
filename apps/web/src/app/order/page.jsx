@@ -208,7 +208,8 @@ return(
       menu={menu}
       bungee={bungee}
     />
-    <form className={` flex flex-col items-center max-w-md w-full mx-auto`}>
+    <form className={` md:grid md:grid-cols-3`}>
+      <div className="col-start-2">
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div className="flex flex-col w-full text-xl font-bold mt-5" key={field}>
@@ -229,6 +230,9 @@ return(
          ) )
       }
 
+      </div>
+
+      <div className="col-start-3">
       <div>
         <h1 className={`${bungee.className} flex justify-center text-4xl mt-10
         [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
@@ -256,7 +260,10 @@ return(
               {sortByType('drink')}
               </div>
             </div>
+            </div>
+            </div>
 
+            <div className="col-start-1">
             <div>
               <Cart
                 addToCart={addToCart}
@@ -279,17 +286,18 @@ return(
                />
               <input/>
             </div>
+            </div>
+            <button
+      type="submit"
+      className={`${bungee.className} border p-4 text-lg rounded-md bg-[#ff2d2d]/70
+      hover:[box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
+      transition-shadow duration-300 flex justify-center`}
+    >
+          Order
+        </button>
 
 
-      </div>
-      <button
-  type="submit"
-  className={`${bungee.className} border p-4 text-lg rounded-md bg-[#ff2d2d]/70
-  hover:[box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
-  transition-shadow duration-300`}
->
-  Order
-</button>    </form>
+  </form>
   </div>
 )
 }
