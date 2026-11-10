@@ -86,10 +86,12 @@ make put route and make api call file
 
 */
   return(
-    <div>
-    <div className=" w-1/2 mx-auto">
-      <h1 className="text-5xl my-5">Menu</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="mx-auto">
+    <div className=" md:grid md:grid-cols-2 ">
+      <form
+      className="col-span-1"
+      onSubmit={handleSubmit}>
+       <h1 className="text-5xl my-5">Menu</h1>
         <div className="flex flex-col my-5 ">
         <label className="text-2xl">Category</label>
         <select
@@ -146,7 +148,8 @@ make put route and make api call file
         </div>
         <button  className="border rounded-md py-3 px-7 text-2xl mb-5 bg-red-900 text-white hover:bg-black/20" type="submit">Add</button>
       </form>
-      <div >
+
+      <div className="grid col-start-2" >
         <div>
           <h1>Menu</h1>
         </div>
