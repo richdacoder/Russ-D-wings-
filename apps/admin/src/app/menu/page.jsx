@@ -131,9 +131,10 @@ make put route and make api call file
             required
             />
           </div>
-          <div>
-            <label> Description </label>
+          <div  className=" my-5 flex flex-col">
+            <label  className="text-2xl "> Description </label>
             <input
+             className="border"
             onChange={(e)=>{
               setDescription(e.target.value)
             }}
