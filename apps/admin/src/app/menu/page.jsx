@@ -105,9 +105,9 @@ make put route and make api call file
         </select>
         </div>
 
-        <div  className="text-2xl my-5">
+        <div  className=" flex flex-col text-2xl my-5">
           <label >Menu Item</label>
-          <input  className="border"
+          <input  className="border  w-1/2"
             onChange={(e) => {
               setMenuItem(e.target.value)
             }}
