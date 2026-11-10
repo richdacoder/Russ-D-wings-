@@ -35,13 +35,12 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
            <p> {dish.dish} </p>
         </div>
         <div>
-          <h4>Price</h4>
-           <p> {dish.price} </p>
-        </div>
-        <div>
-          <h5>Description</h5>
            <p> {dish.description} </p>
         </div>
+        <div>
+           <p> {dish.price} </p>
+        </div>
+
         <button type="button"
         onClick={() => {
           Delete('menu', dish.id)
