@@ -51,6 +51,7 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
 
          <div>
           <button type="button"
+          className="hover:text-black/20"
             onClick={() => {
               const newStock = !dish.stock;
                setMain(prev => prev.map(m => {
