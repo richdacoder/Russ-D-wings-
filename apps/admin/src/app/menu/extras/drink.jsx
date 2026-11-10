@@ -9,7 +9,7 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
   return(
     <>
       <div>
-        <h2> Drink </h2>
+        <h2 className="text-2xl"> Drink </h2>
       </div>
                 <h3>Dish</h3>
       { drink.map((dish, index) => (

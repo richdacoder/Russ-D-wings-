@@ -151,7 +151,6 @@ make put route and make api call file
 
       <div className="grid col-start-2" >
         <div>
-          <h1>Menu</h1>
         </div>
         <div >
           <div className="grid grid-cols-2">

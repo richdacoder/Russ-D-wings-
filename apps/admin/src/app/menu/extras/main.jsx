@@ -26,9 +26,8 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
   return(
     <>
       <div>
-        <h2> Main </h2>
+        <h2 className="text-2xl"> Main Dish </h2>
       </div>
-                <h3>Dish</h3>
       { main.map((dish, index) => (
       <div key={index}>
         <div>
