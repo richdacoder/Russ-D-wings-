@@ -90,9 +90,10 @@ make put route and make api call file
     <div className=" w-1/2 mx-auto">
       <h1 className="text-5xl my-5">Menu</h1>
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col">
+        <div className="flex flex-col my-5 ">
         <label className="text-2xl">Category</label>
         <select
+        className="border"
           value={category}
           onChange={(e) => {
           setCategory(e.target.value)}}
