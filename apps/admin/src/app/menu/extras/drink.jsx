@@ -11,9 +11,9 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
       <div>
         <h2 className=" flex justify-center text-2xl"> Drinks </h2>
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-6">
       { drink.map((dish, index) => (
-      <div key={index}>
+      <div className="border rounded-md p-3" key={index}>
         <div>
            <p> {dish.dish} </p>
         </div>
