@@ -31,6 +31,14 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
       <div className="grid grid-cols-2">
       { main.map((dish, index) => (
       <div className="grid-auto" key={index}>
+                <button type="button"
+                className=""
+        onClick={() => {
+          Delete('menu', dish.id)
+          setMain(prev => prev.filter(m => m.id !== dish.id))
+        }
+         }> X </button>
+
         <div>
            <p> {dish.dish} </p>
         </div>
@@ -41,12 +49,6 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
            <p> {dish.price} </p>
         </div>
 
-        <button type="button"
-        onClick={() => {
-          Delete('menu', dish.id)
-          setMain(prev => prev.filter(m => m.id !== dish.id))
-        }
-         }> X </button>
          <div>
           <button type="button"
             onClick={() => {
