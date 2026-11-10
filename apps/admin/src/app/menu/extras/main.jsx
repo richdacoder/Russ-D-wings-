@@ -31,8 +31,8 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
       <div className="grid grid-cols-2 gap-6">
       { main.map((dish, index) => (
       <div className=" justify-items-center rounded-md border" key={index}>
-          <div className="flex ml-auto gap-12 pr-3">
-           <p> {dish.dish} </p>
+          <div className="flex ml-auto gap-12 px-3">
+           <p className=" font-semibold flex-1"> {dish.dish} </p>
            <button type="button"
                 className=" mr-auto"
         onClick={() => {
@@ -46,7 +46,7 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
            <p> {dish.description} </p>
         </div>
         <div>
-           <p> {dish.price} </p>
+           <p>${dish.price} </p>
         </div>
 
          <div>
