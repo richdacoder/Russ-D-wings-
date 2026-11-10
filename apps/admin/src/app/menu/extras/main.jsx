@@ -24,12 +24,13 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
   console.log('page for main dish working', main);
 
   return(
-    <>
-      <div>
-        <h2 className="text-2xl"> Main Dish </h2>
+    <div className="flex flex-col">
+      <div >
+        <h2 className="text-2xl flex justify-center items-center"> Main Dish </h2>
       </div>
+      <div className="grid grid-cols-2">
       { main.map((dish, index) => (
-      <div key={index}>
+      <div className="" key={index}>
         <div>
            <p> {dish.dish} </p>
         </div>
@@ -71,10 +72,10 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
       ))
       }
       <div>
-
+      </div>
       </div>
 
-    </>
+    </div>
 
   )
 }
