@@ -43,7 +43,7 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
 
         </div>
         <div>
-           <p> {dish.description} </p>
+           <p className="text-black/70"> {dish.description} </p>
         </div>
         <div>
            <p>${dish.price} </p>

@@ -76,7 +76,8 @@ export default function Order(){
     async function getOrder(){
       const dataArray = await Get("menu");
       const getTimes = await Get("availability");
-      setMenu(dataArray);
+      setMenu(dataArray.filter(dish => dish.stock));
+      //.filter(dish => )
       setTimes(getTimes.filter(time => time.is_active));
       setBlockTimes(getTimes.filter(time => !time.is_active));
     }
@@ -90,7 +91,7 @@ export default function Order(){
   [itemName]
   );
 
-
+console.log('check stock in menu',menu);
 
   const phoneNumerFormatter = (number) => {
       let digits = number.replace(/\D/g, "").substring(0,10);
