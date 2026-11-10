@@ -90,7 +90,7 @@ make put route and make api call file
     <div className=" w-1/2 mx-auto">
       <h1 className="text-5xl my-5">Menu</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="flex flex-col">
         <label className="text-2xl">Category</label>
         <select
           value={category}
@@ -147,8 +147,8 @@ make put route and make api call file
         <div>
           <h1>Menu</h1>
         </div>
-        <div>
-          <div>
+        <div >
+          <div className="grid grid-cols-2">
             <Main
               setStock={setStock}
               stock={stock}
