@@ -28,19 +28,20 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
       <div >
         <h2 className="text-2xl flex justify-center items-center"> Main Dish </h2>
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-4">
       { main.map((dish, index) => (
       <div className="grid-auto" key={index}>
-                <button type="button"
-                className=""
+          <div className="flex">
+
+           <p> {dish.dish} </p>
+           <button type="button"
+                className="flex"
         onClick={() => {
           Delete('menu', dish.id)
           setMain(prev => prev.filter(m => m.id !== dish.id))
         }
          }> X </button>
 
-        <div>
-           <p> {dish.dish} </p>
         </div>
         <div>
            <p> {dish.description} </p>
