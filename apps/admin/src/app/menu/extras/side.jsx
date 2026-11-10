@@ -10,7 +10,7 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
   return(
     <>
       <div>
-        <h2> Side </h2>
+        <h2 className="flex justify-center text-2xl my-5"> Side </h2>
       </div>
                 <h3>Dish</h3>
       { side.map((dish, index) => (
@@ -19,7 +19,7 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
            <p> {dish.dish} </p>
         </div>
         <div>
-          <h4>Price</h4>
+          <h4 >Price</h4>
            <p> {dish.price} </p>
         </div>
         <div>
