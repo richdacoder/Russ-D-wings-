@@ -136,7 +136,7 @@ make put route and make api call file
           <div  className=" my-5 flex flex-col">
             <label  className="text-2xl "> Description </label>
             <textarea
-             className="border rounded-md w-full min-h-32 "
+             className="border rounded-md w-3/4 min-h-32 "
             onChange={(e)=>{
               setDescription(e.target.value)
             }}
