@@ -93,7 +93,7 @@ make put route and make api call file
         <div className="flex flex-col my-5 ">
         <label className="text-2xl">Category</label>
         <select
-        className="border w-1/2"
+        className="border w-1/2 rounded-md"
           value={category}
           onChange={(e) => {
           setCategory(e.target.value)}}
@@ -107,7 +107,7 @@ make put route and make api call file
 
         <div  className=" flex flex-col text-2xl my-5">
           <label >Menu Item</label>
-          <input  className="border  w-1/2"
+          <input  className="border rounded-md  w-1/2"
             onChange={(e) => {
               setMenuItem(e.target.value)
             }}
@@ -120,7 +120,7 @@ make put route and make api call file
           <div>
             <span>$</span>
             <input
-             className="border  w-1/2"
+             className="border rounded-md w-1/2"
             step='0.01'
             type="number"
             min="0"
@@ -134,7 +134,7 @@ make put route and make api call file
           <div  className=" my-5 flex flex-col">
             <label  className="text-2xl "> Description </label>
             <textarea
-             className="border w-full min-h-32 "
+             className="border rounded-md w-full min-h-32 "
             onChange={(e)=>{
               setDescription(e.target.value)
             }}
