@@ -88,7 +88,7 @@ make put route and make api call file
   return(
     <div>
     <div className=" w-1/2 mx-auto">
-      <h1>Menu</h1>
+      <h1 className="">Menu</h1>
       <form onSubmit={handleSubmit}>
         <div>
         <label>Category</label>
