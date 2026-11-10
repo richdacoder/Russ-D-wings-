@@ -115,11 +115,12 @@ make put route and make api call file
             required
             />
         </div>
-        <div>
+        <div  className=" my-5">
           <label className="text-2xl">Price</label>
           <div>
             <span>$</span>
             <input
+             className="border"
             step='0.01'
             type="number"
             min="0"
