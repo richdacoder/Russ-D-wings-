@@ -86,7 +86,7 @@ make put route and make api call file
 
 */
   return(
-    <div className="mx-auto">
+    <div className="mx-auto px-3">
     <div className=" md:grid md:grid-cols-2 ">
       <form
       className="col-span-1"
