@@ -18,7 +18,7 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
         <div className="grid grid-cols-2 ">
         <p className="font-semibold"> {dish.dish} </p>
         <button
-        className="hover:text-black/20"
+        className="hover:text-black/20 justify-self-end"
         type="button"
         onClick={() => {
           Delete('menu', dish.id)
@@ -27,7 +27,7 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
          }> X </button>
         </div>
         <div>
-           <p > {dish.price} </p>
+           <p > ${dish.price} </p>
         </div>
         <div>
            <p className="text-black/70"> {dish.description} </p>
