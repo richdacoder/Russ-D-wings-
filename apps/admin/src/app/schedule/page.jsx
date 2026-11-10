@@ -292,7 +292,7 @@ const centerOnFlex = 'flex justify-center';
       endTime={showEndTime}
 
         />
-        <div>
+        <div className="relative mx-auto w-full md:w-1/2 ">
           <div>
             <h1 className="flex justify-center text-3xl my-4">Schedule</h1>
             <Available
