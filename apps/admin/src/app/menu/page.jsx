@@ -144,7 +144,7 @@ make put route and make api call file
             />
           </div>
         </div>
-        <button type="submit">Add</button>
+        <button  className="border rounded-md py-3 px-7 text-2xl mb-5" type="submit">Add</button>
       </form>
       <div >
         <div>
