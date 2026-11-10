@@ -120,7 +120,7 @@ make put route and make api call file
           <div>
             <span>$</span>
             <input
-             className="border"
+             className="border  w-1/2"
             step='0.01'
             type="number"
             min="0"
