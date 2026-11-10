@@ -9,11 +9,11 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
   return(
     <>
       <div>
-        <h2 className=" flex justify-center text-2xl"> Drinks </h2>
+        <h2 className=" flex justify-center text-2xl my-5"> Drinks </h2>
       </div>
       <div className="grid grid-cols-2 gap-6">
       { drink.map((dish, index) => (
-      <div className="border rounded-md p-3" key={index}>
+      <div className="border rounded-md p-3 bg-red-400/20" key={index}>
         <div className="grid grid-cols-2">
            <p> {dish.dish} </p>
            <button type="button"
