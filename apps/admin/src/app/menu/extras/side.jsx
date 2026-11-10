@@ -12,11 +12,11 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
       <div>
         <h2 className="flex justify-center text-2xl my-5"> Side </h2>
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-6 ">
       { side.map((dish, index) => (
-      <div className="border rounded-md p-3" key={index}>
+      <div className="border rounded-md p-3 bg-black/40" key={index}>
         <div className="grid grid-cols-2 ">
-        <p> {dish.dish} </p>
+        <p className="font-semibold"> {dish.dish} </p>
         <button
         className="hover:text-black/20"
         type="button"
@@ -27,15 +27,14 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
          }> X </button>
         </div>
         <div>
-          <h4 >Price</h4>
-           <p> {dish.price} </p>
+           <p > {dish.price} </p>
         </div>
         <div>
-          <h5>Description</h5>
-           <p> {dish.description} </p>
+           <p className="text-black/70"> {dish.description} </p>
         </div>
          <div>
           <button type="button"
+          className="hover:text-black/20"
             onClick={() => {
               const newStock = !dish.stock;
               setSide(prev => prev.map(s => {
