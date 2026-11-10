@@ -142,7 +142,7 @@ make put route and make api call file
         </div>
         <button type="submit">Add</button>
       </form>
-      <div>
+      <div className="">
         <div>
           <h1>Menu</h1>
         </div>
