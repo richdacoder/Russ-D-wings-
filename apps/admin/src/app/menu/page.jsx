@@ -153,7 +153,7 @@ make put route and make api call file
         <div>
         </div>
         <div >
-          <div className="grid grid-cols-2">
+          <div >
             <Main
               setStock={setStock}
               stock={stock}

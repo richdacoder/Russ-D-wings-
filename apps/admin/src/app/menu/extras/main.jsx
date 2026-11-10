@@ -30,7 +30,7 @@ export default function Main({ main, setMain, Delete, stock, setStock, Put}){
       </div>
       <div className="grid grid-cols-2">
       { main.map((dish, index) => (
-      <div className="" key={index}>
+      <div className="grid-auto" key={index}>
         <div>
            <p> {dish.dish} </p>
         </div>
