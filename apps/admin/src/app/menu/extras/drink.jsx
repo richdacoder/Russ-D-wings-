@@ -14,23 +14,23 @@ export default function Drink({ drink, setDrink, Delete, stock, setStock, Put}){
       <div className="grid grid-cols-2 gap-6">
       { drink.map((dish, index) => (
       <div className="border rounded-md p-3" key={index}>
-        <div>
+        <div className="grid grid-cols-2">
            <p> {dish.dish} </p>
-        </div>
-        <div>
-          <h4>Price</h4>
-           <p> {dish.price} </p>
-        </div>
-        <div>
-          <h5>Description</h5>
-           <p> {dish.description} </p>
-        </div>
-        <button type="button"
+           <button type="button"
+           className="justify-self-end hover:text-black/20"
         onClick={() => {
           Delete('menu', dish.id)
           setDrink(prev => prev.filter(m => m.id !== dish.id))
         }
          }> X </button>
+
+        </div>
+        <div>
+           <p> {dish.price} </p>
+        </div>
+        <div>
+           <p> {dish.description} </p>
+        </div>
          <div>
           <button type="button"
             onClick={() => {
