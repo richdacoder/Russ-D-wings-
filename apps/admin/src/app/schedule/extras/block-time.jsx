@@ -5,24 +5,25 @@ import { useEffect } from "react";
 export default function BlockTime({ConvertToEastern, blockTime, setBlockTime, TimeFormat, Delete}){
   console.log('block times ', blockTime);
 return(
-  <div className="flex flex-col relative items-center gap-2" >
-    <div className="flex flex-row ">
-        <h1>Start Time</h1>
-         <h2> End Time </h2>
+  <div className="">
+  <div className="grid grid-rows-2" >
+    <div className="grid grid-cols-2 ">
+        <h1 className="grid justify-center">Start Time</h1>
+         <h2 className="grid justify-center"> End Time </h2>
     </div>
 
-    <div className="flex flex-row">
+    <div className="grid grid-cols-2">
     <div>
     {
     blockTime.map((time, index) => (
-      <p key={index}> {TimeFormat(time.start_time)} </p>
+      <p key={index} className="grid justify-center"> {TimeFormat(time.start_time)} </p>
     ))
     }
     </div>
     <div>
       {
         blockTime.map((time, index) => (
-          <div key={index} className="flex flex-row">
+          <div key={index} className="flex flex-row justify-center">
           <p> {TimeFormat(time.end_time)} </p>
           <p>ID:{time.id}</p>
           <button onClick={() => {
@@ -35,6 +36,7 @@ return(
       }
     </div>
     </div>
+  </div>
   </div>
 )
 }
