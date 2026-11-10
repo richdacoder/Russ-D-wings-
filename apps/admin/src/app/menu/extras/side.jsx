@@ -12,10 +12,18 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
       <div>
         <h2 className="flex justify-center text-2xl my-5"> Side </h2>
       </div>
-                <h3>Dish</h3>
+      <div className="grid grid-cols-2">
       { side.map((dish, index) => (
       <div key={index}>
         <div>
+        <button type="button"
+        onClick={() => {
+          Delete('menu', dish.id)
+          setSide(prev => prev.filter(m => m.id !== dish.id))
+        }
+         }> X </button>
+
+
            <p> {dish.dish} </p>
         </div>
         <div>
@@ -26,12 +34,6 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
           <h5>Description</h5>
            <p> {dish.description} </p>
         </div>
-        <button type="button"
-        onClick={() => {
-          Delete('menu', dish.id)
-          setSide(prev => prev.filter(m => m.id !== dish.id))
-        }
-         }> X </button>
          <div>
           <button type="button"
             onClick={() => {
@@ -54,7 +56,7 @@ export default function Side({ side, setSide, Delete, stock, setStock, Put  }){
       ))
       }
       <div>
-
+      </div>
       </div>
 
     </>
