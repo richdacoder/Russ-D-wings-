@@ -208,7 +208,7 @@ return(
       menu={menu}
       bungee={bungee}
     />
-    <form className={` md:grid md:grid-cols-3`}>
+    <form className={` md:grid md:grid-cols-3 gap-3`}>
       <div className="col-start-2">
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
@@ -263,7 +263,7 @@ return(
             </div>
             </div>
 
-            <div className="col-start-1">
+            <div className="col-start-1 row-start-1">
             <div>
               <Cart
                 addToCart={addToCart}
@@ -291,7 +291,7 @@ return(
       type="submit"
       className={`${bungee.className} border p-4 text-lg rounded-md bg-[#ff2d2d]/70
       hover:[box-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]
-      transition-shadow duration-300 flex justify-center`}
+      transition-shadow duration-300 col-start-2 row-start-2`}
     >
           Order
         </button>
