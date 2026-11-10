@@ -93,7 +93,7 @@ make put route and make api call file
         <div className="flex flex-col my-5 ">
         <label className="text-2xl">Category</label>
         <select
-        className="border"
+        className="border w-1/2"
           value={category}
           onChange={(e) => {
           setCategory(e.target.value)}}
