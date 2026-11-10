@@ -116,7 +116,7 @@ make put route and make api call file
             />
         </div>
         <div>
-          <label>Price</label>
+          <label className="text-2xl">Price</label>
           <div>
             <span>$</span>
             <input
