@@ -216,6 +216,15 @@ const OrderButton = () => {
       </button>)
 }
 
+
+const cart =  <Cart
+addToCart={addToCart}
+setAddToCart={setAddToCart}
+itemQuantity={itemQuantity}
+setItemQuantity={setItemQuantity}
+/>
+
+
 return(
   <div>
     <PopUp
@@ -248,13 +257,7 @@ return(
       }
 
           <div className="hidden md:block">
-          <Cart
-                addToCart={addToCart}
-                setAddToCart={setAddToCart}
-                itemQuantity={itemQuantity}
-                setItemQuantity={setItemQuantity}
-              />
-                </div>
+{cart}                </div>
 
 
           <div className="hidden md:flex justify-center md:mt-5">
@@ -296,13 +299,7 @@ return(
 
             <div className="col-start-1 row-start-1">
             <div className="md:hidden">
-              <Cart
-                addToCart={addToCart}
-                setAddToCart={setAddToCart}
-                itemQuantity={itemQuantity}
-                setItemQuantity={setItemQuantity}
-              />
-            </div>
+{cart}            </div>
 
             <div>
               <h6 className={`${bungee.className} mt-20 mb-15 flex justify-center
