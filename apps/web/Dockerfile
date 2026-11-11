@@ -4,4 +4,4 @@ WORKDIR /Russ D Wings/
 
 COPY package.json ./
 
-CMD ["npm", "run", "prod"]
+CMD ["npm", "build", "prod"]
