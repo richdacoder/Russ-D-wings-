@@ -246,9 +246,12 @@ return(
           </div>
          ) )
       }
-                  <div className="hidden md:flex justify-center md:mt-5">
+
+
+
+          <div className="hidden md:flex justify-center md:mt-5">
             <OrderButton />
-            </div>
+          </div>
 
       </div>
 
@@ -284,7 +287,7 @@ return(
             </div>
 
             <div className="col-start-1 row-start-1">
-            <div>
+            <div className="md:hidden">
               <Cart
                 addToCart={addToCart}
                 setAddToCart={setAddToCart}
