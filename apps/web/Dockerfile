@@ -8,7 +8,7 @@ RUN npm install
 
 RUN ls
 
-COPY apps/web/.
+COPY apps/web/ .
 
 RUN npm run build
 
