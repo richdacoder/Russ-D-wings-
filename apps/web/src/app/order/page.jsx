@@ -37,7 +37,7 @@ for catering use type to differient in code base all coding logic for catering d
 on next and express route
 
 10/1/26
-- we want to show all the times thats not block time
+- we want to show all the times thats not block timexxx
 -
 
 */
@@ -240,6 +240,9 @@ return(
           </div>
          ) )
       }
+                  <div className="hidden md:flex justify-center md:mt-5">
+            <OrderButton />
+            </div>
 
       </div>
 
@@ -298,7 +301,9 @@ return(
               <input/>
             </div>
             </div>
-            <OrderButton/>
+            <div className="md:hidden flex justify-center">
+            <OrderButton />
+            </div>
   </form>
   </div>
 )
