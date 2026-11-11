@@ -5,5 +5,6 @@ WORKDIR /Russ D Wings/
 COPY package*.json ./
 
 RUN npm install
+RUN ls
 
-CMD ["npm", "start", "prod"]
+CMD ["npm", "start"]
