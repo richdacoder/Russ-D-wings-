@@ -4,4 +4,6 @@ WORKDIR /Russ D Wings/
 
 COPY package.json ./
 
+RUN npm install
+
 CMD ["npm", "build", "prod"]
