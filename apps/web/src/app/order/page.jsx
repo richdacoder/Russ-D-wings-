@@ -235,29 +235,30 @@ return(
       bungee={bungee}
     />
     <form className={` md:grid md:grid-cols-3 gap-3`}>
-      <div className="col-start-2 ">
+      <div className="col-start-2 md:mt-20 ">
       {
         ['First Name', 'Last Name', 'Phone', 'Email'].map( (field) =>(
           <div className="flex flex-col w-full text-xl font-bold mt-5" key={field}>
             <label className={`${bungee.className} mx-auto
             [text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#ff2d2d,0_0_40px_#ff2d2d,0_0_80px_#ff2d2d]`}> {field} </label>
             <input
-            type={field === 'Phone'? 'tel': field}
-            className="bg-white/5 border border-white/50 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
-            onChange={e => field === 'Phone'? phoneNumerFormatter(e.target.value): change(field,e.target.value) }
-            value={field === 'Phone'?
-            phone : field === 'Email'?
-             email : field.split(" ")[0] === "First"?
-             firstName : field.split(" ")[0] === "Last"?
-             lastName : ""
-              }
+              type={field === 'Phone'? 'tel': field}
+              className="bg-white/5 border border-white/50 rounded-md mt-2 w-[90%] sm:w-full mx-auto"
+              onChange={e => field === 'Phone'? phoneNumerFormatter(e.target.value): change(field,e.target.value) }
+              value={field === 'Phone'?
+              phone : field === 'Email'?
+              email : field.split(" ")[0] === "First"?
+              firstName : field.split(" ")[0] === "Last"?
+              lastName : ""
+                }
             required/>
           </div>
          ) )
       }
 
           <div className="hidden md:block">
-{cart}                </div>
+            {cart}
+          </div>
 
 
           <div className="hidden md:flex justify-center md:mt-5">
@@ -298,8 +299,9 @@ return(
             </div>
 
             <div className="col-start-1 row-start-1">
-            <div className="md:hidden">
-{cart}            </div>
+              <div className="md:hidden">
+                {cart}
+              </div>
 
             <div>
               <h6 className={`${bungee.className} mt-20 mb-15 flex justify-center
