@@ -6,4 +6,4 @@ COPY package.json ./
 
 RUN npm install
 
-CMD ["npm", "build", "prod"]
+CMD ["npm", "start", "prod"]
