@@ -247,6 +247,14 @@ return(
          ) )
       }
 
+          <div className="hidden md:block">
+          <Cart
+                addToCart={addToCart}
+                setAddToCart={setAddToCart}
+                itemQuantity={itemQuantity}
+                setItemQuantity={setItemQuantity}
+              />
+                </div>
 
 
           <div className="hidden md:flex justify-center md:mt-5">
