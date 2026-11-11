@@ -38,7 +38,13 @@ on next and express route
 
 10/1/26
 - we want to show all the times thats not block timexxx
--
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+- handle catering orders
+- make confirmation page after order
+- make pick up time pop up
 
 */
 
