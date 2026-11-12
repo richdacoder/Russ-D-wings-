@@ -9,9 +9,6 @@ RUN npm install
 RUN ls -la
 
 COPY apps/lib/ ./lib/
-
-RUN ls -la
-
 COPY apps/web/ .
 
 RUN ls -la
