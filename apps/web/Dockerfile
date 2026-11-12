@@ -1,14 +1,17 @@
 FROM node:20-alpine
 
-WORKDIR /app
 
-COPY apps/web/package*.json ./web/
+WORKDIR /app/lib
+
+COPY apps/lib/ ./
+
+WORKDIR /app/web
+
+COPY apps/web/package*.json ./
 
 RUN npm install
 
-COPY apps/lib/ ./lib
-
-COPY apps/web/ ./web/
+COPY apps/web/ ./
 
 RUN npm run build
 
