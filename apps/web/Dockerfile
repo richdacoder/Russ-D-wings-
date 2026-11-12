@@ -11,7 +11,6 @@ RUN ls
 COPY apps/lib/ .
 COPY apps/web/ .
 
-
 RUN npm run build
 
 CMD ["npm", "start"]
