@@ -3,7 +3,7 @@ FROM node:20-alpine
 
 WORKDIR /app/lib
 
-COPY apps/lib/ ./
+COPY apps/lib/. ./
 
 WORKDIR /app/web
 
