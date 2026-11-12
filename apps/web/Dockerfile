@@ -1,20 +1,20 @@
 FROM node:20-alpine
 
 
-WORKDIR /app/lib
+# WORKDIR /app/lib
 
-COPY apps/lib/ ./
+# COPY apps/lib/ ./
 
-RUN npm run build
+# RUN npm run build
 
-WORKDIR /app/web
+# WORKDIR /app/web
 
-COPY apps/web/package*.json ./
+# COPY apps/web/package*.json ./
 
-RUN npm install
+# RUN npm install
 
-COPY apps/web/ ./
+# COPY apps/web/ ./
 
-RUN npm run build
+# RUN npm run build
 
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
