@@ -6,12 +6,16 @@ COPY apps/web/package*.json ./
 
 RUN npm install
 
-RUN ls
+RUN ls -la
 
 COPY apps/lib/ .
+
+RUN ls -la
+
 COPY apps/web/ .
 
-RUN ls
+RUN ls -la
+
 
 
 RUN npm run build
