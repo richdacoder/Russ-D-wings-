@@ -5,6 +5,8 @@ WORKDIR /app/lib
 
 COPY apps/lib/ ./
 
+RUN npm run build
+
 WORKDIR /app/web
 
 COPY apps/web/package*.json ./
