@@ -10,9 +10,11 @@ RUN ls -la
 
 COPY apps/lib/ ./lib/
 
+RUN npm run build
+
+COPY apps/web/ .
+
 RUN ls -la
-
-
 
 RUN npm run build
 
