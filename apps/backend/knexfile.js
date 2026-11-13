@@ -7,8 +7,9 @@ module.exports = {
     },
     migrations:{
       directory: [
-        './migrations/migrations/'
-      ]
+        './migrations/migrations/menu',
+        './migrations/migrations/time-slots'
+        ]
     }
 
   },
