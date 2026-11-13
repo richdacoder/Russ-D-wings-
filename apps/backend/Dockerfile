@@ -8,6 +8,8 @@ COPY /apps/backend/package*.json .
 
 RUN npm install
 
+RUN infisical init
+
 COPY . .
 
 CMD ["infisical", "run", "--", "node", "app.js"]
