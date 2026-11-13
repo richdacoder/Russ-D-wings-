@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . .
 
-CMD ["infisical", "run", "--", "node", "app.js"]
+CMD ["sh","infisical", "run", "--", "node", "app.js"]
