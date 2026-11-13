@@ -8,4 +8,4 @@ RUN npm build
 
 COPY /apps/admin/ .
 
-CMD ["npm", "run"]
+CMD ["npm", "start"]
