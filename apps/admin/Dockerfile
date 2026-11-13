@@ -4,8 +4,11 @@ WORKDIR /apps/admin
 
 COPY /apps/admin/package*.json .
 
-RUN npm build
+RUN npm install
 
 COPY /apps/admin/ .
+
+RUN npm build
+
 
 CMD ["npm", "start"]
