@@ -2,6 +2,6 @@ FROM node:20-alpine
 
 WORKDIR api
 
-COPY /apps/backend/packages*.json .
+COPY /apps/backend/package*.json .
 
 RUN npm install
