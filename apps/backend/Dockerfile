@@ -6,6 +6,8 @@ COPY /apps/backend/package*.json .
 
 RUN npm install
 
-COPY /apps/backend/ .
+COPY . .
 
 RUN npm run build
+
+CMD ["npm", "start"]
