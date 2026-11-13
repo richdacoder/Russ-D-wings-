@@ -12,4 +12,4 @@ RUN infisical init
 
 COPY . .
 
-CMD ["infisical", "run", "--", "node", "app.js"]
+CMD ["infisical","--projectId=<28c3d08e-e6ae-41e5-8b12-10746ffffff7>" "run", "--", "node", "app.js"]
