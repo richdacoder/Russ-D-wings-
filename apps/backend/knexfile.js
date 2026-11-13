@@ -4,6 +4,11 @@ module.exports = {
     connection:{
       connectionString: process.env.DATABASE_URL,
       ssl: { rejectUnauthorized: false }
+    },
+    migrations:{
+      directory: [
+        './migrations/migrations/'
+      ]
     }
 
   },
