@@ -11,6 +11,7 @@
 
 11/16/26
 - check why env is undefined
+- add url to app.js
 
 
 */
