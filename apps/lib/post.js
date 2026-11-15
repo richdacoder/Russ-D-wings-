@@ -9,6 +9,9 @@
 - data variable json
 - something to check error
 
+11/16/26
+- check why env is undefined
+
 
 */
 
