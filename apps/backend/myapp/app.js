@@ -12,7 +12,9 @@ app.get('/health', (req, res) => {
 // const allowedOrigins = [process.env.NEXT_PUBLIC_API_URL];
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://localhost:3002'
+  'http://localhost:3002',
+  'https://russ-d-wings.onrender.com/order',
+  'https://russ-d-wings-admin.onrender.com'
 ];
 console.log('allowed origin', allowedOrigins);
 
