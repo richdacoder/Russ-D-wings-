@@ -2,6 +2,8 @@ module.exports = {
   production: {
     client:"pg",
     connection:{
+      host:"postgres-db",
+      port:5432,
 
     },
     client:"pg",
