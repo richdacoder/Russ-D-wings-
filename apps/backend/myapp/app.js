@@ -14,7 +14,8 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:3002',
   'https://russ-d-wings.onrender.com/order',
-  'https://russ-d-wings-admin.onrender.com'
+  'https://russ-d-wings-admin.onrender.com',
+  'https://russ-d-wings-admin.onrender.com/schedule'
 ];
 console.log('allowed origin', allowedOrigins);
 
