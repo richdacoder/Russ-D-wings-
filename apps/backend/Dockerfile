@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 5000
 
 CMD ["sh", "-c","npx knex migrate:latest --env production --knexfile apps/backend/knexfile.js && node apps/backend/myapp/app.js"]
